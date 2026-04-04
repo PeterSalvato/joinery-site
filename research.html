@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Joinery</title>
+    <meta name="description" content="Published whitepapers and essays from the Accommodation Design methodology. Six papers with DOIs covering task decomposition, input architecture, voice governance, and more.">
+    <meta property="og:title" content="Research — Joinery">
+    <meta property="og:description" content="Six published whitepapers with DOIs. Free essays from the methodology. The research behind every course at Joinery.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="index.html">
+                    <img src="assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Research -->
+        <section class="section research">
+            <div class="section-inner">
+                <div class="label">Published Research</div>
+                <h2>The methodology is documented, tested, and cited.</h2>
+                <p>Every course at Joinery is grounded in published research with DOIs. The tools are open source. The site you are reading was built by the system it teaches.</p>
+                <ul class="paper-list">
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18941231" target="_blank" rel="noopener">
+                            <span class="paper-title">Accommodation Design</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18962881" target="_blank" rel="noopener">
+                            <span class="paper-title">Input Inversion</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18962893" target="_blank" rel="noopener">
+                            <span class="paper-title">Prosthetic Cognition</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986290" target="_blank" rel="noopener">
+                            <span class="paper-title">Semantic Flattening</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986295" target="_blank" rel="noopener">
+                            <span class="paper-title">Lens Extraction</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986297" target="_blank" rel="noopener">
+                            <span class="paper-title">Voice Governance</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Reading -->
+        <section class="section reading">
+            <div class="section-inner">
+                <div class="label">Start Reading</div>
+                <h2>Free essays from the methodology.</h2>
+                <a class="essay-link" href="essays/the-wrong-question.html">
+                    <div class="essay-tag"><span class="material-symbols-outlined">auto_stories</span>Free Essay</div>
+                    <div class="essay-title">The Wrong Question</div>
+                    <div class="essay-desc">Why your prompts keep getting longer and your output keeps getting worse.</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Signup -->
+        <section class="section signup" id="signup">
+            <div class="signup-inner">
+                <h2>Enrollment opens soon.</h2>
+                <p class="subtitle">Get first access to the Foundations course and everything that follows.</p>
+                <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/joinerysystemworks" method="post">
+                    <input class="signup-input" type="email" name="email" placeholder="your email" required aria-label="Email address">
+                    <button class="signup-button" type="submit">Get on the list</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script>
+        // Shadow on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
+</body>
+</html>

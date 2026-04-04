@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses — Joinery</title>
+    <meta name="description" content="Courses at Joinery. The Foundations course is now enrolling. More courses in development across six domains of AI methodology for creative practitioners.">
+    <meta property="og:title" content="Foundations — Joinery">
+    <meta property="og:description" content="Three weeks of structured practice. Three deliverables you use the day after. The entry point to Accommodation Design.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="index.html">
+                    <img src="assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Courses -->
+        <section class="section" style="padding-top: 3.5rem;">
+            <div class="section-inner">
+                <div class="label">Courses</div>
+                <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 2.5rem;">Built by a trained educator. Grounded in published research.</h2>
+
+                <!-- Foundations Card -->
+                <div class="course-card" style="margin-bottom: 2rem;">
+                    <div class="label" style="color: var(--color-accent); margin-bottom: 0.75rem;">Now Enrolling</div>
+                    <h3>AI Accommodation: The Foundations</h3>
+                    <div class="course-meta">Self-paced &middot; 3 weeks &middot; $299 &middot; Designed for designers</div>
+                    <p>Three weeks of structured practice using a gradual release model: demonstration, guided practice, independent practice. Every lesson is built around work you do in your own tools, on your own projects. You finish with a working system, not a playlist you watched.</p>
+                    <ul class="course-includes">
+                        <li><span class="material-symbols-outlined">school</span>Gradual release pedagogy</li>
+                        <li><span class="material-symbols-outlined">construction</span>Applied exercises on your projects</li>
+                        <li><span class="material-symbols-outlined">assignment_turned_in</span>Three deliverables you use the day after</li>
+                        <li><span class="material-symbols-outlined">inventory_2</span>Frameworks and templates</li>
+                        <li><span class="material-symbols-outlined">videocam</span>On-camera instructor sessions</li>
+                        <li><span class="material-symbols-outlined">lab_research</span>Published research foundation</li>
+                    </ul>
+                    <a class="course-cta" href="#signup">Enroll when open</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Courses -->
+        <section class="section" style="background-color: var(--color-bg-alt); border-top: 1px solid var(--color-rule);">
+            <div class="section-inner">
+                <div class="label">In Development</div>
+                <h2 style="font-family: var(--font-heading); font-size: clamp(1.3rem, 3vw, 1.6rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.75rem;">More courses across six domains and three tracks.</h2>
+                <p style="font-size: 1.05rem; color: var(--color-text-mid); max-width: 34em; margin-bottom: 1.5rem;">Joinery's curriculum covers Accommodation Design, Input Inversion, Prosthetic Cognition, Semantic Hierarchy, Voice Governance, and Lens Extraction. Courses for solo practitioners, team directors, and educators are in development. Sign up below for updates as they open.</p>
+            </div>
+        </section>
+
+        <!-- Signup -->
+        <section class="section signup" id="signup">
+            <div class="signup-inner">
+                <h2>Enrollment opens soon.</h2>
+                <p class="subtitle">Get first access to the Foundations course and everything that follows.</p>
+                <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/joinerysystemworks" method="post">
+                    <input class="signup-input" type="email" name="email" placeholder="your email" required aria-label="Email address">
+                    <button class="signup-button" type="submit">Get on the list</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script>
+        // Shadow on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
+</body>
+</html>

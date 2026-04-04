@@ -10,191 +10,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #F8F6F2;
-            --color-bg-alt: #F0EDE7;
-            --color-text: #222222;
-            --color-text-mid: #555555;
-            --color-text-light: #888888;
-            --color-accent: #C45A2D;
-            --color-accent-hover: #A84920;
-            --color-rule: #DDD9D1;
-            --color-white: #F8F6F2;
-            --color-dark: #1A1918;
-            --font-heading: 'Archivo', -apple-system, sans-serif;
-            --font-body: 'Figtree', -apple-system, sans-serif;
-            --measure: 36rem;
-        }
-
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html { font-size: 18px; scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-body);
-            font-weight: 400;
-            color: var(--color-text);
-            background-color: var(--color-bg);
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .essay {
-            max-width: var(--measure);
-            margin: 0 auto;
-            padding: 5rem 2rem 6rem;
-        }
-
-        .essay-meta {
-            font-family: var(--font-heading);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--color-text-light);
-            margin-bottom: 2rem;
-        }
-
-        .essay-meta a {
-            color: var(--color-text-light);
-            text-decoration: none;
-        }
-
-        .essay-meta a:hover {
-            color: var(--color-accent);
-        }
-
-        h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(2rem, 4.5vw, 2.8rem);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-        }
-
-        .essay-subtitle {
-            font-size: 1.1rem;
-            color: var(--color-text-mid);
-            margin-bottom: 3rem;
-            line-height: 1.6;
-        }
-
-        .essay p {
-            margin-bottom: 1.4rem;
-            font-size: 1.05rem;
-        }
-
-        .essay h2 {
-            font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-top: 3rem;
-            margin-bottom: 1.2rem;
-            letter-spacing: -0.01em;
-        }
-
-        .essay .separator {
-            display: block;
-            text-align: center;
-            color: var(--color-rule);
-            margin: 2.5rem 0;
-            font-size: 1.2rem;
-            letter-spacing: 0.5em;
-        }
-
-        .essay-cta {
-            margin-top: 3.5rem;
-            padding: 2.5rem;
-            background-color: var(--color-bg-alt);
-            border: 1px solid var(--color-rule);
-            border-radius: 3px;
-        }
-
-        .essay-cta h3 {
-            font-family: var(--font-heading);
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .essay-cta p {
-            font-size: 0.95rem;
-            color: var(--color-text-mid);
-            margin-bottom: 1.5rem;
-        }
-
-        .essay-cta form {
-            display: flex;
-            gap: 0.75rem;
-            max-width: 24rem;
-        }
-
-        .essay-cta input {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            border: 1px solid var(--color-rule);
-            border-radius: 2px;
-            background: var(--color-white);
-            outline: none;
-        }
-
-        .essay-cta input:focus {
-            border-color: var(--color-accent);
-        }
-
-        .essay-cta button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-heading);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            background: var(--color-accent);
-            color: var(--color-white);
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-        }
-
-        .essay-cta button:hover {
-            background: var(--color-accent-hover);
-        }
-
-        .essay-footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--color-rule);
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-        }
-
-        .essay-footer a {
-            color: var(--color-text-mid);
-            text-decoration: none;
-        }
-
-        .essay-footer a:hover {
-            color: var(--color-accent);
-        }
-
-        @media (max-width: 640px) {
-            html { font-size: 16px; }
-            .essay { padding: 3rem 1.5rem 4rem; }
-            .essay-cta form { flex-direction: column; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+    <div class="page">
+
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="../index.html">
+                    <img src="../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../courses.html">Courses</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
     <article class="essay">
-        <div class="essay-meta"><a href="/">Joinery Systemworks</a></div>
+        <div class="essay-meta"><a href="../index.html">Joinery</a></div>
 
         <h1>The Wrong Question</h1>
         <p class="essay-subtitle">Why your prompts keep getting longer and your output keeps getting worse.</p>
@@ -257,8 +98,16 @@
         </div>
 
         <div class="essay-footer">
-            <p><a href="/">Joinery Systemworks</a> &middot; Created by <a href="https://petersalvato.com">Peter Salvato</a></p>
+            <p><a href="../index.html">Joinery</a> &middot; Created by <a href="https://petersalvato.com">Peter Salvato</a></p>
         </div>
     </article>
+
+    <script>
+        // Shadow on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
 </body>
 </html>
