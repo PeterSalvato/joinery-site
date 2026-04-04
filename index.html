@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joinery Systemworks — AI Methodology for Creative Practitioners</title>
+    <meta name="description" content="Joinery teaches Accommodation Design — a structural methodology for integrating AI into creative practice without losing what makes your work valuable.">
+    <meta property="og:title" content="Joinery Systemworks — AI Methodology for Creative Practitioners">
+    <meta property="og:description" content="A framework for building AI workflows where your judgment stays in the room and your output stays yours.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #F8F6F2;
+            --color-bg-alt: #F0EDE7;
+            --color-text: #222222;
+            --color-text-mid: #555555;
+            --color-text-light: #888888;
+            --color-accent: #C45A2D;
+            --color-accent-hover: #A84920;
+            --color-rule: #DDD9D1;
+            --color-white: #F8F6F2;
+            --color-dark: #1A1918;
+            --font-heading: 'Archivo', -apple-system, sans-serif;
+            --font-body: 'Figtree', -apple-system, sans-serif;
+            --measure: 40rem;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Layout ── */
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .section-inner {
+            max-width: var(--measure);
+            margin: 0 auto;
+        }
+
+        /* ── Header ── */
+
+        .header {
+            padding: 6rem 2rem 4rem;
+            text-align: left;
+        }
+
+        .header-inner {
+            max-width: var(--measure);
+            margin: 0 auto;
+        }
+
+        .wordmark {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 3rem;
+        }
+
+        .headline {
+            font-family: var(--font-heading);
+            font-size: clamp(2.4rem, 5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.12;
+            color: var(--color-text);
+            max-width: 16em;
+            letter-spacing: -0.02em;
+        }
+
+        .headline em {
+            font-style: normal;
+            font-weight: 300;
+            color: var(--color-accent);
+        }
+
+        /* ── Problem ── */
+
+        .problem {
+            background-color: var(--color-bg);
+        }
+
+        .problem p {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--color-text);
+            max-width: 34em;
+        }
+
+        .problem p + p {
+            margin-top: 1.2rem;
+        }
+
+        /* ── Offer ── */
+
+        .offer {
+            background-color: var(--color-bg-alt);
+            border-top: 1px solid var(--color-rule);
+            border-bottom: 1px solid var(--color-rule);
+        }
+
+        .offer-label {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .offer h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            max-width: 20em;
+            letter-spacing: -0.01em;
+        }
+
+        .offer p {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--color-text-mid);
+            max-width: 34em;
+        }
+
+        .offer p + p {
+            margin-top: 1.2rem;
+        }
+
+        /* ── Resources ── */
+
+        .resources {
+            background-color: var(--color-bg);
+        }
+
+        .resources-label {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 2rem;
+        }
+
+        .resources p.intro {
+            font-size: 1.05rem;
+            color: var(--color-text-mid);
+            margin-bottom: 2.5rem;
+            max-width: 34em;
+        }
+
+        .resource-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .resource-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--color-rule);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: color 0.2s ease;
+        }
+
+        .resource-item:first-child {
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .resource-item:hover {
+            color: var(--color-accent);
+        }
+
+        .resource-name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .resource-type {
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            flex-shrink: 0;
+            margin-left: 2rem;
+        }
+
+        .resource-item:hover .resource-type {
+            color: var(--color-accent);
+        }
+
+        /* ── Coming ── */
+
+        .coming {
+            background-color: var(--color-bg-alt);
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .coming-label {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .coming h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: 1.5rem;
+            max-width: 22em;
+            letter-spacing: -0.01em;
+        }
+
+        .coming-items {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .coming-item {
+            flex: 1;
+        }
+
+        .coming-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-item p {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--color-text-mid);
+        }
+
+        /* ── Signup ── */
+
+        .signup {
+            background-color: var(--color-dark);
+            color: var(--color-bg);
+            border-top: none;
+        }
+
+        .signup-inner {
+            max-width: var(--measure);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .signup h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .signup .subtitle {
+            font-size: 1.05rem;
+            color: var(--color-rule);
+            margin-bottom: 2.5rem;
+        }
+
+        .signup-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 28rem;
+            margin: 0 auto;
+        }
+
+        .signup-input {
+            flex: 1;
+            padding: 0.9rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            border: 1px solid #444;
+            border-radius: 2px;
+            background: transparent;
+            color: var(--color-bg);
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .signup-input::placeholder {
+            color: var(--color-text-light);
+        }
+
+        .signup-input:focus {
+            border-color: var(--color-accent);
+        }
+
+        .signup-button {
+            padding: 0.9rem 2rem;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .signup-button:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        /* ── Footer ── */
+
+        .footer {
+            padding: 2.5rem 2rem;
+            text-align: center;
+            background-color: var(--color-dark);
+            border-top: 1px solid #2A2928;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .footer a {
+            color: var(--color-rule);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .footer a:hover {
+            border-bottom-color: var(--color-rule);
+        }
+
+        /* ── Responsive ── */
+
+        @media (max-width: 640px) {
+            html {
+                font-size: 16px;
+            }
+
+            .header {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .coming-items {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .signup-form {
+                flex-direction: column;
+            }
+
+            .signup-button {
+                padding: 1rem 2rem;
+            }
+
+            .resource-item {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .resource-type {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="wordmark">Joinery Systemworks</div>
+                <h1 class="headline">AI methodology for <em>creative practitioners</em></h1>
+            </div>
+        </header>
+
+        <!-- Problem -->
+        <section class="section problem">
+            <div class="section-inner">
+                <p>Creatives face two AI fears at once. Don't use it, get replaced. Use it, and everything you make looks like everything everyone else is making.</p>
+                <p>Both fears point at the same gap: there is no framework for using AI that keeps the work distinctly yours.</p>
+            </div>
+        </section>
+
+        <!-- Offer -->
+        <section class="section offer">
+            <div class="section-inner">
+                <div class="offer-label">The Methodology</div>
+                <h2>Accommodation Design</h2>
+                <p>A structural methodology for integrating AI into creative practice without losing the thing that makes your work valuable: you.</p>
+                <p>Not prompt tutorials. Not tool roundups. A framework for building AI workflows where your judgment stays in the room and your output stays yours.</p>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="section resources">
+            <div class="section-inner">
+                <div class="resources-label">Available Now</div>
+                <p class="intro">Published research. Open-source tools. A working methodology in production, not a pitch deck.</p>
+                <ul class="resource-list">
+                    <li>
+                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18941231" target="_blank" rel="noopener">
+                            <span class="resource-name">Accommodation Design</span>
+                            <span class="resource-type">Whitepaper</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18962881" target="_blank" rel="noopener">
+                            <span class="resource-name">Input Inversion</span>
+                            <span class="resource-type">Whitepaper</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18962893" target="_blank" rel="noopener">
+                            <span class="resource-name">Prosthetic Cognition</span>
+                            <span class="resource-type">Whitepaper</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="resource-item" href="https://github.com/PeterSalvato/joinery" target="_blank" rel="noopener">
+                            <span class="resource-name">Joinery Skills Library</span>
+                            <span class="resource-type">Open Source</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Coming -->
+        <section class="section coming">
+            <div class="section-inner">
+                <div class="coming-label">In Development</div>
+                <h2>Courses, workshops, and a practitioner community built on the same methodology.</h2>
+                <div class="coming-items">
+                    <div class="coming-item">
+                        <h3>Courses</h3>
+                        <p>Self-paced and cohort-based. Each one grounded in published research and built around working tools you can use immediately.</p>
+                    </div>
+                    <div class="coming-item">
+                        <h3>Workshops</h3>
+                        <p>Small-group sessions focused on building your own AI methodology. Not following someone else's prompts. Building your own.</p>
+                    </div>
+                    <div class="coming-item">
+                        <h3>Community</h3>
+                        <p>Practitioners sharing what works, what broke, and what they built. A room for people doing the work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signup -->
+        <section class="section signup">
+            <div class="signup-inner">
+                <h2>Get on the list.</h2>
+                <p class="subtitle">First access when courses open.</p>
+                <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/joinerysystemworks" method="post">
+                    <input class="signup-input" type="email" name="email" placeholder="your email" required aria-label="Email address">
+                    <button class="signup-button" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Created by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>
