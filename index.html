@@ -81,13 +81,24 @@
         }
 
         .wordmark {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .wordmark img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .wordmark span {
             font-family: var(--font-heading);
             font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--color-text-light);
-            margin-bottom: 3rem;
         }
 
         .headline {
@@ -429,7 +440,10 @@
         <!-- Header -->
         <header class="header">
             <div class="header-inner">
-                <div class="wordmark">Joinery Systemworks</div>
+                <div class="wordmark">
+                    <img src="assets/logo.svg" alt="Joinery Systemworks">
+                    <span>Joinery Systemworks</span>
+                </div>
                 <h1 class="headline">AI methodology for <em>creative practitioners</em></h1>
             </div>
         </header>

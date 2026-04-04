@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wrong Question — Joinery Systemworks</title>
+    <meta name="description" content="The AI governance field asks how to control the model. The better question comes from a special education classroom in Brooklyn.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #F8F6F2;
+            --color-bg-alt: #F0EDE7;
+            --color-text: #222222;
+            --color-text-mid: #555555;
+            --color-text-light: #888888;
+            --color-accent: #C45A2D;
+            --color-accent-hover: #A84920;
+            --color-rule: #DDD9D1;
+            --color-white: #F8F6F2;
+            --color-dark: #1A1918;
+            --font-heading: 'Archivo', -apple-system, sans-serif;
+            --font-body: 'Figtree', -apple-system, sans-serif;
+            --measure: 36rem;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { font-size: 18px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .essay {
+            max-width: var(--measure);
+            margin: 0 auto;
+            padding: 5rem 2rem 6rem;
+        }
+
+        .essay-meta {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 2rem;
+        }
+
+        .essay-meta a {
+            color: var(--color-text-light);
+            text-decoration: none;
+        }
+
+        .essay-meta a:hover {
+            color: var(--color-accent);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .essay-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-mid);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .essay p {
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
+        }
+
+        .essay h2 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .essay .separator {
+            display: block;
+            text-align: center;
+            color: var(--color-rule);
+            margin: 2.5rem 0;
+            font-size: 1.2rem;
+            letter-spacing: 0.5em;
+        }
+
+        .essay-cta {
+            margin-top: 3.5rem;
+            padding: 2.5rem;
+            background-color: var(--color-bg-alt);
+            border: 1px solid var(--color-rule);
+            border-radius: 3px;
+        }
+
+        .essay-cta h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .essay-cta p {
+            font-size: 0.95rem;
+            color: var(--color-text-mid);
+            margin-bottom: 1.5rem;
+        }
+
+        .essay-cta form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 24rem;
+        }
+
+        .essay-cta input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            border: 1px solid var(--color-rule);
+            border-radius: 2px;
+            background: var(--color-white);
+            outline: none;
+        }
+
+        .essay-cta input:focus {
+            border-color: var(--color-accent);
+        }
+
+        .essay-cta button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .essay-cta button:hover {
+            background: var(--color-accent-hover);
+        }
+
+        .essay-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-rule);
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .essay-footer a {
+            color: var(--color-text-mid);
+            text-decoration: none;
+        }
+
+        .essay-footer a:hover {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 640px) {
+            html { font-size: 16px; }
+            .essay { padding: 3rem 1.5rem 4rem; }
+            .essay-cta form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <article class="essay">
+        <div class="essay-meta"><a href="/">Joinery Systemworks</a></div>
+
+        <h1>The Wrong Question</h1>
+        <p class="essay-subtitle">Why your prompts keep getting longer and your output keeps getting worse.</p>
+
+        <p>You write a prompt. The output is close but flat. So you add detail. You specify tone, structure, audience, format. You add examples. The prompt grows to three paragraphs, then five. The output gets different, but it does not get better. It gets blurry. You add more constraints. The model starts contradicting itself within the same response. You conclude that the tool is not capable enough, and you wait for the next version.</p>
+
+        <p>This is the most common experience practitioners have with AI, and almost everyone draws the wrong conclusion from it.</p>
+
+        <p>The problem is not the model. The problem is the question you are asking about the model. The entire AI governance conversation, from prompt engineering courses to enterprise deployment frameworks, starts from the same premise: how do we control what the model does? How do we constrain the output to match what we need?</p>
+
+        <p>There is a better question. It comes from a discipline that has been solving this exact structural problem for decades, in rooms full of people with wildly different processing profiles, under federal law.</p>
+
+        <h2>A compound instruction is not one instruction</h2>
+
+        <p>In a special education classroom, a compound instruction looks like this: "Take out your notebook, turn to page 42, and answer questions three through seven." For a neurotypical student, that is one task. For a student with processing delays, that is three tasks delivered simultaneously, and if you do not break them apart, the student fails before they start.</p>
+
+        <p>The failure is not about ability. The student can do all three things. The failure is about input format. The instruction arrived in a shape the receiving system could not process whole.</p>
+
+        <p>The fix, codified in federal special education law, is called task decomposition. You break compound instructions into sequential, single-objective steps. You provide each step with clear success criteria. You let the student complete one before introducing the next. The capability was always there. The structure of the input was the barrier.</p>
+
+        <span class="separator">&bull; &bull; &bull;</span>
+
+        <p>Now look at what happens when you give an AI a compound evaluation prompt: "Evaluate this work for voice quality, structural integrity, narrative coherence, and brand alignment." The model processes the first criterion with full attention. Each subsequent criterion gets less. By the fourth, the model is blending dimensions together, producing a vague average that is none of them. Contradictions appear within a single response. The evaluation is mush.</p>
+
+        <p>The structural problem is identical. A compound instruction delivered to a system that cannot process it whole. The response most practitioners reach for is also identical to the wrong one in a classroom: repeat the instruction louder. Add more detail. Write a longer prompt. Specify harder.</p>
+
+        <p>The fix is identical too. Decompose. One dimension per prompt. One clear objective. One defined output. Run them independently. A coordinator collects the results and maps where they converge (act on it) and where they diverge (the practitioner decides). The model was never incapable. The instruction was shaped wrong for the system receiving it.</p>
+
+        <h2>Accommodation, not constraint</h2>
+
+        <p>Special education calls this accommodation. You design the input to match the processing reality of the receiving system. You do not ask how to control what the student does. You ask what does this student actually need to do this work well. The question changes what you see. It changes what you build. And it changes the results.</p>
+
+        <p>The same question, applied to AI, changes everything about how you work with it. Instead of asking how to constrain the model's output, you ask what the model actually needs: decomposed tasks, single objectives, clear criteria, independent evaluation. You design the input to match the processing architecture.</p>
+
+        <p>This reframe is the foundation of Accommodation Design. It is not a technique. It is a question you learn to ask first, before any prompt, before any workflow, before any system design. What does the system receiving this work actually need to do the job well?</p>
+
+        <h2>Both systems in the room</h2>
+
+        <p>The reframe goes further than the model. In any AI-mediated workflow, there are two systems in the room. The model has processing realities: token limits, context degradation, attention distribution. The human has processing realities too: limited working memory, cognitive fatigue, the gap between having an idea and articulating it clearly.</p>
+
+        <p>Most AI workflows accommodate neither. The model gets compound instructions it cannot process whole. The human gets asked to produce carefully structured input at the exact moment their thinking is least structured, when the idea is raw and alive and has not been organized yet.</p>
+
+        <p>Accommodation Design works both directions. Structure the model's input so it matches how the model processes. Remove friction from the human's input so raw thinking enters the system without losing fidelity. The tools handle the translation. The model gets what it needs. The practitioner gets to think like a practitioner, not like a prompt engineer.</p>
+
+        <h2>Try this today</h2>
+
+        <p>Take one prompt you use regularly. One that produces output that is close but never quite right. Ask yourself: is this actually one task, or is it several tasks wearing a single prompt?</p>
+
+        <p>Break it apart. One objective per prompt. Run each one independently. Compare what you get to what you were getting before.</p>
+
+        <p>The difference will not be subtle.</p>
+
+        <div class="essay-cta">
+            <h3>Accommodation Design is a six-domain methodology.</h3>
+            <p>Task decomposition is the starting point. The full framework covers input architecture, cognitive extension, semantic preservation, voice governance, and evaluation design. Courses and workshops are in development.</p>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/joinerysystemworks" method="post">
+                <input type="email" name="email" placeholder="your email" required aria-label="Email address">
+                <button type="submit">Get updates</button>
+            </form>
+        </div>
+
+        <div class="essay-footer">
+            <p><a href="/">Joinery Systemworks</a> &middot; Created by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </div>
+    </article>
+</body>
+</html>
