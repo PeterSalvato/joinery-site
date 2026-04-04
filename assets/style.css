@@ -374,6 +374,17 @@ body {
     font-weight: 500;
 }
 
+.paper-subtitle {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-top: 0.2rem;
+}
+
+.paper:hover .paper-subtitle { color: var(--color-accent); }
+
 .paper-tag {
     font-family: var(--font-heading);
     font-size: 0.6rem;
