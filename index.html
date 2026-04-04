@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joinery Systemworks — AI Methodology for Creative Practitioners</title>
-    <meta name="description" content="Joinery teaches Accommodation Design — a structural methodology for integrating AI into creative practice without losing what makes your work valuable.">
-    <meta property="og:title" content="Joinery Systemworks — AI Methodology for Creative Practitioners">
-    <meta property="og:description" content="A framework for building AI workflows where your judgment stays in the room and your output stays yours.">
+    <title>Joinery — A School for AI Methodology</title>
+    <meta name="description" content="Joinery teaches Accommodation Design: a structural methodology for creative practitioners integrating AI into their practice. Published research. Working tools. Real curriculum.">
+    <meta property="og:title" content="Joinery — A School for AI Methodology">
+    <meta property="og:description" content="Published research. Working tools. A real curriculum for creative practitioners who use AI and want to keep the work theirs.">
     <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
     <style>
         :root {
             --color-bg: #F8F6F2;
@@ -25,21 +28,11 @@
             --color-dark: #1A1918;
             --font-heading: 'Archivo', -apple-system, sans-serif;
             --font-body: 'Figtree', -apple-system, sans-serif;
-            --measure: 40rem;
+            --measure: 44rem;
         }
 
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 18px; scroll-behavior: smooth; }
 
         body {
             font-family: var(--font-body);
@@ -48,189 +41,359 @@
             background-color: var(--color-bg);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ── Layout ── */
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .section { padding: 4.5rem 2rem; }
+        .section-inner { max-width: var(--measure); margin: 0 auto; }
 
-        .page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        /* ── Sticky Nav ── */
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--color-bg);
+            border-bottom: 1px solid var(--color-rule);
+            padding: 0 2rem;
+            transition: box-shadow 0.2s ease;
         }
 
-        .section {
-            padding: 4rem 2rem;
+        .nav.scrolled {
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
         }
 
-        .section-inner {
+        .nav-inner {
             max-width: var(--measure);
             margin: 0 auto;
-        }
-
-        /* ── Header ── */
-
-        .header {
-            padding: 6rem 2rem 4rem;
-            text-align: left;
-        }
-
-        .header-inner {
-            max-width: var(--measure);
-            margin: 0 auto;
-        }
-
-        .wordmark {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 3rem;
+            justify-content: space-between;
+            height: 3.2rem;
         }
 
-        .wordmark img {
-            width: 32px;
-            height: 32px;
+        .nav-mark {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--color-text);
         }
 
-        .wordmark span {
+        .nav-mark img { width: 20px; height: 20px; }
+
+        .nav-mark span {
             font-family: var(--font-heading);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
             font-weight: 600;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--color-text-light);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: var(--color-text); }
+        .nav-links a.active { color: var(--color-accent); }
+
+        .label {
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
             color: var(--color-text-light);
+            margin-bottom: 1.5rem;
         }
 
-        .headline {
+        /* ── Hero ── */
+
+        .hero {
+            padding: 4rem 2rem 4rem;
+        }
+
+        .hero-inner {
+            max-width: var(--measure);
+            margin: 0 auto;
+        }
+
+        .hero-mark {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .hero-mark img { width: 28px; height: 28px; }
+
+        .hero-mark span {
             font-family: var(--font-heading);
-            font-size: clamp(2.4rem, 5vw, 3.4rem);
+            font-size: 0.85rem;
             font-weight: 700;
-            line-height: 1.12;
+            letter-spacing: 0.04em;
             color: var(--color-text);
-            max-width: 16em;
-            letter-spacing: -0.02em;
         }
 
-        .headline em {
-            font-style: normal;
-            font-weight: 300;
-            color: var(--color-accent);
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            color: var(--color-text);
+            max-width: 14em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--color-text-mid);
+            max-width: 32em;
         }
 
         /* ── Problem ── */
 
-        .problem {
-            background-color: var(--color-bg);
-        }
+        .problem { background-color: var(--color-bg); }
 
-        .problem p {
-            font-size: 1.15rem;
-            line-height: 1.75;
+        .problem-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
             color: var(--color-text);
-            max-width: 34em;
+            max-width: 30em;
+            font-weight: 400;
         }
 
-        .problem p + p {
-            margin-top: 1.2rem;
-        }
+        .problem-text + .problem-text { margin-top: 1.2rem; }
 
-        /* ── Offer ── */
+        /* ── Methodology ── */
 
-        .offer {
+        .methodology {
             background-color: var(--color-bg-alt);
             border-top: 1px solid var(--color-rule);
             border-bottom: 1px solid var(--color-rule);
         }
 
-        .offer-label {
+        .methodology h2 {
             font-family: var(--font-heading);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--color-text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .offer h2 {
-            font-family: var(--font-heading);
-            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
             font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 1.5rem;
-            max-width: 20em;
+            line-height: 1.2;
             letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
         }
 
-        .offer p {
+        .methodology p {
             font-size: 1.05rem;
             line-height: 1.75;
             color: var(--color-text-mid);
             max-width: 34em;
         }
 
-        .offer p + p {
-            margin-top: 1.2rem;
-        }
+        .methodology p + p { margin-top: 1rem; }
 
-        /* ── Resources ── */
+        /* ── Curriculum ── */
 
-        .resources {
-            background-color: var(--color-bg);
-        }
+        .curriculum { background-color: var(--color-bg); }
 
-        .resources-label {
+        .curriculum h2 {
             font-family: var(--font-heading);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--color-text-light);
-            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.75rem;
         }
 
-        .resources p.intro {
+        .curriculum > .section-inner > p {
             font-size: 1.05rem;
             color: var(--color-text-mid);
             margin-bottom: 2.5rem;
             max-width: 34em;
         }
 
-        .resource-list {
+        .domain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background-color: var(--color-rule);
+            border: 1px solid var(--color-rule);
+        }
+
+        .domain {
+            background-color: var(--color-bg);
+            padding: 1.75rem;
+        }
+
+        .domain-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 1rem;
+            color: var(--color-accent);
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+            line-height: 1;
+        }
+
+        .domain-number {
+            font-family: var(--font-heading);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+        }
+
+        .domain h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--color-text-mid);
+        }
+
+        .domain-note {
+            grid-column: 1 / -1;
+            background-color: var(--color-bg-alt);
+            padding: 1.5rem 1.75rem;
+            font-size: 0.9rem;
+            color: var(--color-text-mid);
+            line-height: 1.6;
+        }
+
+        /* ── Tracks ── */
+
+        .tracks {
+            background-color: var(--color-bg-alt);
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .tracks h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 2.5rem;
+        }
+
+        .track-list {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .track {
+            flex: 1;
+            border-top: 3px solid var(--color-text);
+            padding-top: 1.5rem;
+        }
+
+        .track-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .track-icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 1.1rem;
+            color: var(--color-text);
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+            line-height: 1;
+        }
+
+        .track h3 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .track-who {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+
+        .track p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--color-text-mid);
+        }
+
+        /* ── Research ── */
+
+        .research { background-color: var(--color-bg); }
+
+        .research h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.75rem;
+        }
+
+        .research > .section-inner > p {
+            font-size: 1.05rem;
+            color: var(--color-text-mid);
+            margin-bottom: 2rem;
+            max-width: 34em;
+        }
+
+        .paper-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 1px;
         }
 
-        .resource-item {
+        .paper {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            padding: 1.1rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid var(--color-rule);
             text-decoration: none;
             color: var(--color-text);
             transition: color 0.2s ease;
         }
 
-        .resource-item:first-child {
-            border-top: 1px solid var(--color-rule);
-        }
+        .paper:first-child { border-top: 1px solid var(--color-rule); }
+        .paper:hover { color: var(--color-accent); }
 
-        .resource-item:hover {
-            color: var(--color-accent);
-        }
-
-        .resource-name {
+        .paper-title {
             font-family: var(--font-heading);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 500;
         }
 
-        .resource-type {
+        .paper-tag {
             font-family: var(--font-heading);
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -239,58 +402,161 @@
             margin-left: 2rem;
         }
 
-        .resource-item:hover .resource-type {
-            color: var(--color-accent);
-        }
+        .paper:hover .paper-tag { color: var(--color-accent); }
 
-        /* ── Coming ── */
+        /* ── Now Enrolling ── */
 
-        .coming {
+        .enrolling {
             background-color: var(--color-bg-alt);
             border-top: 1px solid var(--color-rule);
         }
 
-        .coming-label {
+        .enrolling h2 {
             font-family: var(--font-heading);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--color-text-light);
-            margin-bottom: 1.5rem;
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.75rem;
         }
 
-        .coming h2 {
+        .enrolling > .section-inner > p {
+            font-size: 1.05rem;
+            color: var(--color-text-mid);
+            margin-bottom: 2rem;
+            max-width: 34em;
+        }
+
+        .course-card {
+            border: 1px solid var(--color-rule);
+            background: var(--color-bg);
+            padding: 2rem;
+        }
+
+        .course-card h3 {
             font-family: var(--font-heading);
-            font-size: clamp(1.4rem, 3vw, 1.8rem);
-            font-weight: 600;
-            line-height: 1.35;
-            margin-bottom: 1.5rem;
-            max-width: 22em;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
             letter-spacing: -0.01em;
         }
 
-        .coming-items {
-            display: flex;
-            gap: 3rem;
-            margin-top: 2rem;
+        .course-meta {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 1.25rem;
         }
 
-        .coming-item {
-            flex: 1;
-        }
-
-        .coming-item h3 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .coming-item p {
-            font-size: 0.95rem;
-            line-height: 1.65;
+        .course-card p {
+            font-size: 1rem;
+            line-height: 1.7;
             color: var(--color-text-mid);
+            max-width: 34em;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-includes {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-includes li {
+            font-size: 0.85rem;
+            color: var(--color-text-mid);
+            padding-left: 1.8rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .course-includes .material-symbols-outlined {
+            position: absolute;
+            left: 0;
+            top: 0.15em;
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+        }
+
+        .course-cta {
+            display: inline-block;
+            padding: 0.85rem 2rem;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--color-accent);
+            color: var(--color-white);
+            border-radius: 2px;
+            transition: background 0.2s ease;
+        }
+
+        .course-cta:hover { background: var(--color-accent-hover); }
+
+        /* ── Reading ── */
+
+        .reading {
+            background-color: var(--color-bg);
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .reading h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 2rem;
+        }
+
+        .essay-link {
+            display: block;
+            padding: 1.75rem;
+            border: 1px solid var(--color-rule);
+            background: var(--color-bg-alt);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .essay-link:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .essay-tag {
+            font-family: var(--font-heading);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .essay-tag .material-symbols-outlined {
+            font-size: 0.9rem;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+        }
+
+        .essay-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .essay-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-mid);
+            line-height: 1.6;
         }
 
         /* ── Signup ── */
@@ -298,7 +564,6 @@
         .signup {
             background-color: var(--color-dark);
             color: var(--color-bg);
-            border-top: none;
         }
 
         .signup-inner {
@@ -309,7 +574,7 @@
 
         .signup h2 {
             font-family: var(--font-heading);
-            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 0.75rem;
@@ -317,7 +582,7 @@
         }
 
         .signup .subtitle {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: var(--color-rule);
             margin-bottom: 2.5rem;
         }
@@ -331,7 +596,7 @@
 
         .signup-input {
             flex: 1;
-            padding: 0.9rem 1.2rem;
+            padding: 0.85rem 1.2rem;
             font-family: var(--font-body);
             font-size: 1rem;
             border: 1px solid #444;
@@ -342,33 +607,26 @@
             transition: border-color 0.2s ease;
         }
 
-        .signup-input::placeholder {
-            color: var(--color-text-light);
-        }
-
-        .signup-input:focus {
-            border-color: var(--color-accent);
-        }
+        .signup-input::placeholder { color: var(--color-text-light); }
+        .signup-input:focus { border-color: var(--color-accent); }
 
         .signup-button {
-            padding: 0.9rem 2rem;
+            padding: 0.85rem 2rem;
             font-family: var(--font-heading);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            background-color: var(--color-accent);
+            background: var(--color-accent);
             color: var(--color-white);
             border: none;
             border-radius: 2px;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: background 0.2s ease;
             white-space: nowrap;
         }
 
-        .signup-button:hover {
-            background-color: var(--color-accent-hover);
-        }
+        .signup-button:hover { background: var(--color-accent-hover); }
 
         /* ── Footer ── */
 
@@ -379,10 +637,7 @@
             border-top: 1px solid #2A2928;
         }
 
-        .footer p {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-        }
+        .footer p { font-size: 0.85rem; color: var(--color-text-light); }
 
         .footer a {
             color: var(--color-rule);
@@ -391,154 +646,265 @@
             transition: border-color 0.2s ease;
         }
 
-        .footer a:hover {
-            border-bottom-color: var(--color-rule);
-        }
+        .footer a:hover { border-bottom-color: var(--color-rule); }
 
         /* ── Responsive ── */
 
         @media (max-width: 640px) {
-            html {
-                font-size: 16px;
-            }
-
-            .header {
-                padding: 4rem 1.5rem 3rem;
-            }
-
-            .section {
-                padding: 3rem 1.5rem;
-            }
-
-            .coming-items {
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .signup-form {
-                flex-direction: column;
-            }
-
-            .signup-button {
-                padding: 1rem 2rem;
-            }
-
-            .resource-item {
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-
-            .resource-type {
-                margin-left: 0;
-            }
+            html { font-size: 16px; }
+            .hero { padding: 3.5rem 1.5rem 3rem; }
+            .section { padding: 3rem 1.5rem; }
+            .domain-grid { grid-template-columns: 1fr; }
+            .track-list { flex-direction: column; gap: 2rem; }
+            .course-includes { grid-template-columns: 1fr; }
+            .signup-form { flex-direction: column; }
+            .signup-button { padding: 1rem 2rem; }
+            .paper { flex-direction: column; gap: 0.25rem; }
+            .paper-tag { margin-left: 0; }
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.55rem; letter-spacing: 0.06em; }
         }
     </style>
 </head>
 <body>
     <div class="page">
 
-        <!-- Header -->
-        <header class="header">
-            <div class="header-inner">
-                <div class="wordmark">
-                    <img src="assets/logo.svg" alt="Joinery Systemworks">
-                    <span>Joinery Systemworks</span>
-                </div>
-                <h1 class="headline">AI methodology for <em>creative practitioners</em></h1>
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="#">
+                    <img src="assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#methodology">Methodology</a></li>
+                    <li><a href="#curriculum">Curriculum</a></li>
+                    <li><a href="#tracks">Tracks</a></li>
+                    <li><a href="#foundations">Foundations</a></li>
+                    <li><a href="#signup">Enroll</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-inner">
+                <h1>A school for creative practitioners who use AI.</h1>
+                <p class="hero-sub">Joinery teaches Accommodation Design: a structural methodology for integrating AI into your practice without losing what makes the work yours. Published research. Working tools. Real curriculum.</p>
             </div>
         </header>
 
         <!-- Problem -->
         <section class="section problem">
             <div class="section-inner">
-                <p>Creatives face two AI fears at once. Don't use it, get replaced. Use it, and everything you make looks like everything everyone else is making.</p>
-                <p>Both fears point at the same gap: there is no framework for using AI that keeps the work distinctly yours.</p>
+                <p class="problem-text">Creatives face two fears at once. Don't use AI, get replaced. Use it, and everything you make looks like everything everyone else is making.</p>
+                <p class="problem-text">The tool tutorials won't fix this. The prompt engineering courses won't fix this. The problem is structural, and it requires a methodology, not a hack.</p>
             </div>
         </section>
 
-        <!-- Offer -->
-        <section class="section offer">
+        <!-- Methodology -->
+        <section class="section methodology" id="methodology">
             <div class="section-inner">
-                <div class="offer-label">The Methodology</div>
+                <div class="label">The Methodology</div>
                 <h2>Accommodation Design</h2>
-                <p>A structural methodology for integrating AI into creative practice without losing the thing that makes your work valuable: you.</p>
-                <p>Not prompt tutorials. Not tool roundups. A framework for building AI workflows where your judgment stays in the room and your output stays yours.</p>
+                <p>The AI governance field asks one question: how do we control what the model does? Accommodation Design asks a different one: what does the system actually need to do this job well?</p>
+                <p>That question comes from special education classrooms, where designing around the processing reality of the receiving system is federal law. Applied to AI, it changes everything: how you structure input, how you preserve your voice, how you evaluate output, and how you keep your judgment in the room.</p>
             </div>
         </section>
 
-        <!-- Resources -->
-        <section class="section resources">
+        <!-- Curriculum -->
+        <section class="section curriculum" id="curriculum">
             <div class="section-inner">
-                <div class="resources-label">Available Now</div>
-                <p class="intro">Published research. Open-source tools. A working methodology in production, not a pitch deck.</p>
-                <ul class="resource-list">
+                <div class="label">The Curriculum</div>
+                <h2>Six domains. One methodology.</h2>
+                <p>Each domain answers the founding question from a different angle. They build on each other in sequence.</p>
+                <div class="domain-grid">
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">architecture</span><div class="domain-number">Domain 1</div></div>
+                        <h3>Accommodation Design</h3>
+                        <p>The founding reframe. Ask what the system needs, not how to constrain it. Task decomposition as accommodation.</p>
+                    </div>
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">grain</span><div class="domain-number">Domain 2</div></div>
+                        <h3>Input Inversion</h3>
+                        <p>Unstructured human input plus structured tools beats structured prompts. The burden of organization belongs to the tooling.</p>
+                    </div>
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">skeleton</span><div class="domain-number">Domain 3</div></div>
+                        <h3>Prosthetic Cognition</h3>
+                        <p>AI as cognitive extension, not tool and not replacement. A harness that extends reach without climbing for you.</p>
+                    </div>
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">layers</span><div class="domain-number">Domain 4</div></div>
+                        <h3>Semantic Hierarchy</h3>
+                        <p>AI memory flattens everything. Human-marked importance preserves what mattered. Without it, better recall just produces more flattened material.</p>
+                    </div>
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">fingerprint</span><div class="domain-number">Domain 5</div></div>
+                        <h3>Voice Governance</h3>
+                        <p>Constraints applied during generation produce structurally different output than constraints applied after. Voice is structural, not stylistic.</p>
+                    </div>
+                    <div class="domain">
+                        <div class="domain-header"><span class="domain-icon material-symbols-outlined">biotech</span><div class="domain-number">Domain 6</div></div>
+                        <h3>Lens Extraction</h3>
+                        <p>"Is this good?" is twelve questions. Extract what strong practitioners consistently ask, codify as testable criteria, run independently.</p>
+                    </div>
+                    <div class="domain-note">Domains build in sequence. Accommodation Design is the foundation. Lens Extraction is the capstone. Each domain has its own courses across practitioner, director, and educator levels.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tracks -->
+        <section class="section tracks" id="tracks">
+            <div class="section-inner">
+                <div class="label">Three Tracks</div>
+                <h2>Same methodology. Different practice.</h2>
+                <div class="track-list">
+                    <div class="track">
+                        <div class="track-header"><span class="track-icon material-symbols-outlined">handyman</span><h3>Practitioner</h3></div>
+                        <p class="track-who">Solo creatives protecting their own work.</p>
+                        <p>Build a personal AI methodology. Your voice protocol. Your evaluation lenses. Your accommodation architecture. The framework becomes yours.</p>
+                    </div>
+                    <div class="track">
+                        <div class="track-header"><span class="track-icon material-symbols-outlined">workspaces</span><h3>Director</h3></div>
+                        <p class="track-who">Leading teams through AI adoption.</p>
+                        <p>Build systems your team can use. Shared voice protocols, evaluation standards, accommodation documents. The methodology survives beyond you.</p>
+                    </div>
+                    <div class="track">
+                        <div class="track-header"><span class="track-icon material-symbols-outlined">school</span><h3>Educator</h3></div>
+                        <p class="track-who">Teaching the next generation of practitioners.</p>
+                        <p>The pedagogical framework behind the methodology. Curriculum design, assessment criteria, and classroom integration for AI-mediated creative education.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Now Enrolling -->
+        <section class="section enrolling" id="foundations">
+            <div class="section-inner">
+                <div class="label">Now Enrolling</div>
+                <h2>Foundations</h2>
+                <p>The entry point. Three weeks of self-paced study covering the full methodology. You finish with a working AI practice document built around your own work.</p>
+                <div class="course-card">
+                    <h3>AI Accommodation: The Foundations</h3>
+                    <div class="course-meta">Self-paced &middot; 3 weeks &middot; $299</div>
+                    <p>The accommodation reframe. The six domains in practice. Your own methodology document as the deliverable. Built for designers, but the framework applies to any creative practice.</p>
+                    <ul class="course-includes">
+                        <li><span class="material-symbols-outlined">videocam</span>8-12 video lessons</li>
+                        <li><span class="material-symbols-outlined">draft</span>12 written lessons</li>
+                        <li><span class="material-symbols-outlined">construction</span>3 applied exercises</li>
+                        <li><span class="material-symbols-outlined">inventory_2</span>Downloadable toolkit</li>
+                        <li><span class="material-symbols-outlined">trophy</span>Final deliverable</li>
+                        <li><span class="material-symbols-outlined">lab_research</span>Published research access</li>
+                    </ul>
+                    <a class="course-cta" href="#signup">Enroll when open</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading -->
+        <section class="section reading">
+            <div class="section-inner">
+                <div class="label">Start Reading</div>
+                <h2>Free essays from the methodology.</h2>
+                <a class="essay-link" href="essays/the-wrong-question.html">
+                    <div class="essay-tag"><span class="material-symbols-outlined">auto_stories</span>Free Essay</div>
+                    <div class="essay-title">The Wrong Question</div>
+                    <div class="essay-desc">Why your prompts keep getting longer and your output keeps getting worse.</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section class="section research">
+            <div class="section-inner">
+                <div class="label">Published Research</div>
+                <h2>The methodology is documented, tested, and cited.</h2>
+                <p>Every course at Joinery is grounded in published research with DOIs. The tools are open source. The site you are reading was built by the system it teaches.</p>
+                <ul class="paper-list">
                     <li>
-                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18941231" target="_blank" rel="noopener">
-                            <span class="resource-name">Accommodation Design</span>
-                            <span class="resource-type">Whitepaper</span>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18941231" target="_blank" rel="noopener">
+                            <span class="paper-title">Accommodation Design</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
                         </a>
                     </li>
                     <li>
-                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18962881" target="_blank" rel="noopener">
-                            <span class="resource-name">Input Inversion</span>
-                            <span class="resource-type">Whitepaper</span>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18962881" target="_blank" rel="noopener">
+                            <span class="paper-title">Input Inversion</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
                         </a>
                     </li>
                     <li>
-                        <a class="resource-item" href="https://doi.org/10.5281/zenodo.18962893" target="_blank" rel="noopener">
-                            <span class="resource-name">Prosthetic Cognition</span>
-                            <span class="resource-type">Whitepaper</span>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18962893" target="_blank" rel="noopener">
+                            <span class="paper-title">Prosthetic Cognition</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
                         </a>
                     </li>
                     <li>
-                        <a class="resource-item" href="https://github.com/PeterSalvato/joinery" target="_blank" rel="noopener">
-                            <span class="resource-name">Joinery Skills Library</span>
-                            <span class="resource-type">Open Source</span>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986290" target="_blank" rel="noopener">
+                            <span class="paper-title">Semantic Flattening</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986295" target="_blank" rel="noopener">
+                            <span class="paper-title">Lens Extraction</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="paper" href="https://doi.org/10.5281/zenodo.18986297" target="_blank" rel="noopener">
+                            <span class="paper-title">Voice Governance</span>
+                            <span class="paper-tag">Whitepaper &middot; DOI</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Coming -->
-        <section class="section coming">
-            <div class="section-inner">
-                <div class="coming-label">In Development</div>
-                <h2>Courses, workshops, and a practitioner community built on the same methodology.</h2>
-                <div class="coming-items">
-                    <div class="coming-item">
-                        <h3>Courses</h3>
-                        <p>Self-paced and cohort-based. Each one grounded in published research and built around working tools you can use immediately.</p>
-                    </div>
-                    <div class="coming-item">
-                        <h3>Workshops</h3>
-                        <p>Small-group sessions focused on building your own AI methodology. Not following someone else's prompts. Building your own.</p>
-                    </div>
-                    <div class="coming-item">
-                        <h3>Community</h3>
-                        <p>Practitioners sharing what works, what broke, and what they built. A room for people doing the work.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Signup -->
-        <section class="section signup">
+        <section class="section signup" id="signup">
             <div class="signup-inner">
-                <h2>Get on the list.</h2>
-                <p class="subtitle">First access when courses open.</p>
+                <h2>Enrollment opens soon.</h2>
+                <p class="subtitle">Get first access to the Foundations course and everything that follows.</p>
                 <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/joinerysystemworks" method="post">
                     <input class="signup-input" type="email" name="email" placeholder="your email" required aria-label="Email address">
-                    <button class="signup-button" type="submit">Subscribe</button>
+                    <button class="signup-button" type="submit">Get on the list</button>
                 </form>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Created by <a href="https://petersalvato.com">Peter Salvato</a></p>
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
         </footer>
 
     </div>
+    <script>
+        // Shadow on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Active link on scroll
+        const sections = document.querySelectorAll('.section[id], .hero');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const id = entry.target.id;
+                    if (id) {
+                        const active = document.querySelector(`.nav-links a[href="#${id}"]`);
+                        if (active) active.classList.add('active');
+                    }
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        sections.forEach(s => { if (s.id) observer.observe(s); });
+    </script>
 </body>
 </html>
