@@ -718,6 +718,26 @@ Teaching point: "Standard prompting produces knowledge-telling: the AI dumps wha
 
 ---
 
+## Course Summary
+
+Three weeks. One complete cycle.
+
+In Week 1 you watched compound prompts degrade. You saw why a single instruction with five objectives splits the model's attention across all of them, why the output comes back competent-but-shallow, and what decomposition does to fix it. You ran five specialist prompts, saw each go deeper than the compound version, and synthesized the outputs into a brief that only a human creative director could have written.
+
+In Week 2 you saw why structured prompts cap the output at the level of the prompt itself, and why unstructured human thinking, captured as raw voice, produces richer results when it becomes the input. You ran a brain dump. You built structured inputs from it. You compared what the model returned against the compound baseline.
+
+In Week 3 you wrote a voice protocol by listening to how you actually talk. You extracted operational rules. You loaded them as governance constraints during generation. You tested the output, caught where the model found loopholes, sharpened the rules, and ran the cycle again.
+
+Across all three weeks one idea holds: **you are the creative director, and the AI is your department.** [SOURCE: compound-prompt-demo.md, line 437; NORTHSTAR.md, line 31] You decide what to decompose. You decide what the inputs should contain. You decide what voice rules govern the work. The model is a capable specialist whose work you scope, shape, and constrain, exactly like any specialist reporting to you.
+
+The methodology is portable. The specific tools will change. The underlying move stays the same: ask what the system receiving the work actually needs to succeed, then structure your instructions around that reality. That question came from a self-contained classroom in Sunset Park, Brooklyn, with twelve students on twelve IEPs, where designing around the processing reality of the receiving system is federal law. The fix was identical when the system receiving the work was a language model instead of a nine-year-old. [SOURCE: essay, what-does-the-system-actually-need.md] That transfer is why the framework has a name: Accommodation Design.
+
+From here, the practitioner-track courses go deeper into each domain. Input Inversion, Prosthetic Cognition, Semantic Hierarchy, Voice Governance, and Lens Extraction each take a single domain, examine it as a standing practice, and expand what you've done in Foundations into sustained working methodology.
+
+You've done the Foundations. The work from here is yours to shape.
+
+---
+
 ## Source Inventory
 
 All content in this document is compiled from the following files:

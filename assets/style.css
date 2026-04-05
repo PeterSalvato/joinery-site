@@ -470,6 +470,15 @@ p {
     content: ' \2192';
 }
 
+.status-indicator {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
 
 /* ================================================================
    Signup (dark section)

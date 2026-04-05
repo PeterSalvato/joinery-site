@@ -444,7 +444,19 @@ Documentation template:
 Teaching application: "Extreme case of decomposition benefit. When the task exceeds the model's capacity as a single step, decomposition doesn't just improve results, it makes them possible at all."
 [SOURCE: cognitive-science-references.md, Zhou "Maps to" note]
 
-[NEEDS PETER: Template introduction and framing text. The scaffold says "Peter writes" for this. The steps above are the operational template. Peter needs to write the framing that sets the student up for the exercise.]
+### Framing the Exercise
+
+You have watched decomposition work on Voss Type. A compound prompt that asked for five dimensions at once. Five specialist prompts that each went deeper. A synthesis step that made the human the creative director.
+
+Now you do it on your own work.
+
+You already have the material. Pick one compound prompt from a recent project. Any project, any domain. The only requirement is that the prompt asks the model for multiple things in a single shot: color and typography, or messaging and structure, or tone and length and format, or anything else that asks the model to carry multiple dimensions at once.
+
+You have the prompt. You have the output. You already felt the result come back "close but flat." [SOURCE: essay, the-wrong-question.html] Or blurry. Or fine-but-not-what-you-wanted. That feeling is where you start.
+
+Run the template above. At the end you will have two versions of the same work: the compound version you already shipped, and the decomposed version you built as the creative director. Compare them. Notice where the decomposed version went deeper, where it surfaced conflicts you did not see in the compound output, and where the compound version felt more coherent because one mind made all the calls.
+
+This lesson is for practice on one workflow. The next lesson takes the same cycle to a different workflow and asks you to submit it as Week 1's deliverable.
 
 ---
 
@@ -518,7 +530,16 @@ This is the moment where the student has their own data for the course's core cl
 
 [NEEDS PETER: The reflection prompt. The scaffold says "Peter writes the reflection prompt, it needs to point at the right insight." The question above ("What did the synthesis step require from you that neither the AI compound output nor the individual specialist outputs could provide?") comes from the scaffold and may be sufficient, but Peter should decide if it points sharply enough at the "you are the creative director" insight.]
 
-[NEEDS PETER: Submission format template with any specific formatting or length requirements beyond what the scaffold specifies.]
+### Submission Format
+
+Submit one document (PDF, Google Doc, or markdown file) containing all six items listed above, in that order.
+
+**Length guidance:**
+- The synthesized brief runs approximately 400-600 words (one page).
+- The reflection runs 3-5 sentences.
+- The decomposed outputs may run long; include them in full. No cap on total document length.
+
+**File naming:** `week1-deliverable-[your-name].pdf` (or equivalent extension).
 
 ---
 
