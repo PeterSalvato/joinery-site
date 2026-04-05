@@ -401,6 +401,14 @@ The brief should read as if a creative director is telling the team what they ar
 
 That comparison is the lesson.
 
+### What This Exercise Does Not Cover
+
+You just synthesized one direction. In practice, a creative director often runs the same decomposition with different positioning emphasis and produces 2-3 distinct directions, then evaluates across them: which direction serves the brand better, and why?
+
+That evaluation requires its own methodology. Comparing directions means decomposing "is this good?" into independent criteria and running each direction against them separately. That is what Course 04 (Lens Extraction) teaches. This course gives you the synthesis skill for one direction. Lens Extraction gives you the evaluation skill for choosing between multiple.
+
+If you want to try it now: run your decomposition again with a different emphasis (different positioning angle, different audience assumption, different aesthetic ancestor). Produce a second brief. Compare the two. Notice what you need in order to decide between them. That need is the appetite Lens Extraction satisfies.
+
 ---
 
 ## Lesson 1.5 — Guided Exercise: Decompose Your Own Work
