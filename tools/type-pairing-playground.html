@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roughing It — Type Pairing Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Text:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+}
+
+/* Controls Panel */
+.controls {
+    background: #111;
+    padding: 24px;
+    border-right: 1px solid #333;
+    overflow-y: auto;
+}
+
+.controls h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.control-group {
+    margin-bottom: 24px;
+}
+
+.control-group label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.radio-option:hover {
+    border-color: #555;
+}
+
+.radio-option.active {
+    border-color: #8a8;
+    background: #1a2a1a;
+}
+
+.radio-option input {
+    margin-top: 3px;
+}
+
+.radio-option .option-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.radio-option .option-detail {
+    font-size: 11px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.radio-option .option-note {
+    font-size: 10px;
+    color: #555;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slider-row input[type="range"] {
+    flex: 1;
+    accent-color: #8a8;
+}
+
+.slider-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #888;
+    min-width: 36px;
+    text-align: right;
+}
+
+.bg-options {
+    display: flex;
+    gap: 6px;
+}
+
+.bg-btn {
+    padding: 6px 12px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #888;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.bg-btn.active {
+    border-color: #8a8;
+    color: #ccc;
+}
+
+.note {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #222;
+}
+
+/* Preview Panel */
+.preview-area {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.label-preview {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 32px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.label-preview .brand-name {
+    line-height: 1.1;
+    margin-bottom: 8px;
+    transition: font-family 0.3s;
+}
+
+.label-preview .product-name {
+    line-height: 1.2;
+    margin-bottom: 24px;
+    transition: font-family 0.3s;
+}
+
+.label-preview .body-copy {
+    line-height: 1.6;
+    margin-bottom: 24px;
+    transition: font-family 0.3s;
+}
+
+.label-preview .data-line {
+    line-height: 1.5;
+    margin-bottom: 4px;
+    transition: font-family 0.3s;
+}
+
+.label-preview .ingredients {
+    margin-top: 20px;
+    padding-top: 16px;
+    line-height: 1.5;
+    transition: font-family 0.3s;
+}
+
+.label-preview .section-rule {
+    border: none;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.label-preview .accent-bar {
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.label-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Second preview: web layout */
+.web-preview {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    margin-top: 32px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.web-preview .page-title {
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.web-preview .page-body {
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.web-preview .page-meta {
+    line-height: 1.5;
+}
+
+/* Prompt output */
+.prompt-area {
+    grid-column: 1 / -1;
+    background: #0d0d0d;
+    border-top: 1px solid #333;
+    padding: 20px 24px;
+}
+
+.prompt-area h2 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.prompt-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #999;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.copy-btn {
+    margin-top: 8px;
+    padding: 6px 16px;
+    background: #222;
+    border: 1px solid #444;
+    color: #aaa;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.copy-btn:hover {
+    background: #333;
+    color: #ccc;
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+    <!-- Controls -->
+    <div class="controls">
+        <h1>Type Pairing Comparison</h1>
+
+        <div class="control-group">
+            <label>Pairing</label>
+            <div class="radio-group" id="pairing-select">
+                <div class="radio-option" data-pairing="1">
+                    <input type="radio" name="pairing" value="1">
+                    <div>
+                        <div class="option-name">Pairing 1: Canela + Söhne Mono</div>
+                        <div class="option-detail">Editorial warmth + field-notebook data</div>
+                        <div class="option-note">Shown as: Cormorant Garamond + JetBrains Mono</div>
+                    </div>
+                </div>
+                <div class="radio-option active" data-pairing="2">
+                    <input type="radio" name="pairing" value="2" checked>
+                    <div>
+                        <div class="option-name">Pairing 2: Freight Text + IBM Plex Sans</div>
+                        <div class="option-detail">Warmer editorial + humanist grotesk</div>
+                        <div class="option-note">Shown as: Lora + IBM Plex Sans</div>
+                    </div>
+                </div>
+                <div class="radio-option" data-pairing="3">
+                    <input type="radio" name="pairing" value="3">
+                    <div>
+                        <div class="option-name">Pairing 3: Domaine Display + JetBrains Mono</div>
+                        <div class="option-detail">High-contrast editorial + monospace</div>
+                        <div class="option-note">Shown as: Playfair Display + JetBrains Mono</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Scale</label>
+            <div class="slider-row">
+                <input type="range" id="scale" min="80" max="130" value="100" step="5">
+                <span class="slider-value" id="scale-val">100%</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Background</label>
+            <div class="bg-options">
+                <button class="bg-btn active" data-bg="cream">Cream</button>
+                <button class="bg-btn" data-bg="kraft">Kraft</button>
+                <button class="bg-btn" data-bg="white">White</button>
+                <button class="bg-btn" data-bg="dark">Dark</button>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> Canela (Commercial Type), Söhne (Klim), Freight (GarageFonts), and Domaine (Klim) are commercial fonts requiring licenses. This playground uses the closest available Google Fonts approximations for comparison purposes. Pairing dynamics (contrast, rhythm, weight relationship) transfer; exact character shapes do not.
+        </div>
+    </div>
+
+    <!-- Preview -->
+    <div class="preview-area">
+        <div class="label-wrapper">
+            <div class="label-preview" id="label-preview">
+                <div class="brand-name" id="brand-name">Roughing It</div>
+                <div class="product-name" id="product-name">High Summer</div>
+                <div class="body-copy" id="body-copy">Tess Brennan grows her own peppers on a 4-acre farm in the Hudson Valley. Four seasonal sauces, released quarterly, tied to what's harvested each season. Cayenne and Thai bird chiles, white vinegar, sea salt. The workhorse sauce.</div>
+                <hr class="section-rule" id="section-rule">
+                <div class="data-line" id="data-batch">Batch 2026-07-014</div>
+                <div class="data-line" id="data-harvest">Harvest date: July 12, 2026</div>
+                <div class="data-line" id="data-volume">5oz / $14</div>
+                <div class="ingredients" id="ingredients">Cayenne, Thai bird chile, white vinegar, sea salt</div>
+            </div>
+        </div>
+
+        <div class="web-preview" id="web-preview">
+            <div class="page-title" id="web-title">About the Farm</div>
+            <div class="page-body" id="web-body">The peppers grow on the same 4-acre plot Tess bought after leaving the fire department. Each season's sauce comes from what the farm produces that quarter. Spring Run is green and herbaceous. High Summer is red, bright, and hot. Harvest is smoky. Long Dark ferments for 90 days in small oak barrels.</div>
+            <div class="page-meta" id="web-meta">Kingston, NY &middot; Est. 2024 &middot; Direct from farm</div>
+        </div>
+    </div>
+
+    <!-- Prompt Output -->
+    <div class="prompt-area">
+        <h2>Decision Output</h2>
+        <div class="prompt-text" id="prompt-output"></div>
+        <button class="copy-btn" id="copy-btn">Copy</button>
+    </div>
+
+</div>
+
+<script>
+const PAIRINGS = {
+    1: {
+        name: 'Canela Text + Söhne Mono',
+        approx: 'Cormorant Garamond + JetBrains Mono',
+        display: "'Cormorant Garamond', serif",
+        data: "'JetBrains Mono', monospace",
+        brandSize: 32,
+        productSize: 22,
+        bodySize: 15,
+        dataSize: 12,
+        brandWeight: 600,
+        productWeight: 700,
+        bodyWeight: 400,
+        letterSpacing: '0'
+    },
+    2: {
+        name: 'Freight Text Pro + IBM Plex Sans',
+        approx: 'Lora + IBM Plex Sans',
+        display: "'Lora', serif",
+        data: "'IBM Plex Sans', sans-serif",
+        brandSize: 30,
+        productSize: 21,
+        bodySize: 15,
+        dataSize: 12,
+        brandWeight: 700,
+        productWeight: 600,
+        bodyWeight: 400,
+        letterSpacing: '0'
+    },
+    3: {
+        name: 'Domaine Display + JetBrains Mono',
+        approx: 'Playfair Display + JetBrains Mono',
+        display: "'Playfair Display', serif",
+        data: "'JetBrains Mono', monospace",
+        brandSize: 30,
+        productSize: 21,
+        bodySize: 15,
+        dataSize: 12,
+        brandWeight: 700,
+        productWeight: 600,
+        bodyWeight: 400,
+        letterSpacing: '0.01em'
+    }
+};
+
+const BACKGROUNDS = {
+    cream: { bg: '#EDE4D0', text: '#1F1F1F', rule: '#c4b99a', accent: '#5A6B3B' },
+    kraft: { bg: '#C4A97D', text: '#1F1F1F', rule: '#a08860', accent: '#3D2817' },
+    white: { bg: '#F8F7F4', text: '#1F1F1F', rule: '#ddd', accent: '#5A6B3B' },
+    dark:  { bg: '#1F1F1F', text: '#EDE4D0', rule: '#3D2817', accent: '#7A8B4D' }
+};
+
+const state = {
+    pairing: 2,
+    scale: 100,
+    bg: 'cream'
+};
+
+function render() {
+    const p = PAIRINGS[state.pairing];
+    const b = BACKGROUNDS[state.bg];
+    const s = state.scale / 100;
+
+    // Label preview
+    const label = document.getElementById('label-preview');
+    label.style.background = b.bg;
+    label.style.color = b.text;
+
+    const brandName = document.getElementById('brand-name');
+    brandName.style.fontFamily = p.display;
+    brandName.style.fontSize = (p.brandSize * s) + 'px';
+    brandName.style.fontWeight = p.brandWeight;
+    brandName.style.letterSpacing = p.letterSpacing;
+
+    const productName = document.getElementById('product-name');
+    productName.style.fontFamily = p.display;
+    productName.style.fontSize = (p.productSize * s) + 'px';
+    productName.style.fontWeight = p.productWeight;
+
+    const bodyCopy = document.getElementById('body-copy');
+    bodyCopy.style.fontFamily = p.display;
+    bodyCopy.style.fontSize = (p.bodySize * s) + 'px';
+    bodyCopy.style.fontWeight = p.bodyWeight;
+
+    document.getElementById('section-rule').style.background = b.rule;
+
+    ['data-batch', 'data-harvest', 'data-volume'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.fontFamily = p.data;
+        el.style.fontSize = (p.dataSize * s) + 'px';
+        el.style.color = b.text;
+        el.style.opacity = '0.7';
+    });
+
+    const ingredients = document.getElementById('ingredients');
+    ingredients.style.fontFamily = p.data;
+    ingredients.style.fontSize = (p.dataSize * s) + 'px';
+    ingredients.style.borderTop = '1px solid ' + b.rule;
+    ingredients.style.color = b.text;
+    ingredients.style.opacity = '0.6';
+
+    // Web preview
+    const web = document.getElementById('web-preview');
+    web.style.background = b.bg;
+    web.style.color = b.text;
+
+    const webTitle = document.getElementById('web-title');
+    webTitle.style.fontFamily = p.display;
+    webTitle.style.fontSize = (24 * s) + 'px';
+    webTitle.style.fontWeight = p.brandWeight;
+
+    const webBody = document.getElementById('web-body');
+    webBody.style.fontFamily = p.display;
+    webBody.style.fontSize = (p.bodySize * s) + 'px';
+    webBody.style.fontWeight = p.bodyWeight;
+
+    const webMeta = document.getElementById('web-meta');
+    webMeta.style.fontFamily = p.data;
+    webMeta.style.fontSize = (p.dataSize * s) + 'px';
+    webMeta.style.opacity = '0.5';
+
+    updatePrompt();
+}
+
+function updatePrompt() {
+    const p = PAIRINGS[state.pairing];
+    const parts = [`Typography decision: ${p.name} (previewed as ${p.approx}).`];
+
+    if (state.bg !== 'cream') {
+        parts.push(`Previewed on ${state.bg} background.`);
+    }
+    if (state.scale !== 100) {
+        parts.push(`Scale adjusted to ${state.scale}%.`);
+    }
+
+    if (state.pairing === 1) {
+        parts.push('Specialist recommendation. Editorial serif for brand voice + monospace for field-data signal. Strongest "care AND receipts" dynamic.');
+    } else if (state.pairing === 2) {
+        parts.push('Warmer, more traditional editorial serif + humanist sans-serif. More weight options. Less distinctive than Pairing 1 but wider flexibility.');
+    } else if (state.pairing === 3) {
+        parts.push('Highest-contrast display serif + monospace. Most contemporary. Closest to craft-vinegar aesthetic. Risk: may read too refined for a farm brand.');
+    }
+
+    document.getElementById('prompt-output').textContent = parts.join(' ');
+}
+
+// Pairing selection
+document.querySelectorAll('.radio-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+        document.querySelectorAll('.radio-option').forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+        opt.querySelector('input').checked = true;
+        state.pairing = parseInt(opt.dataset.pairing);
+        render();
+    });
+});
+
+// Scale
+document.getElementById('scale').addEventListener('input', e => {
+    state.scale = parseInt(e.target.value);
+    document.getElementById('scale-val').textContent = state.scale + '%';
+    render();
+});
+
+// Background
+document.querySelectorAll('.bg-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.bg = btn.dataset.bg;
+        render();
+    });
+});
+
+// Copy
+document.getElementById('copy-btn').addEventListener('click', () => {
+    const text = document.getElementById('prompt-output').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 1500);
+    });
+});
+
+// Init
+render();
+</script>
+</body>
+</html>

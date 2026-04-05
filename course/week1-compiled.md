@@ -305,98 +305,101 @@ The scaffold frames this transition:
 
 ## Lesson 1.4 — The Synthesis Step
 
-**Format:** Written lesson + Exercise. **Learning objective:** The student can synthesize independent specialist outputs into a unified brief by resolving conflicts, finding amplifications, and setting cross-system rules.
+**Format:** Written lesson + Exercise. **Learning objective:** The student can synthesize independent specialist outputs into a unified creative direction brief by stepping through each output, making tracked decisions, and compiling the brief from those decisions.
 
-### The Synthesized Voss Type Brief
+### The Synthesis Process
 
-The scaffold specifies the three types of creative director moves the synthesized brief demonstrates:
+Synthesis is not "read all five outputs, then write a brief." That is compound processing applied to synthesis, the same failure mode the course teaches against. Holding five specialist reports in your head simultaneously and writing a coherent brief from memory degrades the same way a compound prompt degrades: attention splits, details flatten, the middle outputs get less consideration than the first and last.
 
-**Conflicts resolved:**
-> "The typography specialist recommended Knockout (Hoefler) while the layout specialist assumed a grotesk. The creative director chose Druk Wide from Pairing 1 because the layout's 'tight until it hurts' philosophy needs a typeface that holds under compression. Knockout is wide. Druk is wide but compressed. That's the call."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.4]
+The synthesis process is itself decomposed.
 
-**Amplifications found:**
-> "The color specialist's 'two-color print job' logic and the imagery specialist's 'shoot on real substrates' converge. Both point toward a brand that looks printed even on screen. That convergence wasn't in either output. The human saw it."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.4]
+**Step through one specialist at a time.** Present each specialist's findings. React: what works, what does not, what questions does it raise, what does it conflict with from a previous specialist. Track the decision with your reasoning. Move to the next specialist. After all outputs are reviewed, compile the brief from your tracked decisions.
 
-**Cross-system rules set:**
-> "The logo specialist said 'reproducible by hand on a napkin.' The typography specialist said 'hand-lettered display for all recurring headers.' These are two versions of the same rule: the human hand is visible everywhere. That becomes a governing principle, not just two separate recommendations."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.4]
-
-### What the Human Did That Neither Output Could Do
-
-From the scaffold:
-
-> "Read across domains (the AI couldn't because each prompt was isolated). Detected convergences and tensions (requires understanding the project holistically). Made judgment calls where specialists disagreed (this is creative direction). Set hierarchy (which specialist's recommendation governs when they conflict)."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.4]
-
-### Peter's Framing of the Creative Director Role
-
-From the artifact:
-
-> "The compound prompt gives you the AI's vision of your brand. The decomposed prompts give you five specialists reporting to you. You are the creative director."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3, final line]
-
-From the foundations course page (joinery-site):
-
-> "Your prompts keep getting longer and your output keeps getting worse. The problem is structural: compound instructions degrade in AI the same way they degrade in a classroom. You learn to decompose, run independently, and synthesize. The AI gives you depth. You provide the coherence."
-[SOURCE: foundations.html, Week 1 description]
-
-From the scaffold's core lesson statement:
+The brief writes itself from the tracker. You do not sit at a blank page and write. You compile from the calls you already made.
+[SOURCE: demonstrated live in the Roughing It Hot Sauce synthesis session, 2026-04-05]
 
 > "You are the creative director of a team of specialists. The AI gives you depth. You provide the coherence. The synthesis step (where you resolve conflicts between independent outputs) is where your judgment becomes the product."
 [SOURCE: scaffold, foundations-scaffold.md, Week 1 core lesson]
 
-From the essay "The Wrong Question":
+### The Roughing It Hot Sauce Brief
 
-> "The fix is identical too. Decompose. One dimension per prompt. One clear objective. One defined output. Run them independently. A coordinator collects the results and maps where they converge (act on it) and where they diverge (the practitioner decides). The model was never incapable. The instruction was shaped wrong for the system receiving it."
-[SOURCE: essay, the-wrong-question.html]
+The completed CD synthesis brief for the Roughing It Hot Sauce project is at `course/artifacts/roughing-it-cd-brief.md`. Read it now.
 
-From the published "IEP for AI Systems" essay, on evaluation conflict:
+The brief was produced by stepping through each of the five specialist outputs (color, typography, logo, imagery, layout) one at a time, reacting to each, and tracking decisions. Here is what the creative director did at each step:
+
+**Color specialist** recommended a two-color print job palette (Harvest Soil + Cream) with no heat-signaling reds. The CD overrode: green and red for chiles cannot be missing from a brand whose heart is the chiles. Green elevated to primary brand color (the plant, the farm). Red as accent (the fruit, the heat). Off-black added for text. The specialist's production-economy reasoning (two-color flexo) was accepted as the substrate logic.
+
+**Typography specialist** recommended Pairing 1 (Canela + Söhne Mono). The CD chose Pairing 2 (Freight Text Pro + IBM Plex Sans) after visually evaluating all three pairings using a type-comparison playground with free-font approximations across four substrates. The pairing was confirmed visually before committing. Actual fonts to be licensed when production begins.
+
+**Logo specialist** recommended no icon (wordmark only), reasoning that pepper imagery is a crutch in the hot sauce category. The CD overrode: the chile IS the brand because Tess literally grows them. It is evidence, not decoration. Two directions to explore on paper (silhouette as letterform, cross-section as round mark). The specialist's constraints (napkin-reproducible, bottle-cap to market-stall scale, one color) still hold.
+
+**Imagery specialist** recommended a 40/35/25 ratio (process/farm/product). The CD accepted as a working draft but noted the ratios are provisional and may need rebalancing once real photography exists and the brand is tangible.
+
+**Layout specialist** recommended dense, label-first system design. The CD accepted and added a specific aesthetic ancestor: Henderson's Sign Painter. Vintage signpainter craft and composition inform the visual language. The density is a feature, not a limitation.
+
+### What the Creative Director Did
+
+Three types of moves appeared in the tracked decisions:
+
+**Overrides with reasoning.** The CD overrode the color specialist (added green and red), the typography specialist (chose a different pairing after visual evaluation), and the logo specialist (added a chile mark). Each override carried a specific reason grounded in the project's reality, not just preference.
+
+**Provisional acceptance.** The CD accepted the imagery ratios as a draft, acknowledging they would need adjustment once real photography exists. This is a judgment call about when to commit versus when to defer.
+
+**Governing principles.** Three principles emerged across the tracked decisions:
+1. The chile lifecycle governs the palette (green growth → red fruit, on earth-toned ground).
+2. Density is the signal (the brand has more to say than it has room for).
+3. Evidence over decoration (the chile mark is evidence, the process photography is evidence, the monospace data is evidence).
+
+These principles were not prescribed by any specialist. They emerged from the CD reading across all five outputs and naming what connected them. That naming is what the AI compiler in Part 2 of the demo could not do.
+[SOURCE: demonstrated in roughing-it-cd-brief.md]
 
 > "In the classroom, when two IEP goals conflicted (one student needed quiet, another needed verbal processing), the resolution was a structural decision: where to seat them, when to schedule which activity, how to create pockets of different conditions within one room. The conflict wasn't a problem. It was information about what the room needed to accommodate."
 [SOURCE: published essay, petersalvato.com/_essays/the-iep-for-ai-systems.md]
 
-> "Evaluation lenses work the same way. When structural and narrative lenses disagree, the disagreement tells me what decision I need to make as the designer. That's often the most useful thing the system gives me."
-[SOURCE: published essay, petersalvato.com/_essays/the-iep-for-ai-systems.md]
-
-From "The Human in the Loop Is Not a Checkbox" (on what real human leverage means):
-
 > "Human in the loop means the human has actual leverage over the outcome. Not just the ability to reject output but the ability to shape it during production."
 [SOURCE: blog draft, the-human-in-the-loop-is-not-a-checkbox.md]
 
-### Source Material for the "Pressure-to-Control Ratio" and Specific Synthesis Findings
+### Practical Note: Visual Evaluation of Text-Based Outputs
 
-The decomposed logo output contains the "pressure-to-control ratio" concept:
+The specialist outputs are text. Your evaluation is visual. Typography described in a paragraph reads differently than typography rendered on screen. Color described as "Harvest Soil (#3D2817)" reads differently than the swatch.
 
-> "The ratio of control to roughness. This is the signature of someone who letters professionally: the strokes are not sloppy, but they are not sterilized. There is a specific zone where craft meets aggression, where you can tell the person has drawn ten thousand letters and still pushes the tool like they have something to prove. The mark lives in that zone."
-[SOURCE: artifact, compound-prompt-demo.md, Output 3: Logo Style Direction]
+This gap is real and the course does not pretend it away. When a specialist output recommends a typeface, a color, a layout structure, the creative director's next step is to render it visually before making decisions. Use approximation tools to bridge the gap:
 
-The decomposed typography output has the Druk Wide recommendation:
+- For typography: render the recommended pairings using free approximation fonts (Google Fonts closest-match). Evaluate pairing dynamics (contrast, rhythm, weight relationship). License the actual fonts when the direction is locked. Most studios work this way at the comp stage.
+- For color: build swatches from the hex codes. View them on the target substrate (screen, paper, kraft). Colors shift across media.
+- For layout: rough the structure in your design tool. A wireframe built in 15 minutes answers questions a paragraph of description cannot.
 
-> "Druk Wide Bold (Commercial Type) for headlines, section titles, studio name in large-format applications. Druk Wide is compressed aggression. The extended width commands horizontal space the way a wheat-paste poster claims a wall."
-[SOURCE: artifact, compound-prompt-demo.md, Output 2: Typography Pairings, Pairing 1]
+The specialist outputs give you direction and reasoning. The visual rendering gives you confirmation. Both are required before synthesis. Do not synthesize from text alone if the decision is visual.
 
-The decomposed layout output has the micro-rotation detail:
+### Guided Synthesis Exercise
 
-> "Rotational micro-offsets. Select elements rotate between negative 1 and positive 2 degrees. Not enough to read as a 'design trick.' Enough to break the pixel grid's perfection."
-[SOURCE: artifact, compound-prompt-demo.md, Output 5: Layout Principles]
+You have your own decomposed outputs from Lessons 1.2 and 1.3 (or from Lesson 1.5 if you are working ahead). Now synthesize them using the step-through process.
 
-[NEEDS PETER: The actual synthesized Voss Type brief itself. The scaffold (foundations-scaffold.md, Lesson 1.4 Production notes) explicitly states: "WRITE: The synthesized Voss Type brief showing conflict resolution, amplification, and cross-system rules (Peter writes this, it's the key teaching artifact for the course's core claim)." The sources above provide the raw material for what the brief should contain and the three types of moves it should demonstrate. Peter needs to write the brief that demonstrates a creative director reading five specialist reports and making the calls.]
+**Step 1: Prepare your tracker.** Open a blank document. Create a table or list with one row per specialist output. Columns: Specialist | Their Recommendation | My Decision | My Reasoning.
 
-[NEEDS PETER: The guided exercise scenario. The scaffold specifies: "a pre-built set of 3 decomposed outputs for a different fictional project (a podcast brand identity: name direction, visual identity, episode format). The outputs contain two planted conflicts and one amplification." This exercise content does not exist yet.]
+**Step 2: Step through each output one at a time.** Do not read them all first. Present one to yourself, react, and record your decision before moving to the next. For each output, ask:
+- What works here?
+- What does not work, and why?
+- Does this conflict with a decision I already made on a previous output?
+- Am I accepting this, overriding it, or deferring the decision?
 
-### Guided Synthesis Template (from scaffold)
+Record your answer in the tracker before moving on.
 
-The five-step synthesis process for the exercise:
+**Step 3: After all outputs are reviewed, read your tracker top to bottom.** Look for:
+- Patterns across your decisions (did you override the same kind of recommendation more than once? That pattern is a governing principle).
+- Connections between outputs that no single specialist named (convergences you spotted by reading across domains).
+- Decisions that felt provisional versus decisions that felt locked.
 
-1. Read all outputs. Highlight where they agree.
-2. Identify where they conflict. Write down the conflict in one sentence.
-3. For each conflict, decide which output governs and why.
-4. Identify any amplifications (convergences neither output stated explicitly).
-5. Write a 1-page synthesized brief incorporating your decisions.
+**Step 4: Compile the brief from your tracker.** Write a 1-page creative direction brief (400-600 words) organized by your decisions, not by the specialists' categories. The brief should contain:
+- Your key decisions with reasoning
+- Any overrides and why
+- Governing principles that emerged across the tracked decisions
 
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.4]
+The brief should read as if a creative director is telling the team what they are making and why. Confident, specific, decisive.
+
+**Step 5: Compare.** Read your compiled brief against the AI compiler's synthesis from the demo (Part 2 of the artifact). Where did you make calls the AI did not? Where did you name connections the AI missed? Where did you override a specialist the AI silently accepted?
+
+That comparison is the lesson.
 
 ---
 
