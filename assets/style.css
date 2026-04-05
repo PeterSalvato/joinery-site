@@ -19,6 +19,11 @@
     --font-body: 'Figtree', -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
 
+    --grid-columns: 12;
+    --grid-gutter: 20px;
+    --grid-margin: 40px;
+    --grid-max: 1200px;
+
     --measure: 36rem;
     --measure-wide: 48rem;
 
@@ -55,6 +60,63 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+
+/* ================================================================
+   Grid — 12-column fluid, centered, 1200px max
+   Usage: class="grid" on container, then children use grid-column
+   e.g. grid-column: 1 / 7 (spans 6 of 12)
+   e.g. grid-column: 3 / 11 (spans 8, offset by 2)
+   ================================================================ */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 0 var(--grid-gutter);
+    max-width: var(--grid-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-margin);
+    padding-right: var(--grid-margin);
+}
+
+/* Common column spans */
+.col-full   { grid-column: 1 / -1; }
+.col-10     { grid-column: 2 / 12; }
+.col-8      { grid-column: 3 / 11; }
+.col-8-left { grid-column: 1 / 9; }
+.col-6      { grid-column: 1 / 7; }
+.col-6-right { grid-column: 7 / 13; }
+.col-4      { grid-column: 1 / 5; }
+.col-4-mid  { grid-column: 5 / 9; }
+.col-4-right { grid-column: 9 / 13; }
+
+/* Debug: make grid visible (add class="grid debug" to see columns) */
+.grid.debug {
+    background-image: repeating-linear-gradient(
+        to right,
+        rgba(200, 0, 0, 0.05) 0,
+        rgba(200, 0, 0, 0.05) calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns)),
+        transparent calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns)),
+        transparent calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns) + var(--grid-gutter))
+    );
+}
+
+@media (max-width: 768px) {
+    :root {
+        --grid-margin: 20px;
+        --grid-gutter: 16px;
+    }
+
+    .col-10,
+    .col-8,
+    .col-8-left,
+    .col-6,
+    .col-6-right,
+    .col-4,
+    .col-4-mid,
+    .col-4-right { grid-column: 1 / -1; }
 }
 
 
@@ -134,7 +196,7 @@ body {
    ================================================================ */
 
 .section {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-xl) 0;
 }
 
 .section-inner {
@@ -1095,7 +1157,7 @@ p {
     }
 
     .section {
-        padding: var(--space-l) 1.5rem;
+        padding: var(--space-l) 0;
     }
 
     .problem,

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Test — Joinery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        section { padding: var(--space-xl) 0; }
+        section + section { border-top: 1px solid var(--color-rule); }
+        .placement-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Option A: Hero spanning columns 1-8 -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">HERO — Option A: col 1-8</div></div>
+                <div style="grid-column: 1 / 9;">
+                    <h1>A school for creative practitioners who use AI.</h1>
+                    <p style="margin-top: var(--space-m); font-size: 1.1rem; color: var(--color-text-mid);">Joinery teaches Accommodation Design: a structural methodology for integrating AI into your practice without losing what makes the work yours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Option B: Hero spanning columns 1-7 -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">HERO — Option B: col 1-7</div></div>
+                <div style="grid-column: 1 / 8;">
+                    <h1>A school for creative practitioners who use AI.</h1>
+                    <p style="margin-top: var(--space-m); font-size: 1.1rem; color: var(--color-text-mid);">Joinery teaches Accommodation Design: a structural methodology for integrating AI into your practice without losing what makes the work yours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Option C: Hero spanning columns 2-9 (offset) -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">HERO — Option C: col 2-9 (offset)</div></div>
+                <div style="grid-column: 2 / 10;">
+                    <h1>A school for creative practitioners who use AI.</h1>
+                    <p style="margin-top: var(--space-m); font-size: 1.1rem; color: var(--color-text-mid);">Joinery teaches Accommodation Design: a structural methodology for integrating AI into your practice without losing what makes the work yours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem: body text placement options -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">BODY TEXT — col 1-7 (7 of 12)</div></div>
+                <div style="grid-column: 1 / 8;">
+                    <p>Creatives face two fears at once. Don't use AI, get replaced. Use it, and everything you make looks like everything everyone else is making.</p>
+                    <p style="margin-top: var(--space-s);">The tool tutorials won't fix this. The prompt engineering courses won't fix this. The problem is structural, and it requires a methodology, not a hack.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two-column: methodology -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">METHODOLOGY — h2 col 1-5, text col 1-7</div></div>
+                <div style="grid-column: 1 / 6;">
+                    <h2>Accommodation Design</h2>
+                </div>
+                <div style="grid-column: 1 / 8;">
+                    <p style="margin-top: var(--space-s); color: var(--color-text-mid);">The AI governance field asks one question: how do we control what the model does? Accommodation Design asks a different one: what does the system actually need to do this job well?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two-column: heading left, text right -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">SPLIT — h2 col 1-4, text col 5-12</div></div>
+                <div style="grid-column: 1 / 5; padding-top: 0.3rem;">
+                    <h2>Accommodation Design</h2>
+                </div>
+                <div style="grid-column: 5 / 13;">
+                    <p style="color: var(--color-text-mid);">The AI governance field asks one question: how do we control what the model does? Accommodation Design asks a different one: what does the system actually need to do this job well?</p>
+                    <p style="margin-top: var(--space-s); color: var(--color-text-mid);">That question comes from special education classrooms, where designing around the processing reality of the receiving system is federal law.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum as list on grid -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">CURRICULUM — number col 1, name col 2-5, desc col 6-12</div></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">01</div>
+                <div style="grid-column: 2 / 6;"><h3>Accommodation Design</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">The founding reframe. Ask what the system needs, not how to constrain it.</div>
+
+                <div style="grid-column: 1 / -1; border-bottom: 1px solid var(--color-rule); margin: 0.75rem 0;"></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">02</div>
+                <div style="grid-column: 2 / 6;"><h3>Input Inversion</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">Unstructured human input plus structured tools beats structured prompts.</div>
+
+                <div style="grid-column: 1 / -1; border-bottom: 1px solid var(--color-rule); margin: 0.75rem 0;"></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">03</div>
+                <div style="grid-column: 2 / 6;"><h3>Prosthetic Cognition</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">AI as cognitive extension, not tool and not replacement.</div>
+
+                <div style="grid-column: 1 / -1; border-bottom: 1px solid var(--color-rule); margin: 0.75rem 0;"></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">04</div>
+                <div style="grid-column: 2 / 6;"><h3>Semantic Hierarchy</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">AI memory flattens everything. Human-marked importance preserves what mattered.</div>
+
+                <div style="grid-column: 1 / -1; border-bottom: 1px solid var(--color-rule); margin: 0.75rem 0;"></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">05</div>
+                <div style="grid-column: 2 / 6;"><h3>Voice Governance</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">Constraints applied during generation produce structurally different output than constraints applied after.</div>
+
+                <div style="grid-column: 1 / -1; border-bottom: 1px solid var(--color-rule); margin: 0.75rem 0;"></div>
+
+                <div style="grid-column: 1 / 2; font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-text-light);">06</div>
+                <div style="grid-column: 2 / 6;"><h3>Lens Extraction</h3></div>
+                <div style="grid-column: 6 / 13; color: var(--color-text-mid); font-size: 0.92rem;">"Is this good?" is twelve questions. Extract what strong practitioners consistently ask.</div>
+            </div>
+        </section>
+
+        <!-- Tracks: three columns -->
+        <section>
+            <div class="grid debug">
+                <div class="col-full"><div class="placement-label">TRACKS — 4 cols each (4/4/4)</div></div>
+                <div style="grid-column: 1 / 5;">
+                    <h3>Practitioner</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic; margin-top: 0.25rem;">Solo creatives protecting their own work.</p>
+                    <p style="font-size: 0.92rem; color: var(--color-text-mid); margin-top: 0.5rem;">Build a personal AI methodology. Your voice protocol. Your evaluation lenses. Your accommodation architecture.</p>
+                </div>
+                <div style="grid-column: 5 / 9;">
+                    <h3>Director</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic; margin-top: 0.25rem;">Leading teams through AI adoption.</p>
+                    <p style="font-size: 0.92rem; color: var(--color-text-mid); margin-top: 0.5rem;">Build systems your team can use. Shared voice protocols, evaluation standards, accommodation documents.</p>
+                </div>
+                <div style="grid-column: 9 / 13;">
+                    <h3>Educator</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic; margin-top: 0.25rem;">Teaching the next generation.</p>
+                    <p style="font-size: 0.92rem; color: var(--color-text-mid); margin-top: 0.5rem;">The pedagogical framework behind the methodology. Curriculum design, assessment criteria, classroom integration.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

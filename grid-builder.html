@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joinery Grid Builder</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ui-bg: #1a1a1a;
+            --ui-surface: #252525;
+            --ui-border: #333;
+            --ui-text: #ccc;
+            --ui-text-dim: #777;
+            --ui-accent: #C45A2D;
+
+            --site-bg: #F8F6F2;
+            --site-text: #2A2725;
+            --site-text-mid: #555;
+            --site-text-light: #888;
+            --site-rule: #DDD9D1;
+            --site-accent: #C45A2D;
+        }
+
+        html, body { height: 100%; overflow: hidden; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--ui-bg);
+            color: var(--ui-text);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        /* ── Header ── */
+        .header {
+            grid-column: 1 / -1;
+            padding: 10px 16px;
+            background: var(--ui-surface);
+            border-bottom: 1px solid var(--ui-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .header h1 { font-size: 14px; font-weight: 600; }
+        .header-actions { display: flex; gap: 8px; }
+
+        .btn {
+            padding: 5px 12px;
+            font-size: 12px;
+            border: 1px solid var(--ui-border);
+            background: var(--ui-surface);
+            color: var(--ui-text);
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn:hover { border-color: var(--ui-accent); }
+        .btn.primary { background: var(--ui-accent); border-color: var(--ui-accent); color: #fff; }
+
+        /* ── Sidebar ── */
+        .sidebar {
+            grid-row: 2;
+            background: var(--ui-surface);
+            border-right: 1px solid var(--ui-border);
+            overflow-y: auto;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .panel { margin-bottom: 16px; }
+        .panel-title {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ui-text-dim);
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--ui-border);
+        }
+
+        .element-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 4px;
+            background: var(--ui-bg);
+            border: 1px solid var(--ui-border);
+            color: var(--ui-text);
+            font-size: 12px;
+            text-align: left;
+            cursor: grab;
+            border-radius: 3px;
+        }
+        .element-btn:hover { border-color: var(--ui-accent); }
+        .element-btn:active { cursor: grabbing; }
+
+        .element-btn .meta {
+            font-size: 10px;
+            color: var(--ui-text-dim);
+            margin-top: 2px;
+        }
+
+        /* Selected element controls */
+        .selected-controls { display: none; }
+        .selected-controls.visible { display: block; }
+
+        .control-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .control-row label {
+            font-size: 11px;
+            color: var(--ui-text-dim);
+            width: 70px;
+            flex-shrink: 0;
+        }
+
+        .control-row input[type="number"] {
+            width: 50px;
+            padding: 3px 6px;
+            background: var(--ui-bg);
+            border: 1px solid var(--ui-border);
+            color: var(--ui-text);
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        .control-row select {
+            flex: 1;
+            padding: 3px 6px;
+            background: var(--ui-bg);
+            border: 1px solid var(--ui-border);
+            color: var(--ui-text);
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        .control-row .range-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--ui-accent);
+            width: 30px;
+            text-align: right;
+        }
+
+        /* ── Canvas ── */
+        .canvas {
+            grid-row: 2;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .preview {
+            width: 1200px;
+            max-width: 100%;
+            background: var(--site-bg);
+            position: relative;
+            min-height: 800px;
+            flex-shrink: 0;
+        }
+
+        /* Grid overlay */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 40px;
+            right: 40px;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 0 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .grid-col {
+            background: rgba(200, 90, 45, 0.04);
+            border-left: 1px solid rgba(200, 90, 45, 0.08);
+            border-right: 1px solid rgba(200, 90, 45, 0.08);
+        }
+
+        .grid-col-number {
+            position: absolute;
+            top: 4px;
+            font-size: 9px;
+            font-family: monospace;
+            color: rgba(200, 90, 45, 0.3);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Content area (inside margins) */
+        .preview-content {
+            position: relative;
+            z-index: 2;
+            margin: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 0 20px;
+            padding-top: 60px;
+        }
+
+        /* Placed elements */
+        .placed-element {
+            position: relative;
+            min-height: 20px;
+            padding: 0;
+            cursor: move;
+            border: 1px solid transparent;
+            transition: border-color 0.1s;
+            margin-bottom: 8px;
+        }
+
+        .placed-element:hover { border-color: rgba(200, 90, 45, 0.3); }
+        .placed-element.selected { border-color: var(--site-accent); }
+
+        .placed-element .resize-handle {
+            position: absolute;
+            right: -4px;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            cursor: col-resize;
+            opacity: 0;
+        }
+
+        .placed-element:hover .resize-handle,
+        .placed-element.selected .resize-handle { opacity: 1; background: rgba(200, 90, 45, 0.2); }
+
+        .placed-element .col-indicator {
+            position: absolute;
+            top: -16px;
+            left: 0;
+            font-family: monospace;
+            font-size: 9px;
+            color: var(--site-accent);
+            opacity: 0;
+        }
+
+        .placed-element:hover .col-indicator,
+        .placed-element.selected .col-indicator { opacity: 1; }
+
+        /* Element type styling */
+        .el-h1 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            color: var(--site-text);
+        }
+
+        .el-h2 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--site-text);
+        }
+
+        .el-h3 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.12rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--site-text);
+        }
+
+        .el-body {
+            font-family: 'Figtree', sans-serif;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--site-text-mid);
+        }
+
+        .el-body-large {
+            font-family: 'Figtree', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--site-text);
+        }
+
+        .el-mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--site-text-light);
+        }
+
+        .el-rule {
+            border: none;
+            border-top: 1px solid var(--site-rule);
+            margin: 0;
+        }
+
+        .el-spacer {
+            min-height: 60px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 5px,
+                rgba(200, 90, 45, 0.03) 5px,
+                rgba(200, 90, 45, 0.03) 10px
+            );
+        }
+
+        /* ── Prompt output ── */
+        .output {
+            grid-column: 1 / -1;
+            background: var(--ui-surface);
+            border-top: 1px solid var(--ui-border);
+            padding: 10px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .output pre {
+            flex: 1;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--ui-text);
+            white-space: pre-wrap;
+        }
+
+        .copy-btn {
+            padding: 4px 10px;
+            font-size: 11px;
+            background: var(--ui-accent);
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Figtree:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Joinery Grid Builder</h1>
+        <div class="header-actions">
+            <button class="btn" onclick="toggleGrid()">Toggle Grid</button>
+            <button class="btn" onclick="clearAll()">Clear</button>
+            <button class="btn primary" onclick="copyPrompt()">Copy CSS</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="panel">
+            <div class="panel-title">Hero</div>
+            <button class="element-btn" onclick="addElement('h1', 'A school for creative practitioners who use AI.', 1, 9)">
+                H1: Main headline
+            </button>
+            <button class="element-btn" onclick="addElement('body-large', 'Joinery teaches Accommodation Design: a structural methodology for integrating AI into your practice without losing what makes the work yours. Published research. Working tools. Real curriculum.', 1, 8)">
+                Sub: Hero description
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Problem</div>
+            <button class="element-btn" onclick="addElement('body-large', 'Creatives face two fears at once. Don\'t use AI, get replaced. Use it, and everything you make looks like everything everyone else is making.', 1, 8)">
+                Problem statement 1
+            </button>
+            <button class="element-btn" onclick="addElement('body-large', 'The tool tutorials won\'t fix this. The prompt engineering courses won\'t fix this. The problem is structural, and it requires a methodology, not a hack.', 1, 8)">
+                Problem statement 2
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Methodology</div>
+            <button class="element-btn" onclick="addElement('h2', 'Accommodation Design', 1, 6)">
+                H2: Accommodation Design
+            </button>
+            <button class="element-btn" onclick="addElement('body', 'The AI governance field asks one question: how do we control what the model does? Accommodation Design asks a different one: what does the system actually need to do this job well?', 1, 8)">
+                Methodology text 1
+            </button>
+            <button class="element-btn" onclick="addElement('body', 'That question comes from special education classrooms, where designing around the processing reality of the receiving system is federal law. Applied to AI, it changes everything.', 1, 8)">
+                Methodology text 2
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Curriculum</div>
+            <button class="element-btn" onclick="addElement('h2', 'Six domains. One methodology.', 1, 7)">
+                H2: Six domains
+            </button>
+            <button class="element-btn" onclick="addElement('body', 'Each domain answers the founding question from a different angle. They build on each other in sequence.', 1, 7)">
+                Curriculum intro
+            </button>
+            <button class="element-btn" onclick="addDomainRow('01', 'Accommodation Design', 'The founding reframe. Ask what the system needs, not how to constrain it.')">
+                Domain 01: Accommodation Design
+            </button>
+            <button class="element-btn" onclick="addDomainRow('02', 'Input Inversion', 'Unstructured human input plus structured tools beats structured prompts.')">
+                Domain 02: Input Inversion
+            </button>
+            <button class="element-btn" onclick="addDomainRow('03', 'Prosthetic Cognition', 'AI as cognitive extension, not tool and not replacement.')">
+                Domain 03: Prosthetic Cognition
+            </button>
+            <button class="element-btn" onclick="addDomainRow('04', 'Semantic Hierarchy', 'AI memory flattens everything. Human-marked importance preserves what mattered.')">
+                Domain 04: Semantic Hierarchy
+            </button>
+            <button class="element-btn" onclick="addDomainRow('05', 'Voice Governance', 'Constraints applied during generation produce structurally different output than constraints applied after.')">
+                Domain 05: Voice Governance
+            </button>
+            <button class="element-btn" onclick="addDomainRow('06', 'Lens Extraction', '&quot;Is this good?&quot; is twelve questions. Extract what strong practitioners consistently ask.')">
+                Domain 06: Lens Extraction
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Tracks</div>
+            <button class="element-btn" onclick="addElement('h2', 'Same methodology. Different practice.', 1, 8)">
+                H2: Tracks heading
+            </button>
+            <button class="element-btn" onclick="addTrack('Practitioner', 'Solo creatives protecting their own work.', 'Build a personal AI methodology. Your voice protocol. Your evaluation lenses.', 1, 5)">
+                Track: Practitioner
+            </button>
+            <button class="element-btn" onclick="addTrack('Director', 'Leading teams through AI adoption.', 'Build systems your team can use. Shared voice protocols, evaluation standards.', 5, 9)">
+                Track: Director
+            </button>
+            <button class="element-btn" onclick="addTrack('Educator', 'Teaching the next generation.', 'The pedagogical framework behind the methodology. Curriculum design, assessment criteria.', 9, 13)">
+                Track: Educator
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">CTA / Enrollment</div>
+            <button class="element-btn" onclick="addElement('h2', 'Foundations', 1, 6)">
+                H2: Foundations
+            </button>
+            <button class="element-btn" onclick="addElement('body', 'The entry point. Three weeks of applied practice designed around gradual release of responsibility: you watch it done, you do it with guidance, you do it alone.', 1, 8)">
+                Foundations description
+            </button>
+            <button class="element-btn" onclick="addElement('mono', 'Learn more →', 1, 3)">
+                Learn more link
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Utility</div>
+            <button class="element-btn" onclick="addElement('rule', '', 1, 13)">
+                Horizontal rule
+            </button>
+            <button class="element-btn" onclick="addElement('spacer', '', 1, 13)">
+                Spacer
+            </button>
+        </div>
+
+        <div class="panel selected-controls" id="selectedControls">
+            <div class="panel-title">Selected Element</div>
+            <div class="control-row">
+                <label>Start col</label>
+                <input type="number" id="colStart" min="1" max="12" value="1" onchange="updateSelected()">
+            </div>
+            <div class="control-row">
+                <label>End col</label>
+                <input type="number" id="colEnd" min="2" max="13" value="9" onchange="updateSelected()">
+            </div>
+            <div class="control-row">
+                <label>Span</label>
+                <span class="range-val" id="spanDisplay">8</span>
+            </div>
+            <div class="control-row">
+                <label>Type</label>
+                <select id="elType" onchange="updateSelectedType()">
+                    <option value="h1">H1</option>
+                    <option value="h2">H2</option>
+                    <option value="h3">H3</option>
+                    <option value="body">Body</option>
+                    <option value="body-large">Body Large</option>
+                    <option value="mono">Mono</option>
+                    <option value="rule">Rule</option>
+                    <option value="spacer">Spacer</option>
+                </select>
+            </div>
+            <div class="control-row">
+                <button class="btn" onclick="deleteSelected()" style="width: 100%;">Delete</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Grid Settings</div>
+            <div class="control-row">
+                <label>Gutter</label>
+                <input type="number" id="gutterInput" min="8" max="40" value="20" onchange="updateGrid()">
+                <span class="range-val">px</span>
+            </div>
+            <div class="control-row">
+                <label>Margin</label>
+                <input type="number" id="marginInput" min="16" max="80" value="40" onchange="updateGrid()">
+                <span class="range-val">px</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="canvas">
+        <div class="preview" id="preview">
+            <div class="grid-overlay" id="gridOverlay"></div>
+            <div class="preview-content" id="previewContent"></div>
+        </div>
+    </div>
+
+    <div class="output">
+        <pre id="promptOutput">/* Add elements to generate CSS */</pre>
+        <button class="copy-btn" onclick="copyPrompt()">Copy</button>
+    </div>
+
+    <script>
+        let elements = [];
+        let selectedId = null;
+        let nextId = 1;
+        let gridVisible = true;
+
+        // Build grid overlay
+        function buildGridOverlay() {
+            const overlay = document.getElementById('gridOverlay');
+            overlay.innerHTML = '';
+            for (let i = 1; i <= 12; i++) {
+                const col = document.createElement('div');
+                col.className = 'grid-col';
+                col.style.position = 'relative';
+                col.innerHTML = `<span class="grid-col-number">${i}</span>`;
+                overlay.appendChild(col);
+            }
+        }
+
+        function toggleGrid() {
+            gridVisible = !gridVisible;
+            document.getElementById('gridOverlay').style.display = gridVisible ? 'grid' : 'none';
+        }
+
+        function addElement(type, text, colStart, colEnd) {
+            const id = nextId++;
+            elements.push({ id, type, text, colStart, colEnd });
+            renderAll();
+            selectElement(id);
+        }
+
+        function addDomainRow(num, name, desc) {
+            const id1 = nextId++;
+            const id2 = nextId++;
+            const id3 = nextId++;
+            elements.push({ id: id1, type: 'mono', text: num, colStart: 1, colEnd: 2 });
+            elements.push({ id: id2, type: 'h3', text: name, colStart: 2, colEnd: 6 });
+            elements.push({ id: id3, type: 'body', text: desc, colStart: 6, colEnd: 13 });
+            const id4 = nextId++;
+            elements.push({ id: id4, type: 'rule', text: '', colStart: 1, colEnd: 13 });
+            renderAll();
+        }
+
+        function addTrack(title, who, desc, colStart, colEnd) {
+            const id1 = nextId++;
+            const id2 = nextId++;
+            const id3 = nextId++;
+            elements.push({ id: id1, type: 'h3', text: title, colStart, colEnd });
+            elements.push({ id: id2, type: 'body', text: who, colStart, colEnd });
+            elements.push({ id: id3, type: 'body', text: desc, colStart, colEnd });
+            renderAll();
+        }
+
+        function selectElement(id) {
+            selectedId = id;
+            const el = elements.find(e => e.id === id);
+            if (el) {
+                document.getElementById('colStart').value = el.colStart;
+                document.getElementById('colEnd').value = el.colEnd;
+                document.getElementById('spanDisplay').textContent = el.colEnd - el.colStart;
+                document.getElementById('elType').value = el.type;
+                document.getElementById('selectedControls').classList.add('visible');
+            }
+            renderAll();
+        }
+
+        function updateSelected() {
+            if (!selectedId) return;
+            const el = elements.find(e => e.id === selectedId);
+            if (!el) return;
+            el.colStart = parseInt(document.getElementById('colStart').value);
+            el.colEnd = parseInt(document.getElementById('colEnd').value);
+            document.getElementById('spanDisplay').textContent = el.colEnd - el.colStart;
+            renderAll();
+        }
+
+        function updateSelectedType() {
+            if (!selectedId) return;
+            const el = elements.find(e => e.id === selectedId);
+            if (!el) return;
+            el.type = document.getElementById('elType').value;
+            renderAll();
+        }
+
+        function deleteSelected() {
+            elements = elements.filter(e => e.id !== selectedId);
+            selectedId = null;
+            document.getElementById('selectedControls').classList.remove('visible');
+            renderAll();
+        }
+
+        function clearAll() {
+            elements = [];
+            selectedId = null;
+            document.getElementById('selectedControls').classList.remove('visible');
+            renderAll();
+        }
+
+        function updateGrid() {
+            const gutter = document.getElementById('gutterInput').value;
+            const margin = document.getElementById('marginInput').value;
+            const overlay = document.getElementById('gridOverlay');
+            const content = document.getElementById('previewContent');
+            overlay.style.left = margin + 'px';
+            overlay.style.right = margin + 'px';
+            overlay.style.gap = '0 ' + gutter + 'px';
+            content.style.marginLeft = margin + 'px';
+            content.style.marginRight = margin + 'px';
+            content.style.gap = '0 ' + gutter + 'px';
+            renderAll();
+        }
+
+        function renderAll() {
+            const content = document.getElementById('previewContent');
+            content.innerHTML = '';
+
+            elements.forEach(el => {
+                const div = document.createElement('div');
+                div.className = `placed-element el-${el.type} ${el.id === selectedId ? 'selected' : ''}`;
+                div.style.gridColumn = `${el.colStart} / ${el.colEnd}`;
+                div.onclick = (e) => { e.stopPropagation(); selectElement(el.id); };
+
+                const indicator = document.createElement('span');
+                indicator.className = 'col-indicator';
+                indicator.textContent = `col ${el.colStart}–${el.colEnd - 1} (span ${el.colEnd - el.colStart})`;
+                div.appendChild(indicator);
+
+                if (el.type === 'rule') {
+                    const hr = document.createElement('hr');
+                    hr.className = 'el-rule';
+                    div.appendChild(hr);
+                } else if (el.type === 'spacer') {
+                    div.classList.add('el-spacer');
+                } else {
+                    div.appendChild(document.createTextNode(el.text));
+                }
+
+                // Make it editable on double-click
+                if (el.type !== 'rule' && el.type !== 'spacer') {
+                    div.ondblclick = (e) => {
+                        e.stopPropagation();
+                        const newText = prompt('Edit text:', el.text);
+                        if (newText !== null) {
+                            el.text = newText;
+                            renderAll();
+                        }
+                    };
+                }
+
+                content.appendChild(div);
+            });
+
+            updatePrompt();
+        }
+
+        function updatePrompt() {
+            const gutter = document.getElementById('gutterInput').value;
+            const margin = document.getElementById('marginInput').value;
+            const output = document.getElementById('promptOutput');
+
+            if (elements.length === 0) {
+                output.textContent = '/* Add elements to generate CSS */';
+                return;
+            }
+
+            let css = `/* Joinery Grid Layout */\n`;
+            css += `.grid {\n`;
+            css += `    display: grid;\n`;
+            css += `    grid-template-columns: repeat(12, 1fr);\n`;
+            css += `    gap: 0 ${gutter}px;\n`;
+            css += `    max-width: 1200px;\n`;
+            css += `    margin: 0 auto;\n`;
+            css += `    padding: 0 ${margin}px;\n`;
+            css += `}\n\n`;
+
+            elements.forEach((el, i) => {
+                const name = el.type === 'rule' ? 'rule' : el.type === 'spacer' ? 'spacer' : el.text.slice(0, 30).replace(/[^a-zA-Z0-9 ]/g, '').trim().replace(/\s+/g, '-').toLowerCase();
+                css += `/* ${el.type}: "${el.text.slice(0, 40)}${el.text.length > 40 ? '...' : ''}" */\n`;
+                css += `.el-${i + 1} { grid-column: ${el.colStart} / ${el.colEnd}; } /* span ${el.colEnd - el.colStart} */\n`;
+            });
+
+            output.textContent = css;
+        }
+
+        function copyPrompt() {
+            const text = document.getElementById('promptOutput').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 1500);
+            });
+        }
+
+        // Deselect on canvas click
+        document.querySelector('.canvas').addEventListener('click', () => {
+            selectedId = null;
+            document.getElementById('selectedControls').classList.remove('visible');
+            renderAll();
+        });
+
+        // Init
+        buildGridOverlay();
+    </script>
+</body>
+</html>
