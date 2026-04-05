@@ -17,6 +17,17 @@
 
 ---
 
+## Attunement Frame: Reading the AI's Generation Defaults
+
+Weeks 1 and 2 taught you to attune to how the AI processes tasks and receives input. This week, you attune to how it generates output.
+
+Left unconstrained, the AI generates in its training distribution's default voice. Published writing, marketing copy, blog posts, documentation: all the polished, performed text it learned from. That default is why all AI copy sounds the same. The person disappears because the model's generation defaults occupy the space where the person's voice should be.
+[SOURCE: essay, voice-governance.md, paragraphs 1-3]
+
+Voice governance is attunement to generation defaults. You read what the AI's output system does when unconstrained (converges toward generic published register), and you design constraints that occupy that space before the defaults can. Constraints applied during generation produce structurally different work than constraints applied after. That structural difference is the subject of this week.
+
+---
+
 ## Lesson 3.1 — Why AI Copy Sounds the Same (Video Close Script Outline)
 
 **Lesson type:** Demo (instructor presents)
@@ -513,6 +524,27 @@ Step 2: For each category above, student identifies 1-3 patterns from their own 
 Step 3: Student converts each pattern into an operational rule (following the format: what to do OR what not to do, with a specific enough description that the AI can follow it)
 Step 4: Student assembles rules into a single protocol document
 
+### Extraction Template
+
+Use this table for each of the 8 categories. Fill in at least 4 categories with 1-3 patterns each. One row per pattern found.
+
+| Category | Pattern Found | Quote from My Transcript | Operational Rule |
+|----------|--------------|--------------------------|------------------|
+| Hard Prohibitions | (what do you never do or say?) | (exact words from transcript) | (binary rule: "Zero [X]" or "Never [Y]") |
+| AI Patterns to Block | (what AI defaults would sound wrong in your voice?) | (example from transcript showing the opposite) | (specific pattern to catch and prevent) |
+| Sentence Architecture | (how do your sentences connect?) | (example) | (rule about connectors, length, rhythm) |
+| Opening Moves | (how do you start a thought?) | (example) | (rule about what you lead with) |
+| Imagery and Vocabulary | (what physical/concrete words do you reach for?) | (example) | (vocabulary list or reach-for guidance) |
+| Emotional Register | (how does feeling enter your speech?) | (example) | (rule about when/how emotion surfaces) |
+| Evidence Pattern | (how do you support claims?) | (example) | (rule about sourcing, specifics, proof) |
+| Compositional Roughness | (where does your writing NOT resolve cleanly?) | (example) | (rule about allowing unresolved moments) |
+
+**Example row (from Peter's own extraction, for reference):**
+
+| Category | Pattern Found | Quote from Transcript | Operational Rule |
+|----------|--------------|----------------------|------------------|
+| Opening Moves | Leads with the situation or the feeling, not with context or credentials | "So basically what happened was the output came back flat and I knew immediately it was the prompt structure" | "Open with the thing itself. The situation, the feeling, or the object. Context comes after, if at all." |
+
 **Minimum viable protocol:** 8-12 rules covering at least 4 of the 8 categories above.
 
 **Source model for rule format (voice-protocol.md, hard rules):**
@@ -569,10 +601,20 @@ Peter's verification checklist for published copy:
 12. Does the frontmatter match the body?
 13. Does the index entry need updating?
 
-**For student use:** Items 1-11 are adaptable to any voice protocol. Items 12-13 are Peter-specific (site infrastructure). Students should build their own verification checklist with:
-- Their hard rules as binary checks (pass/fail)
-- A "room test" equivalent: does this copy feel like it could only belong to them?
-- A stranger test: would someone who doesn't know them feel the person behind the writing?
+**For student use:** Items 1-11 are adaptable to any voice protocol. Items 12-13 are Peter-specific (site infrastructure). Use this 8-item student verification checklist after generating constrained output:
+
+### Student Verification Checklist
+
+1. **Hard rules pass?** Read through your hard prohibitions one by one. Does the output follow each? Binary per rule: pass or fail.
+2. **AI patterns caught?** Check for the AI defaults you listed (negation-affirmation, epigrammatic closers, performed enthusiasm, etc.). Did any slip through?
+3. **Opening move matches?** Does the output open the way you actually open? Compare the first sentence to how you started thoughts in your transcript.
+4. **Vocabulary right?** Does the output reach for YOUR physical/concrete words, or did it substitute generic alternatives?
+5. **Sentence rhythm matches?** Read the output aloud. Does the pacing feel like you talking, or like AI performing smooth cadence?
+6. **Feeling enters where it should?** Does emotion surface where you surface it (in your transcript), or where the AI defaults to surfacing it (typically at endings and transitions)?
+7. **Roughness preserved?** Is there at least one moment where the thought moves forward instead of landing cleanly? Or does everything resolve with equal smoothness?
+8. **The room test:** Could this only have come from you? If you stripped the byline, would a colleague recognize the voice?
+
+Score: 8/8 means the protocol is working. 5-7/8 means specific rules need tightening. Below 5 means the protocol is too loose or the rules are surface-level (go back to extraction, look for structural patterns you missed).
 
 ### The Overcorrection Warning
 

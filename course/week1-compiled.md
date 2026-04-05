@@ -4,6 +4,18 @@ Compiled 2026-04-04. Every quote, example, and teaching point is sourced. Nothin
 
 ---
 
+## Attunement Frame: Reading the AI's Task-Processing Limits
+
+Designers attune to receiving systems every day. You read a client's decision-making style and shape the presentation to match. You read an audience's attention patterns and design the layout to hold them. You read a student's processing capacity and break the instruction into steps they can follow. The question underneath all of these: what does this system actually need to succeed at this task?
+[SOURCE: essay, what-does-the-system-actually-need.md]
+
+This week applies that attunement skill to a specific receiving system: a large language model processing a compound instruction. The model has processing limits, just as a student has working memory limits. When you give it five objectives in a single prompt, it distributes attention across all five, and each one gets a fraction. The output comes back competent but shallow. The fix is the same fix a special education teacher applies when a student can only hold one instruction at a time: decompose.
+[SOURCE: whitepaper, README.md, Section 1]
+
+Task decomposition is attunement in action. You read the AI's processing reality (attention splits across concurrent objectives), and you design the task around that reality (one objective per prompt). The technique is straightforward. The skill underneath it, reading the receiving system, is what makes it transferable to every other context in this curriculum.
+
+---
+
 ## Lesson 1.1 — The Frame Break (Video Intro Script Outline)
 
 **Format:** On-camera, 3-5 minutes, direct address, no slides.

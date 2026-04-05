@@ -4,6 +4,17 @@ Compiled from Peter Salvato's published writing, whitepapers, drafts, narrative 
 
 ---
 
+## Attunement Frame: Reading the AI's Input Capacity
+
+Week 1 taught you to attune to how the AI processes tasks: one objective at a time, not five at once. This week, you attune to how it receives input.
+
+The conventional approach assumes the AI needs structure from you: clear instructions, defined formats, specific constraints. The attunement approach asks a different question. What kind of input actually carries the most information to this receiving system? The answer, grounded in cognitive science research, is that unstructured human thinking (brain dumps, voice memos, working notes) carries richer raw material than polished prompts. The structuring step compresses your thinking before the AI sees it.
+[SOURCE: whitepaper, input-inversion, Section 1]
+
+Input inversion is attunement to input capacity. You read what the AI actually needs from you (your raw thinking, not your pre-organized conclusions), and you design the input pipeline around that reading. The technique is counter-intuitive. The skill underneath it is the same one you use when you listen to a client talk through their problem instead of reading their brief: the unstructured version carries more.
+
+---
+
 ## Lesson 2.1: Video Intro Script Outline
 **Why Better Prompts Still Produce Generic Output**
 
@@ -169,6 +180,23 @@ Students who explain material to themselves while learning produce deeper unders
 
 *Caveat from references:* "Chi's research is about learning, not about creative ideation. The mechanism (active processing reveals gaps) transfers, but we shouldn't overstate the equivalence."
 
+### Knowledge-Transforming vs Knowledge-Telling
+
+**Source: Cognitive science references, Week 2/3 section; foundations-scaffold.md, Lesson 2.3 citation**
+
+**Flower & Hayes (1981). "A Cognitive Process Theory of Writing." / Bereiter & Scardamalia (1987). *The Psychology of Written Composition.***
+
+Writers operate in two modes. Knowledge-telling is retrieval: the writer accesses what they already know and puts it on the page. The result is organized but static. Knowledge-transforming is generative: the act of writing itself changes what the writer knows. New connections form during production. The result contains ideas the writer did not have before starting.
+
+*Teaching point:* Standard prompting is knowledge-telling. The designer retrieves what they think the AI needs to hear, organizes it into a prompt, and hits enter. The prompt contains retrieved knowledge. The AI processes a fixed input.
+
+A brain dump is knowledge-transforming. The designer thinks out loud without pre-organizing. Talking produces connections that silent retrieval misses. Ideas arrive mid-sentence. Contradictions surface. The designer changes direction when a new thought displaces an old one. The dump contains thinking-in-progress, and when the AI processes it, the raw material is richer because it includes the discovery, not just the conclusion.
+
+This is the conceptual spine of Week 2. Input inversion works because it forces the human into knowledge-transforming mode before the AI touches the material. Structured prompts force the human into knowledge-telling mode. The difference in input quality is not about word count or specificity. It is about whether the human was discovering or retrieving when they produced the input.
+[SOURCE: cognitive-science-references.md, Flower & Hayes citation; foundations-scaffold.md, line 377]
+
+*Caveat:* Flower & Hayes studied expert human writers. Applying the knowledge-telling/knowledge-transforming framework to AI input is analogical. The mechanism (generative articulation produces richer raw material than organized retrieval) is supported by the evidence, but the exact transfer to AI processing contexts is Peter's inference, not the original researchers' claim.
+
 ### The Extended Mind Thesis
 
 **Source: Cognitive science references, Week 2 section**
@@ -204,9 +232,9 @@ Cognitive processes do not stop at the skull. External tools and artifacts (note
 
 **Source: Cognitive science references, Week 2 section**
 
-Voice input cognitive load research: dictation produces 35-45% lower cognitive load measurements compared to typing for equivalent content generation tasks.
+Voice input reduces cognitive load because it separates the planning stage from the translation stage (Kellogg, 1996, cited in Lesson 2.3 above). When you speak, you are not simultaneously formatting, punctuating, and structuring. The translation burden is deferred. Multiple studies have found measurable load reduction during dictation compared to typing, though the size of the effect varies with the person and the task. Some people think better while typing. The recommendation is to try voice input on your next brain dump and notice whether your thinking goes further before you hit a wall.
 
-*Caveat from references:* "The 35-45% figure comes from aggregating across several studies with different methodologies. Individual results vary. Some people think better while typing. The recommendation should be 'try it' not 'this is universally better.'"
+*Note:* A previous version of this section cited a "35-45% lower cognitive load" figure without specific attribution. That figure has been removed pending source verification. The principle (voice input reduces translation-stage cognitive load) is well-grounded in Kellogg's working memory model. The specific percentage should not be cited without a traceable source.
 
 ### Andrew Ng's Benchmark (Systems vs. Prompts)
 
@@ -513,7 +541,7 @@ All content in this document was compiled from the following sources:
 - Osborn (1953) / Amabile (1983) -- Premature evaluation suppresses creativity
 - Cseh et al. (2015) -- Creative flow and ambiguity
 - Ng (2024) -- Agentic workflow benchmarks (GPT-3.5 at 95.1% vs GPT-4 at 67%)
-- Voice input cognitive load research -- 35-45% lower cognitive load via dictation
+- Voice input cognitive load research (Kellogg 1996, planning-translation separation; specific percentage removed pending source verification)
 
 ---
 
