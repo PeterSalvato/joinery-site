@@ -12,14 +12,12 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="page">
 
-        <!-- Nav -->
         <nav class="nav" id="nav">
             <div class="nav-inner">
                 <a class="nav-mark" href="index.html">
@@ -36,46 +34,45 @@
         </nav>
 
         <!-- Research -->
-        <section class="section research">
+        <section class="section" style="padding-top: var(--space-xl);">
             <div class="section-inner">
-                <div class="label">Published Research</div>
-                <h2>The methodology is documented, tested, and cited.</h2>
-                <p>Every course at Joinery is grounded in published research with DOIs. The tools are open source. The site you are reading was built by the system it teaches.</p>
+                <h1>Published Research</h1>
+                <p style="font-size: 1.05rem; color: var(--color-text-mid); margin-top: 0.75rem; margin-bottom: var(--space-xl);">Every course at Joinery is grounded in published research with DOIs. The tools are open source. The site you are reading was built by the system it teaches.</p>
                 <ul class="paper-list">
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18941231" target="_blank" rel="noopener">
-                            <span class="paper-title">Accommodation Design<span class="paper-subtitle">Why "what does the system need?" is a better question than "how do I control the output?"</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Accommodation Design</span>
+                            <span class="paper-subtitle">Why "what does the system need?" is a better question than "how do I control the output?"</span>
                         </a>
                     </li>
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18962881" target="_blank" rel="noopener">
-                            <span class="paper-title">Input Inversion<span class="paper-subtitle">Why unstructured human thinking produces better AI output than structured prompts.</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Input Inversion</span>
+                            <span class="paper-subtitle">Why unstructured human thinking produces better AI output than structured prompts.</span>
                         </a>
                     </li>
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18962893" target="_blank" rel="noopener">
-                            <span class="paper-title">Prosthetic Cognition<span class="paper-subtitle">AI as cognitive extension: the climbing harness, not the replacement or the tool.</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Prosthetic Cognition</span>
+                            <span class="paper-subtitle">AI as cognitive extension: the climbing harness, not the replacement or the tool.</span>
                         </a>
                     </li>
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18986290" target="_blank" rel="noopener">
-                            <span class="paper-title">Semantic Flattening<span class="paper-subtitle">Why AI memory loses what mattered, and what human-marked importance fixes.</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Semantic Flattening</span>
+                            <span class="paper-subtitle">Why AI memory loses what mattered, and what human-marked importance fixes.</span>
                         </a>
                     </li>
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18986295" target="_blank" rel="noopener">
-                            <span class="paper-title">Lens Extraction<span class="paper-subtitle">Decomposing "is this good?" into independent evaluations drawn from real practitioners.</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Lens Extraction</span>
+                            <span class="paper-subtitle">Decomposing "is this good?" into independent evaluations drawn from real practitioners.</span>
                         </a>
                     </li>
                     <li>
                         <a class="paper" href="https://doi.org/10.5281/zenodo.18986297" target="_blank" rel="noopener">
-                            <span class="paper-title">Voice Governance<span class="paper-subtitle">Why constraining AI output during generation produces structurally different work than editing after.</span></span>
-                            <span class="paper-tag">Whitepaper &middot; DOI</span>
+                            <span class="paper-title">Voice Governance</span>
+                            <span class="paper-subtitle">Why constraining AI output during generation produces structurally different work than editing after.</span>
                         </a>
                     </li>
                 </ul>
@@ -83,20 +80,21 @@
         </section>
 
         <!-- Reading -->
-        <section class="section reading">
+        <section class="reading">
             <div class="section-inner">
-                <div class="label">Start Reading</div>
                 <h2>Free essays from the methodology.</h2>
-                <a class="essay-link" href="essays/the-wrong-question.html">
-                    <div class="essay-tag"><span class="material-symbols-outlined">auto_stories</span>Free Essay</div>
-                    <div class="essay-title">The Wrong Question</div>
-                    <div class="essay-desc">Why your prompts keep getting longer and your output keeps getting worse.</div>
-                </a>
+                <div class="essay-entry">
+                    <div class="essay-entry-label">Free essay</div>
+                    <a href="essays/the-wrong-question.html">
+                        <div class="essay-entry-title">The Wrong Question</div>
+                        <div class="essay-entry-desc">Why your prompts keep getting longer and your output keeps getting worse.</div>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Signup -->
-        <section class="section signup" id="signup">
+        <section class="signup" id="signup">
             <div class="signup-inner">
                 <h2>Enrollment opens soon.</h2>
                 <p class="subtitle">Get first access to the Foundations course and everything that follows.</p>
@@ -107,14 +105,12 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
             <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
         </footer>
 
     </div>
     <script>
-        // Shadow on scroll
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 20);

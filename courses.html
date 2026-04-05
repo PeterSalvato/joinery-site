@@ -12,14 +12,12 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="page">
 
-        <!-- Nav -->
         <nav class="nav" id="nav">
             <div class="nav-inner">
                 <a class="nav-mark" href="index.html">
@@ -36,33 +34,30 @@
         </nav>
 
         <!-- Courses -->
-        <section class="section" style="padding-top: 3.5rem;">
+        <section class="section" style="padding-top: var(--space-xl);">
             <div class="section-inner">
-                <div class="label">Courses</div>
-                <h2 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem;">Built by a trained educator. Grounded in published research.</h2>
-                <p style="font-size: 1.05rem; color: var(--color-text-mid); max-width: 34em; margin-bottom: 2.5rem;">Every course uses a gradual release model: demonstration, guided practice, independent practice. You finish with a working system for your own practice, not a playlist you watched.</p>
+                <h1>Courses</h1>
+                <p style="font-size: 1.05rem; color: var(--color-text-mid); margin-top: 0.75rem; margin-bottom: var(--space-xl);">Built by a trained educator. Grounded in published research. Every course uses a gradual release model: demonstration, guided practice, independent practice. You finish with a working system for your own practice, not a playlist you watched.</p>
 
-                <!-- Foundations Card -->
-                <a href="courses/foundations.html" class="course-card" style="display: block; text-decoration: none; color: inherit; margin-bottom: 2rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; cursor: pointer;">
-                    <div class="label" style="color: var(--color-accent); margin-bottom: 0.75rem;">Now Enrolling</div>
-                    <h3>AI Accommodation: The Foundations</h3>
+                <div class="course-entry">
+                    <h3><a href="courses/foundations.html" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--color-rule); transition: border-color 0.15s ease;">AI Accommodation: The Foundations</a></h3>
                     <div class="course-meta">Self-paced &middot; 3 weeks &middot; $299 &middot; Designed for designers</div>
-                    <p style="margin-bottom: 0;">Three domains. Three weeks. Three deliverables. Task decomposition, input architecture, and voice governance: the three skills that produce the fastest visible change in AI-assisted creative work.</p>
-                </a>
+                    <p>Three domains. Three weeks. Three deliverables. Task decomposition, input architecture, and voice governance: the three skills that produce the fastest visible change in AI-assisted creative work.</p>
+                    <a class="text-link" href="courses/foundations.html">Learn more</a>
+                </div>
             </div>
         </section>
 
         <!-- More Courses -->
-        <section class="section" style="background-color: var(--color-bg-alt); border-top: 1px solid var(--color-rule);">
+        <section class="section" style="padding-top: var(--space-xl); border-top: 1px solid var(--color-rule);">
             <div class="section-inner">
-                <div class="label">In Development</div>
-                <h2 style="font-family: var(--font-heading); font-size: clamp(1.3rem, 3vw, 1.6rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.75rem;">More courses across six domains and three tracks.</h2>
-                <p style="font-size: 1.05rem; color: var(--color-text-mid); max-width: 34em; margin-bottom: 1.5rem;">Joinery's curriculum covers Accommodation Design, Input Inversion, Prosthetic Cognition, Semantic Hierarchy, Voice Governance, and Lens Extraction. Courses for solo practitioners, team directors, and educators are in development. Sign up below for updates as they open.</p>
+                <h2>More courses across six domains and three tracks.</h2>
+                <p style="font-size: 1.05rem; color: var(--color-text-mid); margin-top: 0.75rem;">Joinery's curriculum covers Accommodation Design, Input Inversion, Prosthetic Cognition, Semantic Hierarchy, Voice Governance, and Lens Extraction. Courses for solo practitioners, team directors, and educators are in development. Sign up below for updates as they open.</p>
             </div>
         </section>
 
         <!-- Signup -->
-        <section class="section signup" id="signup">
+        <section class="signup" id="signup">
             <div class="signup-inner">
                 <h2>Enrollment opens soon.</h2>
                 <p class="subtitle">Get first access to the Foundations course and everything that follows.</p>
@@ -73,7 +68,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
             <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
         </footer>
