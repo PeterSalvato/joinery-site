@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart TB
+    AD["Accommodation Design\n(the founding paper)"]
+
+    AD --> II["Input Inversion"]
+    AD --> VG["Voice Governance"]
+    AD --> SF["Semantic Flattening"]
+
+    II --> PC["Prosthetic Cognition\n(extends Input Inversion\nto cognitive framing)"]
+
+    VG --> LE["Lens Extraction\n(extends Voice Governance\nto evaluation)"]
+
+    SF --> LE
+
+    PC -.->|"all six synthesize into"| ALL["Coordinator\nBuilding"]
+    LE -.->|"all six synthesize into"| ALL
+    II -.->|"all six synthesize into"| ALL
+    VG -.->|"all six synthesize into"| ALL
+    SF -.->|"all six synthesize into"| ALL
+    AD -.->|"all six synthesize into"| ALL
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

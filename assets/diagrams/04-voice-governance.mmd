@@ -1,0 +1,18 @@
+flowchart TB
+    CONV["CONVERSATIONS\nhow you actually talk"]
+    PUB["PUBLISHED WRITING\nhow you perform"]
+
+    CONV -->|"use this"| VS
+    PUB -.-x|"not this"| VS
+
+    VS["VOICE SAMPLING\nobserve patterns"]
+    VS --> VF["VOICE FINGERPRINT\naccumulated observations"]
+    VF --> ER["EXTRACT RULES\nbinary, testable, specific"]
+    ER --> VP["VOICE PROTOCOL\nloaded before generation"]
+    VP --> CG["CONSTRAINED GENERATION\nrules applied DURING"]
+    CG --> VER{"VERIFICATION"}
+
+    VER -->|"violation"| FIX["FIX"] --> CG
+    VER -->|"false positive"| OVERRIDE["HUMAN\nOVERRIDE"]
+    VER -->|"passes"| SHIP["SHIP"]
+    OVERRIDE --> SHIP

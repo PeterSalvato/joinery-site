@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joinery — Diagram System</title>
+<style>
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 48px 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 48px;
+}
+h2 {
+    font-size: 1.1rem;
+    margin-top: 64px;
+    margin-bottom: 4px;
+    color: #ccc;
+}
+.placement {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 24px;
+}
+.mermaid {
+    background: #f8f6f2;
+    padding: 32px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+.note {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+.source {
+    margin-top: 24px;
+    padding: 16px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #888;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+.source-toggle {
+    font-size: 0.75rem;
+    color: #555;
+    cursor: pointer;
+    margin-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<h1>Joinery Diagram System — Draft Renders</h1>
+
+<!-- Diagram 1 -->
+<h2>1. The Attunement-Accommodation Cycle</h2>
+<div class="placement">Homepage + Module 1 intro</div>
+<div class="mermaid">
+flowchart TB
+    E["ENCOUNTER\na receiving system"]
+    R["READ\nwhat does this system\nactually need to succeed\nat this task?"]
+    D["DESIGN AROUND\nstructure the task, input,\nor constraint to fit\nwhat you read"]
+    O["OBSERVE\ndid it work?\nwhat changed?\nwhat did you miss?"]
+
+    E --> R
+    R --> D
+    D --> O
+    O -->|"re-read, re-design"| E
+
+    style E fill:#2a2725,color:#f8f6f2,stroke:#555
+    style R fill:#2a2725,color:#f8f6f2,stroke:#555
+    style D fill:#2a2725,color:#f8f6f2,stroke:#555
+    style O fill:#2a2725,color:#f8f6f2,stroke:#555
+</div>
+<div class="note">The same cycle applies to every receiving system: student, LLM, client, brand audience. The cycle stays the same. The reading changes.</div>
+
+<!-- Diagram 2 -->
+<h2>2. Decomposition-to-Synthesis Flow</h2>
+<div class="placement">Module 1 Lessons 1.2-1.4 + Foundations sales page</div>
+<div class="mermaid">
+flowchart TB
+    B["BRIEF\nthe project"]
+
+    B --> C["COMPOUND PATH\none prompt, 5 objectives"]
+    B --> D["DECOMPOSED PATH\nidentify dimensions,\n5 specialist prompts"]
+
+    C --> CO["AI processes\nall 5 simultaneously"]
+    CO --> CX["OUTPUT: shallow, coherent\nAI made all decisions"]
+
+    D --> SO["5 specialist outputs\neach deep, independent"]
+
+    SO --> AC["AI COMPILER\nsynthesizes outputs"]
+    SO --> HC["HUMAN CD\nsteps through\none at a time"]
+
+    AC --> ACO["OUTPUT: organized, passive\nmisses conflicts\nmisses convergences"]
+
+    HC --> TR["TRACKED DECISIONS\naccept, override,\ndefer + reasoning"]
+    TR --> CB["COMPILED BRIEF\nfrom tracker"]
+    CB --> HCO["OUTPUT: directed\nconflicts resolved\nconvergences named\ngoverning principles set"]
+
+    style B fill:#555,color:#f8f6f2,stroke:#777
+    style CX fill:#8b4444,color:#f8f6f2,stroke:#a55
+    style ACO fill:#8b7744,color:#f8f6f2,stroke:#a97
+    style HCO fill:#4a7a4a,color:#f8f6f2,stroke:#5a5
+    style TR fill:#2a2725,color:#f8f6f2,stroke:#555
+    style CB fill:#2a2725,color:#f8f6f2,stroke:#555
+</div>
+<div class="note">Three paths from the same brief. Compound is a dead end. Harnessed is better but passive. Human-CD is where judgment enters. The branching IS the argument.</div>
+
+<!-- Diagram 3 -->
+<h2>3. Step-Through Synthesis Process</h2>
+<div class="placement">Module 1 Lesson 1.4</div>
+<div class="mermaid">
+flowchart LR
+    subgraph step1 [" "]
+        direction TB
+        S1["Specialist\nOutput #1"] --> P1["PRESENT"]
+        P1 --> R1["REACT"]
+        R1 --> T1["TRACK\ndecision +\nreasoning"]
+    end
+
+    subgraph step2 [" "]
+        direction TB
+        S2["Specialist\nOutput #2"] --> P2["PRESENT"]
+        P2 --> R2["REACT"]
+        R2 --> T2["TRACK"]
+    end
+
+    subgraph step3 [" "]
+        direction TB
+        S3["Specialist\nOutput #3"] --> P3["PRESENT"]
+        P3 --> R3["REACT"]
+        R3 --> T3["TRACK"]
+    end
+
+    subgraph stepN ["...#4, #5"]
+        direction TB
+        SN["..."] --> TN["TRACK"]
+    end
+
+    subgraph compile [" "]
+        direction TB
+        TR["READ\nTRACKER\ntop to bottom"]
+        TR --> GP["PATTERNS?\ngoverning\nprinciples\nemerge"]
+        GP --> BR["COMPILE\nBRIEF"]
+    end
+
+    step1 --> step2
+    step2 --> step3
+    step3 --> stepN
+    stepN --> compile
+
+    style S1 fill:#555,color:#f8f6f2,stroke:#777
+    style S2 fill:#555,color:#f8f6f2,stroke:#777
+    style S3 fill:#555,color:#f8f6f2,stroke:#777
+    style BR fill:#4a7a4a,color:#f8f6f2,stroke:#5a5
+</div>
+<div class="note">One at a time. React before seeing the next. The tracker accumulates. The brief compiles from the tracker, not from memory. Decomposed synthesis.</div>
+
+<!-- Diagram 4 -->
+<h2>4. Voice Governance Pipeline</h2>
+<div class="placement">Module 3 Lesson 3.1</div>
+<div class="mermaid">
+flowchart TB
+    CONV["CONVERSATIONS\nhow you actually talk:\nworking messages,\nbrain dumps, voice memos"]
+    PUB["PUBLISHED WRITING\nhow you perform:\nblog posts, case studies"]
+
+    CONV -->|"use this"| VS
+    PUB -.-x|"not this"| VS
+
+    VS["VOICE SAMPLING\nobserve patterns:\nrhythm, openings,\nvocabulary, transitions"]
+    VS --> VF["VOICE FINGERPRINT\naccumulated observations\nacross sessions"]
+    VF --> ER["EXTRACT RULES\nconvert patterns to\noperational constraints:\nbinary, testable, specific"]
+    ER --> VP["VOICE PROTOCOL\nruleset loaded\nbefore generation"]
+    VP --> CG["CONSTRAINED GENERATION\nrules applied DURING,\nnot after"]
+    CG --> VER{"VERIFICATION\ncheck output\nagainst protocol"}
+
+    VER -->|"violation\n(real AI pattern)"| FIX["FIX"]
+    VER -->|"false positive\n(your actual voice)"| OVERRIDE["HUMAN OVERRIDE\nkeep the sentence"]
+    VER -->|"passes"| SHIP["SHIP"]
+    FIX --> CG
+    OVERRIDE --> SHIP
+
+    style CONV fill:#4a7a4a,color:#f8f6f2,stroke:#5a5
+    style PUB fill:#8b4444,color:#f8f6f2,stroke:#a55
+    style SHIP fill:#4a7a4a,color:#f8f6f2,stroke:#5a5
+    style OVERRIDE fill:#2a2725,color:#f8f6f2,stroke:#555
+    style VER fill:#555,color:#f8f6f2,stroke:#777
+</div>
+<div class="note">Two critical signals: source is conversations (not published writing). Verification has a human override branch for false positives. The override is the system working, not failing.</div>
+
+<!-- Diagram 5 -->
+<h2>5. Input Inversion</h2>
+<div class="placement">Module 2 Lesson 2.1</div>
+<div class="mermaid">
+flowchart TB
+    PERSON["THE SAME PERSON\nwith the same idea"]
+
+    PERSON --> CONV_PATH
+    PERSON --> INV_PATH
+
+    subgraph CONV_PATH ["CONVENTIONAL PATH"]
+        direction TB
+        CT["Think about\nthe problem"]
+        CT --> CO["Organize\nthoughts"]
+        CO --> CS["Structure\ninto prompt"]
+        CS --> COMPRESS["⚠ COMPRESSION\nediting, filtering,\npolishing removes\nthe raw thinking"]
+        COMPRESS --> SP["Structured\nprompt"]
+        SP --> AP1["AI processes\nfixed input"]
+        AP1 --> OUT1["OUTPUT:\nlimited to what\nsurvived compression"]
+    end
+
+    subgraph INV_PATH ["INVERTED PATH"]
+        direction TB
+        IT["Think out loud\nabout the problem"]
+        IT --> BD["Brain dump\ntangents,\ncontradictions,\nfalse starts,\ndiscoveries"]
+        BD --> RT["Raw transcript\nnothing lost yet"]
+        RT --> AS["AI structures\nthe raw input"]
+        AS --> AP2["AI processes\nthe full thinking"]
+        AP2 --> OUT2["OUTPUT:\ncontains ideas\nthe person didn't\nknow they had"]
+    end
+
+    style COMPRESS fill:#8b4444,color:#f8f6f2,stroke:#a55
+    style OUT1 fill:#8b4444,color:#f8f6f2,stroke:#a55
+    style OUT2 fill:#4a7a4a,color:#f8f6f2,stroke:#5a5
+    style PERSON fill:#555,color:#f8f6f2,stroke:#777
+</div>
+<div class="note">Same person, same idea. The difference is WHERE compression happens. Conventional path: the person compresses before the AI sees anything. Inverted path: the AI sees the full thinking and structures it after.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: {
+        curve: 'basis',
+        padding: 20
+    },
+    themeVariables: {
+        fontSize: '14px',
+        fontFamily: 'system-ui, -apple-system, sans-serif'
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart LR
+    subgraph s1 ["Output #1"]
+        direction TB
+        P1["PRESENT"] --> R1["REACT"] --> T1["TRACK"]
+    end
+    subgraph s2 ["Output #2"]
+        direction TB
+        P2["PRESENT"] --> R2["REACT"] --> T2["TRACK"]
+    end
+    subgraph s3 ["Output #3"]
+        direction TB
+        P3["PRESENT"] --> R3["REACT"] --> T3["TRACK"]
+    end
+    subgraph s4 ["...#4, #5"]
+        direction TB
+        PN["..."] --> TN["TRACK"]
+    end
+    subgraph comp ["Compile"]
+        direction TB
+        RD["READ TRACKER"] --> GP["PATTERNS\nemerge"] --> BR["COMPILE\nBRIEF"]
+    end
+
+    s1 --> s2 --> s3 --> s4 --> comp
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

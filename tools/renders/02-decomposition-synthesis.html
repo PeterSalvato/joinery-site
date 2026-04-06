@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart TB
+    B["BRIEF\nthe project"]
+
+    B --> C["COMPOUND PATH\none prompt, 5 objectives"]
+    B --> D["DECOMPOSED PATH\nidentify dimensions,\n5 specialist prompts"]
+
+    C --> CO["AI processes\nall 5 simultaneously"]
+    CO --> CX["OUTPUT: shallow, coherent\nAI made all decisions"]
+
+    D --> SO["5 specialist outputs\neach deep, independent"]
+
+    SO --> AC["AI COMPILER\nsynthesizes outputs"]
+    SO --> HC["HUMAN CD\nsteps through\none at a time"]
+
+    AC --> ACO["OUTPUT: organized, passive\nmisses conflicts\nmisses convergences"]
+
+    HC --> TR["TRACKED DECISIONS\naccept, override,\ndefer + reasoning"]
+    TR --> CB["COMPILED BRIEF\nfrom tracker"]
+    CB --> HCO["OUTPUT: directed\nconflicts resolved\nconvergences named\ngoverning principles set"]
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart TB
+    E["ENCOUNTER\na receiving system"]
+    R["READ\nwhat does this system\nactually need to succeed\nat this task?"]
+    D["DESIGN AROUND\nstructure the task, input,\nor constraint to fit\nwhat you read"]
+    O["OBSERVE\ndid it work?\nwhat changed?\nwhat did you miss?"]
+
+    E --> R
+    R --> D
+    D --> O
+    O -->|"re-read, re-design"| E
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

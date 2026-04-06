@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart TB
+    F["01 FOUNDATIONS\nconversation architecture\nfirst artifact"]
+    F -->|"you can talk to AI\nbut output sounds generic"| VG
+
+    VG["02 VOICE GOVERNANCE\ncapture voice, constrain generation"]
+    VG -->|"voice holds but\ninput is still shallow"| II
+
+    II["03 INPUT INVERSION\nbrain dump, unstructured input"]
+    II -->|"input is rich but\nhow do you evaluate?"| LE
+
+    LE["04 LENS EXTRACTION\nmulti-dimensional evaluation"]
+    LE -->|"evaluation works per session\nbut context resets"| SH
+
+    SH["05 SEMANTIC HIERARCHY\nmemory, context across sessions"]
+    SH -->|"context persists but\nwhere's the line?"| PC
+
+    PC["06 PROSTHETIC COGNITION\nwhen to extend vs replace"]
+    PC -->|"you know the method\nnow build infrastructure"| CB
+
+    CB["07 COORDINATOR BUILDING\nmaterialize your practice\nas infrastructure"]
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart LR
+    subgraph research ["PUBLISHED RESEARCH"]
+        direction TB
+        W["6 whitepapers\nwith DOIs\nopen access\npeer-citable"]
+    end
+
+    subgraph courses ["COURSES"]
+        direction TB
+        C["Applied practice\non your own work\ngradual release\nreal deliverables"]
+    end
+
+    subgraph practice ["YOUR PRACTICE"]
+        direction TB
+        P["Working methodology\nyou built yourself\nportable across\nany tool"]
+    end
+
+    research -->|"foundation"| courses
+    courses -->|"application"| practice
+    practice -->|"feeds back"| research
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>

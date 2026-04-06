@@ -1,0 +1,14 @@
+flowchart TB
+    AD["ACCOMMODATION DESIGN\nthe founding question:\nwhat does the system need?"]
+
+    AD --> TD["TASK DECOMPOSITION\nhow to structure\nthe task"]
+    AD --> II["INPUT INVERSION\nhow to structure\nthe input"]
+    AD --> VG["VOICE GOVERNANCE\nhow to constrain\nthe output"]
+
+    TD --> LE["LENS EXTRACTION\nhow to evaluate\nthe result"]
+    II --> PC["PROSTHETIC COGNITION\nwhen to extend\nvs replace thinking"]
+    VG --> SH["SEMANTIC HIERARCHY\nhow to preserve\nwhat mattered"]
+
+    LE --> CB["COORDINATOR BUILDING\nbuild infrastructure\nthat embodies all of it"]
+    PC --> CB
+    SH --> CB

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+</head><body style="background:white; margin:0; padding:24px;">
+<pre class="mermaid">
+flowchart TB
+    PERSON["THE SAME PERSON\nwith the same idea"]
+
+    PERSON --> CP & IP
+
+    subgraph CP ["CONVENTIONAL PATH"]
+        direction TB
+        CT["Think about\nthe problem"] --> CO["Organize\nthoughts"] --> CS["Structure\ninto prompt"]
+        CS --> COMP["⚠ COMPRESSION\nraw thinking\nlost here"]
+        COMP --> SP["Structured prompt"] --> AP1["AI processes\nfixed input"]
+        AP1 --> OUT1["OUTPUT:\nlimited to what\nsurvived compression"]
+    end
+
+    subgraph IP ["INVERTED PATH"]
+        direction TB
+        IT["Think out loud"] --> BD["Brain dump\ntangents, contradictions,\ndiscoveries"]
+        BD --> RT["Raw transcript\nnothing lost"]
+        RT --> AS["AI structures\nthe raw input"]
+        AS --> AP2["AI processes\nfull thinking"]
+        AP2 --> OUT2["OUTPUT:\ncontains ideas\nyou didn't know\nyou had"]
+    end
+</pre>
+<script>mermaid.initialize({startOnLoad:true, theme:'default'});</script>
+</body></html>
