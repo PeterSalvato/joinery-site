@@ -1241,7 +1241,7 @@ input:focus-visible {
     }
 
     .section {
-        padding: var(--space-l) 0;
+        padding: var(--space-l) 1.5rem;
     }
 
     .problem,
