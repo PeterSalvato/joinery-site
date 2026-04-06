@@ -41,10 +41,10 @@ From the whitepaper, Peter frames the same problem in terms of the field's orien
 > "There is a different question: what does each system in the room actually need to do this job well?"
 [SOURCE: whitepaper, README.md, Section 1]
 
-From the compound-prompt-demo artifact, the core frame:
+From the Roughing It Hot Sauce demo artifact, the core frame:
 
 > "A compound prompt makes the AI the creative director. Decomposed prompts make you the creative director with specialists reporting to you."
-[SOURCE: artifact, compound-prompt-demo.md, line 9]
+[SOURCE: artifact, roughing-it-compound-demo.md, setup]
 
 From the foundations-scaffold.md, the lesson objective:
 
@@ -176,97 +176,95 @@ Honest caveat for the course: "LLMs don't have working memory in the human sense
 > "Task analysis (breaking complex behaviors into discrete, teachable steps) is classified as an evidence-based practice in special education. Decades of applied research show it improves learning outcomes for students with cognitive disabilities."
 [SOURCE: cognitive-science-references.md, Week 1 Supporting Citations, Wong et al. 2014]
 
-### The Voss Type Compound Output as the Example
+### The Roughing It Hot Sauce Compound Output as the Example
 
-The compound prompt (full text):
+The compound prompt. This is what a typical designer actually types:
 
-> "Act as a creative director. I'm Mara Voss, a freelance brand designer and letterer based in Brooklyn. I'm launching my own studio called Voss Type. My clients are independent food brands, breweries, and record labels. My style is bold, hand-drawn typography with a confrontational edge. Generate a visual branding guide for Voss Type that includes: recommended color palette with hex codes and psychological rationale, typography pairings with usage contexts, logo style direction, imagery guidelines, and layout principles for my website and social media. Make sure it reflects my hand-crafted aesthetic and stands out from the minimal-clean trend."
-[SOURCE: artifact, compound-prompt-demo.md, Part 1]
+> "I'm designing identity for Roughing It Hot Sauce, a small-batch brand from a farm in the Hudson Valley. Founder grows her own peppers. Four seasonal sauces (green spring, red summer, smoky fall, fermented winter). Positioning: agricultural, seasonal, serious about peppers. Not edgy, not gimmicky. Closer to craft vinegar than typical hot sauce. Budget is tight, works on shelves, markets, and web. Give me a color palette with hex codes, typography pairings, logo direction, imagery guidelines, and layout principles."
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 1]
 
-The compound output is the full "Voss Type -- Visual Branding Guide" in the artifact (lines 19-199). It covers all 5 sections: Color Palette, Typography Pairings, Logo Style Direction, Imagery Guidelines, Layout Principles.
-[SOURCE: artifact, compound-prompt-demo.md, Part 1]
+The compound output covers all 5 sections in one pass: Color Palette (4 colors with brief rationale), Typography (1 pairing), Logo Direction (hand-drawn wordmark concept), Imagery (farm-focused photography), Layout (generous whitespace, editorial hierarchy). The full output is in the artifact.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 1]
 
-The scaffold frames this output as: "It's competent. It's a B+. Point out what's good about it: coherent, complete, professional. This is not garbage. That's what makes it dangerous. It looks done."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.2]
+The output is competent. Each section names the correct general direction. No section goes deep. The color palette stays at four colors with brief rationale. The typography gives one pairing. The logo direction stays at concept level. The imagery guidelines cover the right territory without specifying capture methodology or seasonal variation. The layout principles name constraints without building a system.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
 
-The artifact's own framing:
+This is a B+ deliverable. Point out what is good about it: coherent, complete, professional. That is what makes it dangerous. It looks done. The compound prompt understood the positioning. It could not carry the positioning into depth on five dimensions simultaneously.
+[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.2; artifact, roughing-it-compound-demo.md, Part 4]
 
-> "A coherent brand guide in one pass. Competent. Professional. A B+ deliverable. Every section was shaped by the same attention in a single generation."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3 "What the compound version produced"]
-
-> "One voice, one perspective, one creative director making all the decisions simultaneously."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
-
-The key structural observation:
-
-> "The compound prompt made the AI the creative director. One perspective made all the decisions. The output is coherent because one mind shaped it. That coherence is also its limitation: no tension, no surprise, no moment where one dimension pushes back against another."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3 "The structural difference"]
+The compound prompt made the AI the creative director. One perspective made all the decisions. The output is coherent because one mind shaped it. That coherence is also its limitation: no tension, no surprise, no moment where one dimension pushes back against another.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
 
 ---
 
-## Lesson 1.3 — The Decomposition
+## Lesson 1.3 — The Decomposition and the Harnessed Workflow
 
-**Format:** Written lesson. **Learning objective:** The student can identify the structural differences between compound and decomposed outputs and explain why independent specialist prompts produce deeper results.
+**Format:** Written lesson. **Learning objective:** The student can identify the structural differences between compound, decomposed, and harnessed outputs, and explain why decomposition unlocks depth while AI compilation has a ceiling.
 
 ### The Five Decomposed Prompts
 
-Each prompt addresses a single dimension. Each is given only the brief and explicitly told to ignore other dimensions.
+Each prompt addresses a single dimension. Each receives only the brand context and is explicitly told to ignore other dimensions. The full prompts and outputs are in the artifact (roughing-it-compound-demo.md, Part 2).
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 2]
 
-**Prompt 1 (Color):** "...Recommend a color palette with hex codes. For each color, explain what it does in the system (primary, accent, neutral, etc.) and why it fits this specific studio's positioning. Do not address typography, logo, imagery, or layout."
-[SOURCE: artifact, compound-prompt-demo.md, Prompt 1]
+The prompting pattern:
+1. **One objective.** "Recommend a color palette with hex codes." Not "recommend a color palette and typography pairings."
+2. **One output.** "For each color, explain what it does in the system and why it fits." Not "explain the color palette, typography, and logo direction."
+3. **Explicit exclusion constraints.** "Do not address typography, logo, imagery, or layout." Every prompt explicitly tells the model what to ignore.
+4. **Only the context it needs.** Each prompt gets the brand brief (who the client is, what the positioning is) but not the other outputs.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 2, prompt structure]
 
-**Prompt 2 (Typography):** "...Recommend typography pairings for the studio's own brand materials. For each pairing, specify where it's used (headlines, body, captions, UI) and why it fits. Do not address color, logo, imagery, or layout."
-[SOURCE: artifact, compound-prompt-demo.md, Prompt 2]
+### What the Decomposed Outputs Produced
 
-**Prompt 3 (Logo):** "...Describe the logo style direction. Not a logo design. The principles, references, and constraints that should govern the mark. What it should feel like, what it should avoid, what makes it unmistakably this studio. Do not address color, typography, imagery, or layout."
-[SOURCE: artifact, compound-prompt-demo.md, Prompt 3]
+Five independent specialist reports, each significantly deeper than its compound counterpart:
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
 
-**Prompt 4 (Imagery):** "...Define imagery guidelines for the studio's own brand presence (website, social, case studies). What kinds of images, what treatment, what to avoid. Photography style, texture use, how hand-drawn work is photographed or scanned. Do not address color, typography, logo, or layout."
-[SOURCE: artifact, compound-prompt-demo.md, Prompt 4]
+**Color:** Specified a two-color print job economy tied to how small-batch food packaging is actually produced. Developed seasonal accent logic tied to harvest. Articulated what the palette deliberately avoids (heat signaling) as a positioning statement.
 
-**Prompt 5 (Layout):** "...Define layout principles for the studio website and social media. Grid behavior, spacing philosophy, how density vs whitespace is handled, how the hand-crafted feeling survives in a digital layout. Do not address color, typography, logo, or imagery."
-[SOURCE: artifact, compound-prompt-demo.md, Prompt 5]
+**Typography:** Provided three complete pairings with reasoning. Established the structural role of the monospaced secondary face (signaling that the brand tracks harvest dates). Defined usage rules down to emphasis conventions.
 
-### The Five Decomposed Outputs
+**Logo:** Went into the philosophy of the mark: what it should feel like, what to avoid, what to study as reference (sign painters' corner initials, printer's marks from the 1500s), and what constraints govern every scale. The compound output described a direction. The decomposed output described what the mark needs to feel like and why.
 
-All five outputs are in the artifact (compound-prompt-demo.md, Part 2, lines 203-412). Each is substantially deeper than its compound counterpart. The full outputs should be included in the lesson.
-[SOURCE: artifact, compound-prompt-demo.md, Part 2]
+**Imagery:** Specified a 40/35/25 ratio (process/farm/product), capture methodology including DPI and lighting discipline, and articulated the structural argument for seasonal variation in the image library.
 
-### The Side-by-Side Comparison (from the artifact's own analysis)
+**Layout:** Built an actual system: label as primary surface, web as echo of label, market signage as scaled label, shipping box as one-color kraft. Each surface's rules were derivable from the label system.
 
-> "Five independent specialist reports, each significantly deeper than its compound counterpart:"
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+The structural difference: each specialist went deeper because it was not splitting attention across five dimensions. The model's full capacity pointed at one problem per prompt.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
 
-**Color comparison:**
-> "Color added a conditional fifth color with a rationale for restraint, and explained the palette as a two-color print job structure reflecting how the studio's clients actually produce packaging."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+### The Harnessed Workflow: What Happens When the AI Synthesizes
 
-**Typography comparison:**
-> "Typography provided three complete pairing options with a recommendation and context-specific reasoning for when each works best, rather than two pairings."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+Decomposition unlocked depth. Five specialist reports, each stronger than the compound version. The natural next question: can the AI also synthesize the five reports into a unified brief?
 
-**Logo comparison:**
-> "Logo went into the philosophy of the mark: 'the ratio of control to roughness,' reproducibility on a napkin, printer's marks from the 1500s as structural precedent. The compound version described a mark. The decomposed version described what the mark needs to feel like and why."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+The harnessed workflow tries this. After the five specialist prompts, a compiler prompt asks the AI to synthesize all five outputs into a single creative direction brief.
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 2, AI Compiler section]
 
-**Imagery comparison:**
-> "Imagery specified scanning DPI, case study image minimums, a 60/40 process-to-finished ratio for social, and distinguished between scanning and photographing hand-drawn work."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+The AI compiler produced an organized, coherent synthesis. It accurately summarized each specialist's recommendations, identified governing principles at a high level (provenance over spectacle, restraint as differentiation, seasonal variation, density as signal).
 
-**Layout comparison:**
-> "Layout introduced rotational micro-offsets, imperfect alignment as intentional design, edge bleed as a compositional tool, and the principle 'tight until it hurts, then tighter.'"
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+What the AI compiler missed:
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
 
-### The Structural Difference
+**Specific conflict resolution.** The synthesis did not identify conflicts between specialists, so it did not resolve any. When color said "no heat signaling" and imagery's product shots inherently show peppers, the synthesis included both recommendations without naming the tension.
 
-> "The compound prompt made the AI the creative director. One perspective made all the decisions. The output is coherent because one mind shaped it. That coherence is also its limitation: no tension, no surprise, no moment where one dimension pushes back against another."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+**Unstated convergences.** The synthesis named governing principles that were explicit in individual reports. It did not identify principles that emerged across reports without any single specialist naming them.
 
-> "The decomposed prompts made the AI five independent specialists. Each went deep on one dimension without being constrained by the others. Now the designer reads five reports and makes the decisions about how they fit together. The typography specialist might push in a direction that conflicts with the layout specialist. That tension is where the design happens."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3]
+**Hierarchy of governance.** When specialists' recommendations conflict, the synthesis does not establish which recommendation governs. A human creative director sets the order of operations.
 
-> "The compound prompt gives you the AI's vision of your brand. The decomposed prompts give you five specialists reporting to you. You are the creative director."
-[SOURCE: artifact, compound-prompt-demo.md, Part 3, final line]
+**Creative direction confidence.** The synthesis reads as summary, not decision. Each recommendation is presented as-is rather than selected and argued for.
+
+The harnessed workflow (decomposition plus AI compilation) is better than compound prompting. It is not the same as creative direction. The AI compiler can organize. It cannot direct.
+
+### The Three-Way Comparison
+
+Three approaches, one brand brief:
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4]
+
+**Compound:** The AI is the creative director. One perspective, one pass, shallow across all dimensions. B+ deliverable that looks done but carries no depth.
+
+**Harnessed (decomposed plus AI compiler):** The AI is both the specialist team and the creative director. Depth is present in the specialist reports. The AI synthesis is organized but passive. It summarizes without deciding.
+
+**Human-CD (decomposed plus human synthesis):** The AI is the specialist team. The human is the creative director. The human steps through each specialist output, makes tracked decisions (accepting, overriding, deferring), names convergences nobody stated, and sets governing principles that hold across all domains. The brief reads as direction, not summary.
+
+The course's thesis sharpened: decomposition unlocks depth. Decomposition plus AI compilation is better than compound prompting, but still has a ceiling. The breakthrough comes from pairing decomposition with human synthesis. That is where judgment enters. That is Lesson 1.4.
 
 ### Cognitive Science for This Lesson
 
@@ -274,32 +272,32 @@ All five outputs are in the artifact (compound-prompt-demo.md, Part 2, lines 203
 > "Code generation accuracy jumped from 19% (compound prompt) to 44% (decomposed multi-step flow) on the CodeContests benchmark. Same model, same problems, different input structure."
 [SOURCE: cognitive-science-references.md, Week 1 Primary Citations]
 
-Teaching application: "Direct evidence that decomposition improves output quality on complex tasks without changing the model."
+Teaching application: direct evidence that decomposition improves output quality on complex tasks without changing the model. The improvement is from input structure, not model capability.
 [SOURCE: cognitive-science-references.md, Ridnik "Maps to" note]
 
 **Andrew Ng (2024):**
 > "GPT-3.5 with a decomposed agentic workflow (95.1%) outperformed GPT-4 with a single compound prompt (67%) on the HumanEval coding benchmark."
 [SOURCE: cognitive-science-references.md, Week 1 Primary Citations]
 
-Teaching application: "The architecture of the input matters more than the capability of the model. This is the single most persuasive data point for the course's core thesis."
+Teaching application: the architecture of the input matters more than the capability of the model. A weaker model with better structure outperforms a stronger model with compound structure.
 [SOURCE: cognitive-science-references.md, Andrew Ng "Maps to" note]
 
-Honest caveat: "HumanEval is a coding benchmark. The 95.1% vs. 67% comparison is dramatic but domain-specific. We should be careful about generalizing to all creative work."
+Honest caveat: HumanEval is a coding benchmark. The comparison is dramatic but domain-specific. The principle (decomposition improves complex task performance) is supported across domains, but the specific numbers should not be generalized to all creative work without qualification.
 [SOURCE: cognitive-science-references.md, Andrew Ng caveat]
 
 **Chain-of-Thought (Wei et al. 2022):**
 > "Adding 'Let's think step by step' or explicit reasoning steps to prompts substantially improved performance on arithmetic, commonsense, and symbolic reasoning tasks."
 [SOURCE: cognitive-science-references.md, Week 1 Supporting Citations]
 
-Teaching application: "Chain-of-thought is a lightweight form of decomposition. It forces the model to externalize intermediate steps rather than jumping to a final answer."
+Teaching application: chain-of-thought is a lightweight form of decomposition. It forces the model to externalize intermediate steps rather than jumping to a final answer. Decomposition takes this further by separating each step into its own prompt.
 [SOURCE: cognitive-science-references.md, Wei "Maps to" note]
 
 ### The Pivot to Lesson 1.4
 
-The scaffold frames this transition:
+Five independent outputs. They carry depth the compound version did not. An AI compiler can organize them into a coherent summary. But the summary reads as summary, not direction. Nobody resolved the conflicts. Nobody named the convergences. Nobody set the governing rules.
 
-> "But there's a new problem. Five independent outputs. They don't talk to each other. The typography specialist might push in a direction that conflicts with the layout specialist. The color palette might imply a different mood than the imagery guidelines suggest. Nobody is in charge. That's Lesson 1.4. You are."
-[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.3]
+That is Lesson 1.4. You are the creative director. The synthesis process is itself decomposed: step through each specialist output one at a time, react, track your decisions, compile the brief from those tracked decisions. The brief writes itself from the tracker.
+[SOURCE: scaffold, foundations-scaffold.md, Lesson 1.3; demonstrated in roughing-it-cd-brief.md]
 
 ---
 
@@ -415,7 +413,7 @@ If you want to try it now: run your decomposition again with a different emphasi
 
 **Format:** Exercise. **Learning objective:** The student can decompose one of their own compound prompts into independent specialist prompts and document the difference in output quality.
 
-### The Decomposition Structure (modeled on the Voss Type demo)
+### The Decomposition Structure (modeled on the Roughing It Hot Sauce demo)
 
 The prompting pattern from the artifact. Each decomposed prompt follows this structure:
 
@@ -424,7 +422,7 @@ The prompting pattern from the artifact. Each decomposed prompt follows this str
 3. **Explicit exclusion constraints.** "Do not address typography, logo, imagery, or layout." Every prompt explicitly tells the model what to ignore.
 4. **Only the context it needs.** Each prompt gets the brief (who the client is, what the studio does) but not the other outputs.
 
-[SOURCE: artifact, compound-prompt-demo.md, Part 2, prompt structure visible across all 5 prompts]
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 2, prompt structure]
 
 From the whitepaper on the skill architecture principle:
 
@@ -469,7 +467,7 @@ Teaching application: "Extreme case of decomposition benefit. When the task exce
 
 ### Framing the Exercise
 
-You have watched decomposition work on Voss Type. A compound prompt that asked for five dimensions at once. Five specialist prompts that each went deeper. A synthesis step that made the human the creative director.
+You have watched decomposition work on Roughing It Hot Sauce. A compound prompt that asked for five dimensions at once. Five specialist prompts that each went deeper. A harnessed AI synthesis that organized but did not direct. A human creative director who stepped through each output, made tracked decisions, and compiled a brief the AI could not have written.
 
 Now you do it on your own work.
 
@@ -515,10 +513,10 @@ The student picks a second workflow from their own work. Different project than 
 From Peter's own quality criteria (compiled from multiple sources):
 
 **The decomposition is real, not cosmetic.** Each prompt has one objective, one output, and explicit exclusion of other dimensions. This is the pattern demonstrated in the artifact.
-[SOURCE: artifact, compound-prompt-demo.md, Part 2, prompt structure]
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 2, prompt structure]
 
 **The depth difference is visible.** The decomposed outputs go deeper than the compound output on their respective dimensions. If they don't, the student either didn't decompose far enough or the original prompt was already single-objective.
-[SOURCE: artifact, compound-prompt-demo.md, Part 3: "Five independent specialist reports, each significantly deeper than its compound counterpart"]
+[SOURCE: artifact, roughing-it-compound-demo.md, Part 4: comparison]
 
 **The synthesis contains decisions the AI didn't make.** The brief should show evidence of:
 - Conflicts identified and resolved (which specialist governs when they disagree)
@@ -569,7 +567,8 @@ Submit one document (PDF, Google Doc, or markdown file) containing all six items
 ## Cross-Lesson Source Index
 
 ### Artifacts Used
-- `/home/peter/homelab/projects/active/joinery-site/course/artifacts/compound-prompt-demo.md` -- All of Part 1 (compound), Part 2 (5 decomposed), Part 3 (comparison)
+- `/home/peter/homelab/projects/active/joinery-site/course/artifacts/roughing-it-compound-demo.md` -- All of Part 1 (compound), Part 2 (harnessed: 5 decomposed + AI compiler), Part 3 (human-CD synthesis), Part 4 (three-way comparison)
+- `/home/peter/homelab/projects/active/joinery-site/course/artifacts/roughing-it-cd-brief.md` -- The compiled CD synthesis brief from tracked decisions
 - `/home/peter/homelab/projects/active/joinery-site/course/artifacts/cognitive-science-references.md` -- Week 1 section (all primary and supporting citations)
 
 ### Peter's Published/Draft Writing Used
@@ -594,7 +593,7 @@ Submit one document (PDF, Google Doc, or markdown file) containing all six items
 | Item | Lesson | Why It Can't Be Compiled |
 |------|--------|--------------------------|
 | Video script (performed on camera) | 1.1 | Peter performs this. Sources above provide the argument and beats. |
-| Synthesized Voss Type brief | 1.4 | The key teaching artifact. Must demonstrate creative director judgment on the five outputs. Scaffold explicitly marks this as "Peter writes." |
+| Roughing It CD synthesis brief | 1.4 | Compiled from tracked decisions during step-through review. Demonstrates creative director judgment: overrides, convergences, governing principles. See roughing-it-cd-brief.md. |
 | Podcast brand exercise (3 outputs with planted conflicts) | 1.4 | Original exercise content. No source exists. |
 | Template introduction/framing for 1.5 | 1.5 | Peter's voice framing the exercise. |
 | Reflection prompt (final version) | 1.6 | Scaffold provides a draft question. Peter decides if it points at the right insight. |
