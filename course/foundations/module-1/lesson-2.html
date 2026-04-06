@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.2: The Compound Instruction Problem — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../../../favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="../../../index.html">
+                    <img src="../../../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../courses.html" class="active">Courses</a></li>
+                    <li><a href="../../../research.html">Research</a></li>
+                    <li><a href="../../../about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="course-page">
+            <div class="course-header">
+                <div class="module-label">Module 1 &middot; Task Decomposition</div>
+                <h1>Lesson 1.2: The Compound Instruction Problem</h1>
+                <p class="lesson-meta">The student can explain why compound prompts produce shallow output, citing both the serial position effect and cognitive load theory.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>The Argument: Compound Instructions Degrade</h3>
+<h4>From the Classroom (Peter's own telling)</h4>
+<blockquote>
+<p>"First, you have to decompose the task before the student sees it. A compound instruction ('take out your notebook, turn to page 42, and answer questions 3 through 7') is one task for a neurotypical student and three tasks for a student with processing delays. If I didn't break it apart, the student failed before they started. The failure wasn't about ability. It was about input format."</p>
+<p>"A fourth grader with processing delays can't receive a multi-step math problem as a single instruction. 'Solve for the missing number, show your work, and explain your reasoning' is three tasks disguised as one. The student hears the first instruction, starts working, and the second two are gone."</p>
+<p>"Decomposition. 'Solve for the missing number, show your work, and explain your reasoning' is three tasks disguised as one. A student with processing delays hears the first instruction, starts working, and the rest is gone. You learn to give one instruction at a time. One clear objective. One visible result before the next step."</p>
+<p>"In a special education classroom, a compound instruction looks like this: 'Take out your notebook, turn to page 42, and answer questions three through seven.' For a neurotypical student, that is one task. For a student with processing delays, that is three tasks delivered simultaneously, and if you do not break them apart, the student fails before they start."</p>
+<p>"The failure is not about ability. The student can do all three things. The failure is about input format. The instruction arrived in a shape the receiving system could not process whole."</p>
+</blockquote>
+<h4>The Transfer to AI (Peter's own telling)</h4>
+<blockquote>
+<p>"The input format problem: an AI tool that receives a compound prompt ('evaluate this for voice quality, structural integrity, narrative coherence, and brand alignment') processes the first criterion with full attention and the rest gets progressively less. The model's context window is a working memory ceiling. Same problem as the student with processing delays. Same fix. Decompose the task. One criterion per pass."</p>
+<p>"In 2023 I started building AI evaluation systems. The first approach was conventional: compound prompts asking the model to evaluate across multiple dimensions at once. I gave it a prompt: evaluate this portfolio for voice quality, structural integrity, narrative coherence, and brand alignment. The model processed the first criterion with full attention. Each subsequent criterion got less. The output blurred all four together into a blended average that was none of them. Criteria contaminated each other. Contradictions showed up within a single evaluation pass."</p>
+<p>"I recognized it immediately. A compound instruction given to a system that can't process it whole. I'd seen this every day in the classroom. The fix is the same fix. Decompose. One dimension per prompt. One clear objective. One clear output. Run them independently."</p>
+<p>"A monolithic prompt that says 'evaluate this portfolio for voice quality, structural integrity, narrative coherence, and brand alignment' is four tasks disguised as one. The model receives the first criterion, starts working, and the others drift. Output quality degrades as the instruction gets longer. Context gets polluted. The model can't hold all four evaluation frames simultaneously, so it collapses them into a blended average that's none of the four."</p>
+<p>"Now look at what happens when you give an AI a compound evaluation prompt: 'Evaluate this work for voice quality, structural integrity, narrative coherence, and brand alignment.' The model processes the first criterion with full attention. Each subsequent criterion gets less. By the fourth, the model is blending dimensions together, producing a vague average that is none of them. Contradictions appear within a single response. The evaluation is mush."</p>
+<p>"The structural problem is identical. A compound instruction delivered to a system that cannot process it whole. The response most practitioners reach for is also identical to the wrong one in a classroom: repeat the instruction louder. Add more detail. Write a longer prompt. Specify harder."</p>
+</blockquote>
+<h4>Peter's Framing of the Key Insight</h4>
+<blockquote>
+<p>"Compound instructions degrade the same way in both systems."</p>
+<p>"I didn't design these parallels. I discovered them after the fact. The classroom forced me to figure out decomposition, scaffolding, and independent evaluation because twelve kids with twelve different needs demanded it. AI tools forced me to figure out the same things for the same reasons. The system is different. The structural problem is the same."</p>
+<p>"That's a structural decision about how complex work gets delivered to a system that can't process it whole. That sentence describes a fourth grader in Sunset Park. It also describes a large language model receiving a compound evaluation prompt."</p>
+</blockquote>
+<h3>The Cognitive Science</h3>
+<p><strong>Serial Position Effect (Murdock 1962, Liu et al. 2024):</strong></p>
+<blockquote>
+<p>"LLMs degrade 30%+ in accuracy when relevant information is positioned in the middle of a long input, compared to the beginning or end. Performance follows a U-shaped curve mirroring the human serial position effect."</p>
+<p>"Items at the beginning (primacy) and end (recency) of a list are recalled significantly better than items in the middle. The middle-position deficit is robust across conditions."</p>
+</blockquote>
+<p>"Compound prompts bury critical instructions in the middle. Decomposition puts each instruction at the focal point of its own step."</p>
+<p><strong>Cognitive Load Theory (Sweller 1988, Cowan 2001):</strong></p>
+<blockquote>
+<p>"Working memory can process approximately 2-4 novel items concurrently. Overloading working memory with extraneous information degrades learning and performance."</p>
+<p>"The effective capacity of the focus of attention is approximately 4 chunks, not the 7 +/- 2 that Miller (1956) proposed."</p>
+</blockquote>
+<p>"Compound prompts overload the model's 'working memory' (attention budget) the same way overloaded briefs overload human working memory. Decomposition is a cognitive load management strategy."</p>
+<p>Honest caveat for the course: "LLMs don't have working memory in the human sense. The analogy is useful for teaching but shouldn't be presented as a direct equivalence. The functional parallel (performance degrades with input complexity) holds even if the mechanism differs."</p>
+<p><strong>Task Analysis in Special Education (Wong et al. 2014):</strong></p>
+<blockquote>
+<p>"Task analysis (breaking complex behaviors into discrete, teachable steps) is classified as an evidence-based practice in special education. Decades of applied research show it improves learning outcomes for students with cognitive disabilities."</p>
+</blockquote>
+<h3>The Roughing It Hot Sauce Compound Output as the Example</h3>
+<p>The compound prompt. This is what a typical designer actually types:</p>
+<blockquote>
+<p>"I'm designing identity for Roughing It Hot Sauce, a small-batch brand from a farm in the Hudson Valley. Founder grows her own peppers. Four seasonal sauces (green spring, red summer, smoky fall, fermented winter). Positioning: agricultural, seasonal, serious about peppers. Not edgy, not gimmicky. Closer to craft vinegar than typical hot sauce. Budget is tight, works on shelves, markets, and web. Give me a color palette with hex codes, typography pairings, logo direction, imagery guidelines, and layout principles."</p>
+</blockquote>
+<p>The compound output covers all 5 sections in one pass: Color Palette (4 colors with brief rationale), Typography (1 pairing), Logo Direction (hand-drawn wordmark concept), Imagery (farm-focused photography), Layout (generous whitespace, editorial hierarchy). The full output is in the artifact.</p>
+<p>The output is competent. Each section names the correct general direction. No section goes deep. The color palette stays at four colors with brief rationale. The typography gives one pairing. The logo direction stays at concept level. The imagery guidelines cover the right territory without specifying capture methodology or seasonal variation. The layout principles name constraints without building a system.</p>
+<p>This is a B+ deliverable. Point out what is good about it: coherent, complete, professional. That is what makes it dangerous. It looks done. The compound prompt understood the positioning. It could not carry the positioning into depth on five dimensions simultaneously.</p>
+<p>The compound prompt made the AI the creative director. One perspective made all the decisions. The output is coherent because one mind shaped it. That coherence is also its limitation: no tension, no surprise, no moment where one dimension pushes back against another.</p>
+<hr />
+            </div>
+
+            <div class="lesson-nav">
+                <a href="lesson-1.html"><span class="nav-label">Previous</span>Lesson 1</a>
+                <a href="lesson-3.html"><span class="nav-label">Next</span>Lesson 3</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script src="../assets/course.js"></script>
+</body>
+</html>

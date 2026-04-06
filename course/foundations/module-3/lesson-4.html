@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3.4: Guided Voice Extraction — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../../../favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="../../../index.html">
+                    <img src="../../../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../courses.html" class="active">Courses</a></li>
+                    <li><a href="../../../research.html">Research</a></li>
+                    <li><a href="../../../about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="course-page">
+            <div class="course-header">
+                <div class="module-label">Module 3 &middot; Voice Governance</div>
+                <h1>Lesson 3.4: Guided Voice Extraction</h1>
+                <p class="lesson-meta">Lesson 4 of 6</p>
+            </div>
+
+            <div class="lesson-content">
+                <p><strong>Lesson type:</strong> Guided (student follows structured process)
+<strong>Deliverable:</strong> Student produces their own voice protocol from their Week 2 brain dump.</p>
+<hr />
+<h3>How Peter's Protocol Was Built</h3>
+<blockquote>
+<p>"I had a draft of my This Site page that ended with 'The structure is the signal.' It scanned fine. The rhythm was satisfying. I read it twice before I noticed it meant nothing. That sentence could end any page about systems, infrastructure, design, governance. It belonged to no one in particular and said nothing specific about my work. That catch became a rule: no fortune-cookie closers. Sentences that feel like insight without containing any."</p>
+<p>"That's how most of these rules got built. I caught a pattern, named it, codified the prohibition."</p>
+<p>"Every rule is enforceable and has a specific origin. 'Zero em dashes' because they accumulate into a rhythm that belongs to no specific person."</p>
+<p>"'Every negation-affirmation pattern has to be earned' because that pattern ('Not X. Y.') is the single most common AI writing tell and most people don't notice it until you point it out. The test: does the negation correct a genuine misunderstanding the reader would actually have? If you're using it for emphasis or contrast, rewrite it. Every rule in the protocol got built the same way: I caught it in real output, named what was wrong, and wrote a prohibition specific enough that I couldn't rationalize my way past it later."</p>
+</blockquote>
+<h3>The Two-Stage Extraction Pipeline</h3>
+<blockquote>
+<p>"The extraction pipeline has two stages. The first samples how I talk in conversation: sentence rhythm, opening moves, vocabulary, transitions, emotional register. Raw observations, accumulated across sessions. The second converts those observations into operational generation rules organized by dimension: how sentences connect, how paragraphs open, where imagery comes from, how feeling enters the text. The protocol tells the model what it cannot do. The fingerprint tells it what I do. Both are loaded before generation begins."</p>
+</blockquote>
+<h3>The Voice Sample Method</h3>
+<blockquote>
+<p>"The voice-sample skill reads my conversation transcripts and captures observations about how I actually talk. The output isn't a style guide. It's a tuning fork. It tracks sentence rhythm (short bursts or long flowing thoughts?), opening moves ('so basically...', 'the thing is...', 'yeah let's...'), natural vocabulary, transitions, humor, qualifying phrases."</p>
+<p>"The key constraint: voice sampling reads conversations, not published pages. Published pages are the output. Conversations are the source. Conflating those is how you end up with AI voice that sounds polished but empty."</p>
+</blockquote>
+<h3>The Categories Students Should Extract From Their Brain Dump</h3>
+<p>Based on Peter's actual protocol structure (voice-protocol.md + voice-fingerprint.md), students extract rules in these categories:</p>
+<p><strong>Category 1: Hard Prohibitions (What You Never Do)</strong>
+Source template: voice-protocol.md "Hard Rules" section
+- What punctuation patterns does the student never use?
+- What words do they never reach for?
+- What sentence structures feel wrong to them?
+- What kinds of openings or closings feel fake?</p>
+<p><strong>Category 2: AI Patterns to Block</strong>
+Source template: voice-protocol.md "AI Pattern Avoidance" section
+- The student generates a standard prompt output about their work, then identifies what feels wrong about it
+- Each "feels wrong" moment becomes a named pattern to prohibit</p>
+<p><strong>Category 3: Sentence Architecture</strong>
+Source template: voice-fingerprint.md Section 1
+- How does the student connect thoughts? ("And" chains? Hard breaks? "So" as consequence?)
+- Short sentences or long ones? When do they switch?
+- Do they use periods where others use commas?</p>
+<p><strong>Category 4: Opening Moves</strong>
+Source template: voice-fingerprint.md Section 2
+- How do they start explaining something? With the thing itself or with context?
+- Do they lead with feeling or situation?
+- What phrases signal they're about to make their real point?</p>
+<p><strong>Category 5: Imagery and Vocabulary</strong>
+Source template: voice-fingerprint.md Sections 3 and 8
+- Where do their metaphors come from? (Physical trade? Kitchen? Sports? Music?)
+- What words do they reach for naturally vs. what the AI defaults to?
+- Build a two-column table: "I say" / "AI defaults to"</p>
+<p><strong>Category 6: Emotional Register</strong>
+Source template: voice-fingerprint.md Section 5
+- How does excitement show up? (Velocity? Superlatives? Detail density?)
+- How does frustration show up? (Bluntness? Silence? Humor?)
+- How does vulnerability enter? (Stated directly? Hedged? Never?)</p>
+<p><strong>Category 7: Evidence Pattern</strong>
+Source template: voice-fingerprint.md Section 6
+- Does the student lead with the incident or the principle?
+- Do they use hypotheticals or real examples?
+- How do they handle uncertainty? ("I think" vs. hedging?)</p>
+<p><strong>Category 8: Compositional Roughness</strong>
+Source template: voice-fingerprint.md Section 9
+- Does every paragraph resolve neatly, or do some move forward instead of landing?
+- Is there room for a thought to arrive partway through a paragraph?
+- Does the student's writing have temperature variation (some paragraphs intense, some just factual)?</p>
+<h3>The Guided Extraction Exercise</h3>
+<p>Step 1: Student re-reads their Week 2 brain dump transcript
+Step 2: For each category above, student identifies 1-3 patterns from their own speech
+Step 3: Student converts each pattern into an operational rule (following the format: what to do OR what not to do, with a specific enough description that the AI can follow it)
+Step 4: Student assembles rules into a single protocol document</p>
+<h3>Extraction Template</h3>
+<p>Use this table for each of the 8 categories. Fill in at least 4 categories with 1-3 patterns each. One row per pattern found.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Pattern Found</th>
+<th>Quote from My Transcript</th>
+<th>Operational Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard Prohibitions</td>
+<td>(what do you never do or say?)</td>
+<td>(exact words from transcript)</td>
+<td>(binary rule: "Zero [X]" or "Never [Y]")</td>
+</tr>
+<tr>
+<td>AI Patterns to Block</td>
+<td>(what AI defaults would sound wrong in your voice?)</td>
+<td>(example from transcript showing the opposite)</td>
+<td>(specific pattern to catch and prevent)</td>
+</tr>
+<tr>
+<td>Sentence Architecture</td>
+<td>(how do your sentences connect?)</td>
+<td>(example)</td>
+<td>(rule about connectors, length, rhythm)</td>
+</tr>
+<tr>
+<td>Opening Moves</td>
+<td>(how do you start a thought?)</td>
+<td>(example)</td>
+<td>(rule about what you lead with)</td>
+</tr>
+<tr>
+<td>Imagery and Vocabulary</td>
+<td>(what physical/concrete words do you reach for?)</td>
+<td>(example)</td>
+<td>(vocabulary list or reach-for guidance)</td>
+</tr>
+<tr>
+<td>Emotional Register</td>
+<td>(how does feeling enter your speech?)</td>
+<td>(example)</td>
+<td>(rule about when/how emotion surfaces)</td>
+</tr>
+<tr>
+<td>Evidence Pattern</td>
+<td>(how do you support claims?)</td>
+<td>(example)</td>
+<td>(rule about sourcing, specifics, proof)</td>
+</tr>
+<tr>
+<td>Compositional Roughness</td>
+<td>(where does your writing NOT resolve cleanly?)</td>
+<td>(example)</td>
+<td>(rule about allowing unresolved moments)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example row (from Peter's own extraction, for reference):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Pattern Found</th>
+<th>Quote from Transcript</th>
+<th>Operational Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opening Moves</td>
+<td>Leads with the situation or the feeling, not with context or credentials</td>
+<td>"So basically what happened was the output came back flat and I knew immediately it was the prompt structure"</td>
+<td>"Open with the thing itself. The situation, the feeling, or the object. Context comes after, if at all."</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Minimum viable protocol:</strong> 8-12 rules covering at least 4 of the 8 categories above.</p>
+<p><strong>Source model for rule format (voice-protocol.md, hard rules):</strong>
+Each rule should be: binary (yes/no, zero tolerance, or specific threshold), testable (you can check whether the output follows it), and originated from real speech (traced to something the student actually said or did in their transcript).</p>
+<hr />
+            </div>
+
+            <div class="lesson-nav">
+                <a href="lesson-3.html"><span class="nav-label">Previous</span>Lesson 3</a>
+                <a href="lesson-5.html"><span class="nav-label">Next</span>Lesson 5</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script src="../assets/course.js"></script>
+</body>
+</html>

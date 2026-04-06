@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.3: The Decomposition and the Harnessed Workflow — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../../../favicon.ico" sizes="32x32">
+    <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="../../../index.html">
+                    <img src="../../../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../../courses.html" class="active">Courses</a></li>
+                    <li><a href="../../../research.html">Research</a></li>
+                    <li><a href="../../../about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="course-page">
+            <div class="course-header">
+                <div class="module-label">Module 1 &middot; Task Decomposition</div>
+                <h1>Lesson 1.3: The Decomposition and the Harnessed Workflow</h1>
+                <p class="lesson-meta">The student can identify the structural differences between compound, decomposed, and harnessed outputs, and explain why decomposition unlocks depth while AI compilation has a ceiling.</p>
+            </div>
+
+            <div class="lesson-content">
+                <h3>The Five Decomposed Prompts</h3>
+<p>Each prompt addresses a single dimension. Each receives only the brand context and is explicitly told to ignore other dimensions. The full prompts and outputs are in the artifact (roughing-it-compound-demo.md, Part 2).</p>
+<p>The prompting pattern:
+1. <strong>One objective.</strong> "Recommend a color palette with hex codes." Not "recommend a color palette and typography pairings."
+2. <strong>One output.</strong> "For each color, explain what it does in the system and why it fits." Not "explain the color palette, typography, and logo direction."
+3. <strong>Explicit exclusion constraints.</strong> "Do not address typography, logo, imagery, or layout." Every prompt explicitly tells the model what to ignore.
+4. <strong>Only the context it needs.</strong> Each prompt gets the brand brief (who the client is, what the positioning is) but not the other outputs.</p>
+<h3>What the Decomposed Outputs Produced</h3>
+<p>Five independent specialist reports, each significantly deeper than its compound counterpart:</p>
+<p><strong>Color:</strong> Specified a two-color print job economy tied to how small-batch food packaging is actually produced. Developed seasonal accent logic tied to harvest. Articulated what the palette deliberately avoids (heat signaling) as a positioning statement.</p>
+<p><strong>Typography:</strong> Provided three complete pairings with reasoning. Established the structural role of the monospaced secondary face (signaling that the brand tracks harvest dates). Defined usage rules down to emphasis conventions.</p>
+<p><strong>Logo:</strong> Went into the philosophy of the mark: what it should feel like, what to avoid, what to study as reference (sign painters' corner initials, printer's marks from the 1500s), and what constraints govern every scale. The compound output described a direction. The decomposed output described what the mark needs to feel like and why.</p>
+<p><strong>Imagery:</strong> Specified a 40/35/25 ratio (process/farm/product), capture methodology including DPI and lighting discipline, and articulated the structural argument for seasonal variation in the image library.</p>
+<p><strong>Layout:</strong> Built an actual system: label as primary surface, web as echo of label, market signage as scaled label, shipping box as one-color kraft. Each surface's rules were derivable from the label system.</p>
+<p>The structural difference: each specialist went deeper because it was not splitting attention across five dimensions. The model's full capacity pointed at one problem per prompt.</p>
+<h3>The Harnessed Workflow: What Happens When the AI Synthesizes</h3>
+<p>Decomposition unlocked depth. Five specialist reports, each stronger than the compound version. The natural next question: can the AI also synthesize the five reports into a unified brief?</p>
+<p>The harnessed workflow tries this. After the five specialist prompts, a compiler prompt asks the AI to synthesize all five outputs into a single creative direction brief.</p>
+<p>The AI compiler produced an organized, coherent synthesis. It accurately summarized each specialist's recommendations, identified governing principles at a high level (provenance over spectacle, restraint as differentiation, seasonal variation, density as signal).</p>
+<p>What the AI compiler missed:</p>
+<p><strong>Specific conflict resolution.</strong> The synthesis did not identify conflicts between specialists, so it did not resolve any. When color said "no heat signaling" and imagery's product shots inherently show peppers, the synthesis included both recommendations without naming the tension.</p>
+<p><strong>Unstated convergences.</strong> The synthesis named governing principles that were explicit in individual reports. It did not identify principles that emerged across reports without any single specialist naming them.</p>
+<p><strong>Hierarchy of governance.</strong> When specialists' recommendations conflict, the synthesis does not establish which recommendation governs. A human creative director sets the order of operations.</p>
+<p><strong>Creative direction confidence.</strong> The synthesis reads as summary, not decision. Each recommendation is presented as-is rather than selected and argued for.</p>
+<p>The harnessed workflow (decomposition plus AI compilation) is better than compound prompting. It is not the same as creative direction. The AI compiler can organize. It cannot direct.</p>
+<h3>The Three-Way Comparison</h3>
+<p>Three approaches, one brand brief:</p>
+<p><strong>Compound:</strong> The AI is the creative director. One perspective, one pass, shallow across all dimensions. B+ deliverable that looks done but carries no depth.</p>
+<p><strong>Harnessed (decomposed plus AI compiler):</strong> The AI is both the specialist team and the creative director. Depth is present in the specialist reports. The AI synthesis is organized but passive. It summarizes without deciding.</p>
+<p><strong>Human-CD (decomposed plus human synthesis):</strong> The AI is the specialist team. The human is the creative director. The human steps through each specialist output, makes tracked decisions (accepting, overriding, deferring), names convergences nobody stated, and sets governing principles that hold across all domains. The brief reads as direction, not summary.</p>
+<p>The course's thesis sharpened: decomposition unlocks depth. Decomposition plus AI compilation is better than compound prompting, but still has a ceiling. The breakthrough comes from pairing decomposition with human synthesis. That is where judgment enters. That is Lesson 1.4.</p>
+<h3>Cognitive Science for This Lesson</h3>
+<p><strong>AlphaCodium (Ridnik et al. 2024):</strong></p>
+<blockquote>
+<p>"Code generation accuracy jumped from 19% (compound prompt) to 44% (decomposed multi-step flow) on the CodeContests benchmark. Same model, same problems, different input structure."</p>
+</blockquote>
+<p>direct evidence that decomposition improves output quality on complex tasks without changing the model. The improvement is from input structure, not model capability.</p>
+<p><strong>Andrew Ng (2024):</strong></p>
+<blockquote>
+<p>"GPT-3.5 with a decomposed agentic workflow (95.1%) outperformed GPT-4 with a single compound prompt (67%) on the HumanEval coding benchmark."</p>
+</blockquote>
+<p>the architecture of the input matters more than the capability of the model. A weaker model with better structure outperforms a stronger model with compound structure.</p>
+<p>Caveat: HumanEval is a coding benchmark. The comparison is dramatic but domain-specific. The principle (decomposition improves complex task performance) is supported across domains, but the specific numbers should not be generalized to all creative work without qualification.</p>
+<p><strong>Chain-of-Thought (Wei et al. 2022):</strong></p>
+<blockquote>
+<p>"Adding 'Let's think step by step' or explicit reasoning steps to prompts substantially improved performance on arithmetic, commonsense, and symbolic reasoning tasks."</p>
+</blockquote>
+<p>chain-of-thought is a lightweight form of decomposition. It forces the model to externalize intermediate steps rather than jumping to a final answer. Decomposition takes this further by separating each step into its own prompt.</p>
+<h3>The Pivot to Lesson 1.4</h3>
+<p>Five independent outputs. They carry depth the compound version did not. An AI compiler can organize them into a coherent summary. But the summary reads as summary, not direction. Nobody resolved the conflicts. Nobody named the convergences. Nobody set the governing rules.</p>
+<p>That is Lesson 1.4. You are the creative director. The synthesis process is itself decomposed: step through each specialist output one at a time, react, track your decisions, compile the brief from those tracked decisions. The brief writes itself from the tracker.</p>
+<hr />
+            </div>
+
+            <div class="lesson-nav">
+                <a href="lesson-2.html"><span class="nav-label">Previous</span>Lesson 2</a>
+                <a href="lesson-4.html"><span class="nav-label">Next</span>Lesson 4</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script src="../assets/course.js"></script>
+</body>
+</html>
