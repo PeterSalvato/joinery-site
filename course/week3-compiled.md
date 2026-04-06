@@ -550,7 +550,15 @@ Use this table for each of the 8 categories. Fill in at least 4 categories with 
 **Source model for rule format (voice-protocol.md, hard rules):**
 Each rule should be: binary (yes/no, zero tolerance, or specific threshold), testable (you can check whether the output follows it), and originated from real speech (traced to something the student actually said or did in their transcript).
 
-[NEEDS PETER: Record a walkthrough of extracting 3-4 rules from a real transcript. Show the process of going from "this is how she talks" to "this is an operational rule the AI can follow." The Mara Voss demo shows the finished rules but not the extraction process itself. Students need to see the messy middle: reading a transcript, noticing a pattern, naming it, testing whether the name is specific enough to be enforceable.]
+### Real Extraction Walkthrough
+
+The following excerpt shows the extraction process in practice. See `course/artifacts/real-session-excerpts.md` (Excerpt 2) for the full annotated version.
+
+Peter was reviewing 8 book chapters against his voice protocol. The system found negation-affirmation patterns exceeding the allowed limit. His reaction: "I think they sound performed. Like the AI is landing a point instead of making one." That visceral response became an operational rule (zero tolerance), which propagated across 6 governance files in under three minutes.
+
+The excerpt demonstrates: reading output, noticing a pattern, naming it with a concrete reason, converting the observation into a binary rule, and propagating the rule system-wide. The AI also distinguished between real negation-affirmation patterns and natural comparisons that look similar but serve a different function. That distinction (pattern vs false positive) is the nuance students must learn.
+
+[EXCERPT 2 FROM: course/artifacts/real-session-excerpts.md — embed full Excerpt 2 content here when rendering student-facing pages.]
 
 ---
 
@@ -652,7 +660,17 @@ Three questions to ask:
 
 > "The fidelity chain is: source material, constrained generation, independent evaluation, human verification. Skip any link and the output drifts. It'll still be competent. It just won't be yours."
 
-[NEEDS PETER: A walkthrough of the verification process on a real piece of output. Show what it looks like to read constrained output and catch a false positive. Show what it looks like when the constrained output is genuinely better but still needs a human pass. The theory is compiled here. The live demonstration of the judgment process needs to be Peter.]
+### Real Verification Walkthrough
+
+The following excerpt shows the verification and override process in practice. See `course/artifacts/real-session-excerpts.md` (Excerpt 3) for the full annotated version.
+
+Peter drafted a LinkedIn comment responding to a well-known design educator's post about learning stages. Before posting, he ran copy-verify. The system caught three violations: an em dash (mechanical), a fortune-cookie closer (structural), and a negation-affirmation pattern (rhetorical). Each got a specific fix. The comment went from 9/12 to 12/12.
+
+Then Peter overrode in the other direction: he ADDED substance the system did not flag ("I have to add that its the human in the loop making the CHOICE between those perspectives"). The protocol passed, but Peter's judgment said the content was incomplete. He also made a social judgment call the protocol has no rule for (whether to tag another practitioner in the comment). Fourteen minutes from seeing the post to "posted."
+
+The excerpt demonstrates: system catches what eyes miss (3 categories of violation), human adds what the system cannot see (incomplete content, social positioning), and governance that informs while the human decides keeps the human where they need to be.
+
+[EXCERPT 3 FROM: course/artifacts/real-session-excerpts.md — embed full Excerpt 3 content here when rendering student-facing pages.]
 
 ---
 
@@ -756,7 +774,20 @@ The deliverable must be real. It should be something the student actually needs 
 
 Teaching point: "Standard prompting produces knowledge-telling: the AI dumps what it knows about 'brand designer about pages.' Voice governance forces something closer to knowledge-transforming: the constraints reshape the output structure, which in turn changes what gets said and what gets left out. The about page written under voice governance contains different information, not just different phrasing."
 
-[NEEDS PETER: Record a capstone walkthrough showing the full three-week stack in action. Use a real deliverable (not Mara Voss). Show the task decomposition, the brain dump source material, the voice protocol loading, the generation, the verification, and the human override on at least one false positive. This is the proof that the methodology works as a unified system. The Mara Voss demo proves Week 3 in isolation. The capstone needs to prove all three weeks together.]
+### Real Capstone: Full-Stack Methodology in One Session
+
+The following excerpt shows all three modules' skills demonstrated in a single real working session. See `course/artifacts/real-session-excerpts.md` (Excerpt 4) for the full annotated version.
+
+Peter spent a full day building and executing a LinkedIn content strategy. The session contains the entire methodology:
+
+- **Module 1 (Decomposition):** Planning the content calendar, breaking multi-post strategy into individual components, mapping the content landscape before writing anything.
+- **Module 2 (Input Inversion):** Pasting raw source material (another educator's post, analytics data, existing content inventory) as unstructured input. The raw material became the basis for original content.
+- **Module 3 (Voice Governance):** Copy-verify caught three violations in a drafted comment (Excerpt 3 is from inside this session). Peter overrode on specific terminology ("drift and fidelity are really accurate for what's happening") where his judgment said the voice protocol was wrong about those specific terms.
+- **Shipping:** "Posts scheduled daily through thursday." Real deliverables shipped from the methodology.
+
+The annotations in the full excerpt mark where each module's skill appears: "This is Module 1 (decomposition)" / "This is Module 2 (unstructured input)" / "This is Module 3 (voice governance and override)." The student should finish reading this and see how the three modules connect into one workflow.
+
+[EXCERPT 4 FROM: course/artifacts/real-session-excerpts.md — embed full Excerpt 4 content here when rendering student-facing pages.]
 
 ---
 
@@ -799,14 +830,12 @@ All content in this document is compiled from the following files:
 | The Overcorrection (draft) | `petersalvato-dev/_drafts/the-overcorrection-when-governance-catches-false-positives.md` | 3.5 |
 | Voice sample | `memory/voice-sample.md` | 3.3, 3.4 |
 
-## [NEEDS PETER] Summary
+## Production Status (updated 2026-04-05)
 
-Four items require Peter's direct involvement:
+**Resolved (replaced with real session excerpts from conversation history):**
+- ~~Lesson 3.4: extraction walkthrough~~ → Excerpt 2 (negation-affirmation kill, March 18, 2026)
+- ~~Lesson 3.5: verification walkthrough~~ → Excerpt 3 (LinkedIn copy-verify, March 7, 2026)
+- ~~Lesson 3.6: capstone walkthrough~~ → Excerpt 4 (full-stack LinkedIn workflow, March 7, 2026)
 
-1. **Lesson 3.1:** Record the video close. Script outline is compiled from his own words but the delivery needs to be his.
-
-2. **Lesson 3.4:** Record a walkthrough of the extraction process. Show going from transcript to operational rule. The demo shows finished rules but students need to see the messy middle of extraction.
-
-3. **Lesson 3.5:** Record a verification walkthrough on real output. Show the judgment process: catching a false positive, deciding what stays, deciding what gets rewritten.
-
-4. **Lesson 3.6:** Record a capstone walkthrough using all three weeks on a real deliverable (not Mara Voss). Prove the methodology works as a unified system.
+**Remaining (optional, course ships without):**
+1. **Lesson 3.1:** Video close recording. Script outline compiled. Nice-to-have for production polish. Not blocking.

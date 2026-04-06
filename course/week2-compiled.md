@@ -153,7 +153,13 @@ Output identified: "Dark" as entire positioning (not just beer descriptor). The 
 
 The lesson ends with this framing: the student has now seen the same task produce three different quality levels. The variable that changed was the input, not the model, not the prompt technique. The rest of this week teaches the student to produce Level 3 input.
 
-[NEEDS PETER: The Night Owl demo transcript is currently simulated/placeholder. Peter notes in the artifact: "The brain dump transcript in Part 3 is simulated (placeholder). It will be replaced with a real recorded transcript for the published course." A real recording is required before this lesson ships.]
+### Real Brain Dump Transcript (replaces simulated placeholder)
+
+The following is an edited excerpt from a real working session. The process, decisions, and outcomes are real. Names and language edited for professional context. See `course/artifacts/real-session-excerpts.md` (Excerpt 1) for the full annotated version.
+
+This excerpt shows a five-minute brain dump that pivoted from building a job-search tool to launching an education platform. The direction changes, contradictions, and mid-sentence discoveries are the point. This is what unstructured input looks like when it works.
+
+[EXCERPT 1 FROM: course/artifacts/real-session-excerpts.md — embed full Excerpt 1 content here when rendering student-facing pages. The compiled source references the artifact file rather than duplicating the full text.]
 
 ---
 
@@ -349,9 +355,11 @@ The metaphor: Clay, not marble.
 - **Voice memo app** on phone (any app that records). The tool does not matter. The friction does.
 - **AI conversation window** (ChatGPT, Claude, Gemini). Open it and talk, do not type a structured prompt.
 - **Timing:** No set time. Peter's corpus includes "2 AM when the idea won't let go" and "dictated voice notes while driving." The point is to capture thinking when it is happening, not to schedule a session.
-- **Duration:** The Night Owl brain dump was 12 minutes. Peter's individual conversation sessions range from ten minutes to multi-hour architecture sessions. There is no minimum. Even one recording is enough to start.
+- **Duration:** Peter's individual conversation sessions range from ten minutes to multi-hour architecture sessions. There is no minimum. Even one recording is enough to start. The brain dump excerpt in Lesson 2.2 (Excerpt 1) took five minutes and produced a complete strategic direction.
 
-[NEEDS PETER: Peter should record a short video or audio clip demonstrating an actual brain dump in progress. Not a polished example. An actual dump: tangents, corrections, false starts. The lesson's credibility depends on the student seeing the real process, not a cleaned-up version.]
+### What the Real Brain Dump Looks Like
+
+You already saw it in Lesson 2.2. The Excerpt 1 brain dump demonstrates: a direction change in under sixty seconds ("no. stop this."), a market identified mid-conversation, a vehicle named with a question mark, competitive positioning discovered from personal knowledge, and conviction strong enough to start building the same day. That is what unstructured input produces. The student's brain dump will be different in content and smaller in scope, but the PROCESS (talk without structure, discover through articulation, arrive at something actionable) is the same.
 
 ### Guided Scenario for Student Practice
 
