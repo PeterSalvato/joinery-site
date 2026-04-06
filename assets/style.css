@@ -196,7 +196,7 @@ body {
    ================================================================ */
 
 .section {
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) var(--space-m);
 }
 
 .section-inner {
