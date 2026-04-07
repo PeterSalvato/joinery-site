@@ -1,0 +1,73 @@
+# Joinery
+
+> A school for creative practitioners who use AI. Joinery teaches Accommodation Design: a structural methodology for AI-assisted creative work that doesn't expire when the tools change.
+
+Enrollment opens Summer 2026. joinerysystemworks.com
+
+## What Joinery Is
+
+Other courses teach the tools. Joinery teaches the thinking underneath. The methodology is called Accommodation Design. It asks: what does the system actually need to do this job well? That question comes from special education classrooms, where designing around the processing reality of the receiving system is federal law. Applied to AI, it changes how you structure input, preserve your voice, evaluate output, and keep your judgment in the room.
+
+Designers already have the skill this methodology depends on. You attune to clients, audiences, customers every day. Joinery teaches you to apply that same attunement skill to AI as a new receiving system.
+
+## The Six Domains
+
+Domains build in sequence. Each answers the founding question from a different angle.
+
+1. **Accommodation Design** — The founding reframe. Ask what the system needs, not how to constrain it. Task decomposition as accommodation.
+2. **Input Inversion** — Unstructured human input plus structured tools beats structured prompts. The burden of organization belongs to the tooling.
+3. **Prosthetic Cognition** — AI as cognitive extension, not tool and not replacement. A harness that extends reach without climbing for you.
+4. **Semantic Hierarchy** — AI memory flattens everything. Human-marked importance preserves what mattered.
+5. **Voice Governance** — Constraints applied during generation produce structurally different output than constraints applied after. Voice is structural, not stylistic.
+6. **Lens Extraction** — "Is this good?" is twelve questions. Extract what strong practitioners consistently ask, codify as testable criteria, run independently.
+
+## Tracks
+
+- **Designers** — Individual practice. Voice protocol, evaluation lenses, accommodation architecture.
+- **Creative Directors** — Team-scale coherence. Shared protocols and governance that survives beyond one person.
+- **Design Educators** — Train-the-trainer certification. Curriculum design and classroom integration.
+
+## Courses
+
+### AI Accommodation: The Foundations (Course 01 — Designer Track)
+Self-paced. 3 modules. $299.
+
+The entry point. Three weeks of applied practice on your own real project using the gradual release model: demonstration, guided practice, independent practice.
+
+- **Week 1: Task Decomposition** — Your prompts keep getting longer and your output keeps getting worse. The problem is structural. You learn to decompose, run independently, and synthesize.
+- **Week 2: Input Inversion** — Unstructured input contains richer raw material than structured prompts. You learn to dump your thinking and let the tool find the structure.
+- **Week 3: Voice Governance** — All AI copy sounds the same because voice constraints are applied after generation, not during. You learn to apply rules before the first word is produced.
+
+Grounded in six published whitepapers (DOIs). Built by a trained educator (SVA, Brooklyn College M.A., NYC DOE). Pedagogy follows the IDEA gradual release model.
+
+### Practitioner Ladder (Courses 02–07, In Development)
+02 Voice Governance / 03 Input Inversion / 04 Lens Extraction / 05 Semantic Hierarchy / 06 Prosthetic Cognition / 07 Coordinator Building
+
+### Workbench (In Development)
+Designer tooling. Voice fingerprinting, CLI, asset processing. Take alongside any course.
+
+## Certification
+
+- **Tier I: Course Completion** — Completed one course.
+- **Tier II: Program Completion** — Completed the full Designer ladder (7 courses).
+- **Tier III: Practitioner Certification** — Assessed and portfolio-reviewed.
+- **Tier IV: Educator Certification** — Train-the-trainer. Licensed to teach the methodology forward.
+
+## Research
+
+Six published whitepapers with DOIs. Open access. The papers are the foundation; the courses are the application.
+
+- Accommodation Design — https://doi.org/10.5281/zenodo.18941231
+- Input Inversion — https://doi.org/10.5281/zenodo.18962881
+- Prosthetic Cognition — https://doi.org/10.5281/zenodo.18962893
+- Semantic Flattening — https://doi.org/10.5281/zenodo.18986290
+- Lens Extraction — https://doi.org/10.5281/zenodo.18986295
+- Voice Governance — https://doi.org/10.5281/zenodo.18986297
+
+Free essay: "The Wrong Question" — Why your prompts keep getting longer and your output keeps getting worse. /essays/the-wrong-question.html
+
+## About
+
+Founded by Peter Salvato. Trained at SVA (graphic design, printmaking, screen printing under James Victore). Brooklyn College M.A. program in education. NYC Department of Education (special education, self-contained classroom, Sunset Park). Kingsborough Community College (intro to graphic design and visual studies). 25 years in design practice. 12 years as product design lead in enterprise software. Six published whitepapers. 130+ working AI skills and agents in daily production use.
+
+The methodology comes from the classroom, where designing around the processing reality of the receiving system is federal law. Accommodation Design is not a theory. It is a practice developed across 25 years of making things in rooms where the gap between intent and execution was the whole problem.
