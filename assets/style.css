@@ -263,7 +263,7 @@ p {
    ================================================================ */
 
 .hero {
-    padding: var(--space-xl) var(--space-m) var(--space-xxl);
+    padding: var(--space-xl) var(--space-m) var(--space-m);
 }
 
 .hero-inner {
@@ -289,7 +289,7 @@ p {
    ================================================================ */
 
 .problem {
-    padding: var(--space-l) var(--space-m);
+    padding: var(--space-s) var(--space-m) var(--space-l);
 }
 
 .problem-text {
