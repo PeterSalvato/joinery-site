@@ -1338,8 +1338,7 @@ p {
     font-size: 0.9rem;
     color: var(--color-text-mid);
     line-height: 1.7;
-    max-width: var(--measure);
-    margin: 0 auto;
+    max-width: var(--measure-wide);
 }
 
 .cred-section a {
