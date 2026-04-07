@@ -196,7 +196,7 @@ body {
    ================================================================ */
 
 .section {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
 }
 
 .section-inner {
@@ -289,7 +289,7 @@ p {
    ================================================================ */
 
 .problem {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
     border-top: 1px solid var(--color-rule);
 }
 
@@ -310,7 +310,7 @@ p {
    ================================================================ */
 
 .methodology {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
     border-top: 1px solid var(--color-rule);
 }
 
@@ -334,7 +334,7 @@ p {
    ================================================================ */
 
 .curriculum {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
     border-top: 1px solid var(--color-rule);
 }
 
@@ -395,7 +395,7 @@ p {
    ================================================================ */
 
 .tracks {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
     border-top: 1px solid var(--color-rule);
 }
 
@@ -439,7 +439,7 @@ p {
    ================================================================ */
 
 .enrolling {
-    padding: var(--space-xl) var(--space-m);
+    padding: var(--space-l) var(--space-m);
     border-top: 1px solid var(--color-rule);
 }
 
@@ -1404,7 +1404,7 @@ input:focus-visible {
     .reading,
     .founder,
     .week-breakdown {
-        padding: var(--space-l) 1.5rem;
+        padding: var(--space-m) 1.5rem;
     }
 
     .signup {
