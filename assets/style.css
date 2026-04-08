@@ -1212,6 +1212,57 @@ p {
 }
 
 
+.ladder-destination {
+    display: flex;
+    gap: var(--space-m);
+    padding: 1rem 0;
+    border-top: 2px solid var(--color-text-mid);
+    border-bottom: 1px solid var(--color-rule);
+    background: var(--color-dark);
+    padding: 1.25rem 1.75rem;
+    margin-top: 1px;
+    color: var(--color-bg);
+    align-items: baseline;
+}
+
+.ladder-destination-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-bg);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.ladder-destination-body {
+    flex: 1;
+}
+
+.ladder-destination-body strong {
+    font-size: 1rem;
+    color: var(--color-bg);
+}
+
+.ladder-destination .ladder-desc {
+    color: var(--color-bg);
+    opacity: 0.75;
+}
+
+.ladder-destination .ladder-link {
+    color: var(--color-bg);
+    border-bottom-color: rgba(255,255,255,0.3);
+    opacity: 0.75;
+}
+
+.ladder-destination .ladder-link:hover {
+    opacity: 1;
+    color: var(--color-bg);
+    border-bottom-color: var(--color-bg);
+}
+
+
 /* ================================================================
    Future tracks (courses page)
    ================================================================ */
