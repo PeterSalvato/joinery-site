@@ -763,6 +763,15 @@ p {
     line-height: 1.6;
 }
 
+.artifact-context {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+}
+
 
 /* ================================================================
    What's included (simple list)
