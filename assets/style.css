@@ -1337,6 +1337,12 @@ p {
     margin-top: 0.35rem;
 }
 
+.domain-destination {
+    grid-column: 1 / -1;
+    border-top: 2px solid var(--color-text-mid);
+    background: var(--color-bg-alt);
+}
+
 
 /* ================================================================
    Card sections
