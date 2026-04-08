@@ -97,3 +97,10 @@ Practitioner to practitioner. Peter is not a guru. He is someone who worked this
 Direct. Specific. First person where appropriate. The expertise shows through what is described, not through how it is framed.
 
 See `voice/voice-protocol.md` for hard rules. See `voice/profiles/` for format-specific adjustments.
+
+---
+
+## Key Documents
+
+- `NORTHSTAR.md` — this file. Positioning, audience, mission, category. Read first.
+- `docs/market-context.md` — competitive landscape, 18-24 month timing window, moat-building priorities. Read before making decisions about pricing, partnerships, or scope.
