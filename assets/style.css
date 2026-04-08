@@ -453,6 +453,8 @@ p {
 }
 
 .text-link {
+    display: block;
+    text-align: right;
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--color-accent);
@@ -1350,6 +1352,7 @@ p {
     color: var(--color-text-mid);
     line-height: 1.75;
     margin-bottom: var(--space-m);
+    max-width: var(--measure-wide);
 }
 
 .methodology-lean .section-inner {
