@@ -1217,10 +1217,9 @@ p {
 .ladder-destination {
     display: flex;
     gap: var(--space-m);
-    padding: 1rem 0;
-    border-top: 2px solid var(--color-text-mid);
+    border-top: 2px solid var(--color-accent);
     border-bottom: 1px solid var(--color-rule);
-    background: var(--color-dark);
+    background: var(--color-accent);
     padding: 1.25rem 1.75rem;
     margin-top: 1px;
     color: var(--color-bg);
