@@ -96,6 +96,55 @@
             </div>
         </section>
 
+        <!-- Week Breakdown -->
+        <section class="week-breakdown">
+            <div class="section-inner">
+                <div class="week">
+                    <div class="week-label">Week 1</div>
+                    <h3>Architecture</h3>
+                    <p class="week-pedagogy">Capstone: student-designed system. Instructor provides architectural patterns, not prescriptions.</p>
+                    <p>You have five practices that work. You don't have a map of where they live. Some run at the start of a project, some run at the end, some should run continuously. Some depend on each other. Some are independent. Right now you hold all of that in your head, and some sessions you forget a step.</p>
+                    <p>You start by mapping your current workflow: where does decomposition happen? Where does voice governance kick in? Where do lenses evaluate? Where do savepoints fire? Where does the dump enter the pipeline? You draw the real picture, not the ideal one. Then you identify the friction: what's manual that should be automatic? What's disconnected that should be wired together? What runs in sequence that could run in parallel?</p>
+                    <p>By the end of the week you have a coordinator blueprint. It specifies which practices run independently (voice sampling and lens calibration don't need each other), which run in sequence (the dump has to happen before decomposition can structure it), and where governance checkpoints sit. The blueprint is yours. It reflects your work, not a generic template.</p>
+                    <p class="deliverable"><strong>Deliverable:</strong> A coordinator architecture diagram mapping your five practices, their dependencies, and their orchestration sequence.</p>
+                    <div class="diagram-placeholder">
+                        <div class="diagram-placeholder-label">Diagram</div>
+                        <div class="diagram-placeholder-title">Coordinator Architecture Map</div>
+                    </div>
+                </div>
+
+                <div class="week">
+                    <div class="week-label">Week 2</div>
+                    <h3>Build</h3>
+                    <p class="week-pedagogy">Capstone: student builds the working system. Instructor provides interface principles, not implementation.</p>
+                    <p>The blueprint becomes infrastructure. You build atomic skills (one objective each) and the orchestration layer that sequences them. This is where the five courses converge into one system.</p>
+                    <p>You wire voice protocol into the generation pipeline so every output runs through your constraints before the first word lands. You wire your lens array into the evaluation pipeline so assessment is decomposed and automatic, not a manual checklist you run when you remember. You wire savepoints into context preservation so cognitive turning points are captured as they happen, not reconstructed after the fact. You connect input inversion (the dump) to the downstream tools so raw thinking flows into structure without a formatting step in between.</p>
+                    <p>Each connection is a real interface. The quality of the coordinator depends on the quality of those interfaces. A poorly fitted prosthetic fights the body it's attached to. A well-fitted one disappears into use. You are building the prosthetic that fits your practice.</p>
+                    <p>This is not a prototype. This is your working system. You will use it tomorrow.</p>
+                    <p class="deliverable"><strong>Deliverable:</strong> A working coordinator with atomic skills wired through an orchestration layer, tested on component-level tasks.</p>
+                    <div class="diagram-placeholder">
+                        <div class="diagram-placeholder-label">Diagram</div>
+                        <div class="diagram-placeholder-title">Orchestration Wiring Diagram</div>
+                    </div>
+                </div>
+
+                <div class="week">
+                    <div class="week-label">Week 3</div>
+                    <h3>Test and Refine</h3>
+                    <p class="week-pedagogy">Capstone: student runs and iterates the system on real work. Instructor provides diagnostic patterns, not fixes.</p>
+                    <p>You run your coordinator on a real project, end to end. Not a test case. Not a simulation. A project you need to finish. The coordinator handles orchestration: loading protocols, sequencing tasks, enforcing constraints, preserving context. You handle direction, judgment, and synthesis.</p>
+                    <p>Some of it will hold. Some of it will break. You identify where: maybe the voice protocol fires too late in the pipeline. Maybe two lenses that you assumed were independent actually need to run in sequence. Maybe a savepoint trigger is too aggressive and you're drowning in context markers that don't mean anything. Maybe a skill you built is doing two things and needs to be split.</p>
+                    <p>You refine. Add what's missing. Adjust the orchestration. Remove what doesn't earn its place. This is where the scaffold principle applies: if a tool has to stay permanently loaded to keep the system running, it's a dependency, not structure. Structure is what remains after the scaffolding comes down. Your coordinator should feel like the way you work, not like overhead you maintain.</p>
+                    <p>In December 2024, before the term "coordinator" existed, the proto-version of this was already being built: a custom GPT wired to a database as a single source of truth for a novel project. Same instinct. Same problem. The tooling has matured. The need was always there.</p>
+                    <p class="deliverable"><strong>Deliverable:</strong> A refined coordinator system, tested end-to-end on a real project, with a written assessment of what held, what broke, and what was removed.</p>
+                    <div class="diagram-placeholder">
+                        <div class="diagram-placeholder-label">Diagram</div>
+                        <div class="diagram-placeholder-title">End-to-End System Test Flow</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Pedagogy Note -->
         <section class="section" style="padding-top: var(--space-l); border-top: 1px solid var(--color-rule);">
             <div class="section-inner">
