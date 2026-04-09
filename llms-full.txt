@@ -23,9 +23,9 @@ Domains build in sequence. Each answers the founding question from a different a
 
 ## Tracks
 
-- **Designers** — Individual practice. Voice protocol, evaluation lenses, accommodation architecture.
-- **Creative Directors** — Team-scale coherence. Shared protocols and governance that survives beyond one person.
-- **Design Educators** — Train-the-trainer certification. Curriculum design and classroom integration.
+- **Authors** — Solo deep work on long-form projects. Input inversion as brainstorming. Voice governance for prose. Lens extraction for narrative evaluation. Savepoints managing continuity across dozens of sessions.
+- **Creative Directors** — Team-scale coherence. Shared voice protocols, evaluation standards, savepoints across Discord/Slack/project channels, staff as decomposed agents, collective synthesis.
+- **Educators** — Train-the-trainer certification. Pedagogy scaffolding for teaching the methodology forward.
 
 ## Courses
 
@@ -40,8 +40,8 @@ The entry point. Three weeks of applied practice on your own real project using 
 
 Grounded in six published whitepapers (DOIs). Built by a trained educator (SVA, Brooklyn College M.A., NYC DOE). Pedagogy follows the IDEA gradual release model.
 
-### Practitioner Ladder (Courses 02–07, In Development)
-02 Voice Governance / 03 Input Inversion / 04 Lens Extraction / 05 Semantic Hierarchy / 06 Prosthetic Cognition / 07 Coordinator Building
+### Practitioner Ladder (Courses 02–06, In Development)
+02 Input Inversion (joineryschool.com/courses/input-inversion.html) / 03 Lens Extraction (joineryschool.com/courses/lens-extraction.html) / 04 Voice Governance (joineryschool.com/courses/voice-governance.html) / 05 Semantic Hierarchy (joineryschool.com/courses/semantic-hierarchy.html) / 06 Coordinator Building (joineryschool.com/courses/coordinator-building.html). All six build toward Prosthetic Cognition.
 
 ### Workbench (In Development)
 Designer tooling. Voice fingerprinting, CLI, asset processing. Take alongside any course.
@@ -68,9 +68,7 @@ Free essay: "The Wrong Question" — Why your prompts keep getting longer and yo
 
 ## About
 
-Founded by Peter Salvato. Trained at SVA (graphic design, printmaking, screen printing under James Victore). Brooklyn College M.A. program in education. NYC Department of Education (special education, self-contained classroom, Sunset Park). Kingsborough Community College (intro to graphic design and visual studies). 25 years in design practice. 12 years as product design lead in enterprise software. Six published whitepapers. 130+ working AI skills and agents in daily production use.
-
-The methodology comes from the classroom, where designing around the processing reality of the receiving system is federal law. Accommodation Design is not a theory. It is a practice developed across 25 years of making things in rooms where the gap between intent and execution was the whole problem.
+Founded by Peter Salvato. SVA-trained designer. Taught special education in a self-contained classroom in Sunset Park, Brooklyn. Twelve years as product design lead on an enterprise platform. Before any of that, growing up on construction sites in Brooklyn. Twenty-five years of the same move across printshops, classrooms, enterprise platforms, kitchens, recording studios, and prose. AI was where the pattern became clear enough to name. Six published papers with DOIs formalizing what he'd been doing instinctively across every other domain. 130+ working AI skills and agents in daily production use. The methodology didn't come from studying AI. It came from decades of reading rooms and designing around what he found.
 
 ---
 
@@ -144,9 +142,11 @@ Future Tracks
 
 Same methodology, different practice. If you're leading a team through AI adoption, Foundations is still where you start. The tracks below build on it.
 
-Creative Directors: Team coherence at scale. For creative team leaders managing AI adoption. Shared voice protocols, evaluation standards, governance that holds when more than one person is in the room. (Planned)
+Authors: Solo deep work, long-form projects. For novelists, nonfiction writers, and memoirists using AI across months of sustained work. The full methodology applied to a single long-form project. (Planned)
 
-Educators: Train-the-trainer. Certification. For school faculty, workshop leaders, and corporate trainers. Pedagogy scaffolding. Each certified educator teaches tens to thousands. (Planned)
+Creative Directors: Team coherence at scale. For creative team leaders managing AI adoption across a team. Shared voice protocols, evaluation standards, savepoints as shared infrastructure, collective research and synthesis. (Planned)
+
+Educators: Train-the-trainer. Certification. For school faculty, workshop leaders, and corporate trainers. Pedagogy scaffolding for teaching the methodology forward. (Planned)
 
 ## AI Accommodation: The Foundations (courses/foundations.html)
 

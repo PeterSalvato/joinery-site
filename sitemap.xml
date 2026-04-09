@@ -13,6 +13,26 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://joineryschool.com/courses/input-inversion.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joineryschool.com/courses/lens-extraction.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joineryschool.com/courses/voice-governance.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joineryschool.com/courses/semantic-hierarchy.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joineryschool.com/courses/coordinator-building.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://joineryschool.com/research.html</loc>
     <priority>0.8</priority>
   </url>
