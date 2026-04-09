@@ -1523,19 +1523,19 @@ p {
 }
 
 .course-card-grid .course-card {
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
 }
 
 .course-card-grid .course-card:hover {
-    border-bottom: 1px solid var(--color-text-mid);
+    border-bottom-color: var(--color-text-mid);
 }
 
 .course-card-grid .course-card:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
 }
 
 .course-card-grid .course-card:last-child:hover {
-    border-bottom: 1px solid var(--color-text-mid);
+    border-bottom-color: var(--color-text-mid);
 }
 
 .course-card {
