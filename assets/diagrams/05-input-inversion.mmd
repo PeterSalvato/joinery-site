@@ -1,21 +1,16 @@
 flowchart TB
-    PERSON["THE SAME PERSON\nwith the same idea"]
-
-    PERSON --> CP & IP
-
-    subgraph CP ["CONVENTIONAL PATH"]
+    subgraph CONVENTIONAL ["CONVENTIONAL"]
         direction TB
-        CT["Think about\nthe problem"] --> CO["Organize\nthoughts"] --> CS["Structure\ninto prompt"]
-        CS --> COMP["⚠ COMPRESSION\nraw thinking\nlost here"]
-        COMP --> SP["Structured prompt"] --> AP1["AI processes\nfixed input"]
-        AP1 --> OUT1["OUTPUT:\nlimited to what\nsurvived compression"]
+        C1["RAW THINKING"] --> C2["ORGANIZE"]
+        C2 --> C3["COMPRESS INTO PROMPT"]
+        C3 -.->|"signal lost"| C4["AI PROCESSES\nnarrowed input"]
+        C4 --> C5["LIMITED OUTPUT"]
     end
 
-    subgraph IP ["INVERTED PATH"]
+    subgraph INVERTED ["INVERTED"]
         direction TB
-        IT["Think out loud"] --> BD["Brain dump\ntangents, contradictions,\ndiscoveries"]
-        BD --> RT["Raw transcript\nnothing lost"]
-        RT --> AS["AI structures\nthe raw input"]
-        AS --> AP2["AI processes\nfull thinking"]
-        AP2 --> OUT2["OUTPUT:\ncontains ideas\nyou didn't know\nyou had"]
+        I1["RAW THINKING"] --> I2["FULL TRANSCRIPT\nnothing compressed"]
+        I2 -->|"full signal"| I3["AI FINDS STRUCTURE"]
+        I3 --> I4["AI PROCESSES\nfull bandwidth"]
+        I4 --> I5["RICHER OUTPUT"]
     end

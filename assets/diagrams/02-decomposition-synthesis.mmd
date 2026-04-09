@@ -1,19 +1,19 @@
 flowchart TB
-    B["BRIEF\nthe project"]
+    INPUT["CONCEPT"]
 
-    B --> C["COMPOUND PATH\none prompt, 5 objectives"]
-    B --> D["DECOMPOSED PATH\nidentify dimensions,\n5 specialist prompts"]
+    INPUT --> A["CHANNEL A"]
+    INPUT --> B["CHANNEL B"]
+    INPUT --> C["CHANNEL C"]
+    INPUT --> D["CHANNEL D"]
 
-    C --> CO["AI processes\nall 5 simultaneously"]
-    CO --> CX["OUTPUT: shallow, coherent\nAI made all decisions"]
+    A --> PA["AI PROCESS"]
+    B --> PB["AI PROCESS"]
+    C --> PC["AI PROCESS"]
+    D --> PD["AI PROCESS"]
 
-    D --> SO["5 specialist outputs\neach deep, independent"]
+    PA --> REG["REGISTRATION\nhuman synthesis"]
+    PB --> REG
+    PC --> REG
+    PD --> REG
 
-    SO --> AC["AI COMPILER\nsynthesizes outputs"]
-    SO --> HC["HUMAN CD\nsteps through\none at a time"]
-
-    AC --> ACO["OUTPUT: organized, passive\nmisses conflicts\nmisses convergences"]
-
-    HC --> TR["TRACKED DECISIONS\naccept, override,\ndefer + reasoning"]
-    TR --> CB["COMPILED BRIEF\nfrom tracker"]
-    CB --> HCO["OUTPUT: directed\nconflicts resolved\nconvergences named\ngoverning principles set"]
+    REG --> OUTPUT["COMPOSITE OUTPUT\ndirected, resolved"]

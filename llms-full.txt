@@ -1,0 +1,267 @@
+# Joinery
+
+> A school for creative practitioners who use AI. Joinery teaches Accommodation Design: a structural methodology for AI-assisted creative work that doesn't expire when the tools change.
+
+Enrollment opens Summer 2026. joineryschool.com
+
+## What Joinery Is
+
+Other courses teach the tools. Joinery teaches the thinking underneath. The methodology is called Accommodation Design. It asks: what does the system actually need to do this job well? That question comes from special education classrooms, where designing around the processing reality of the receiving system is federal law. Applied to AI, it changes how you structure input, preserve your voice, evaluate output, and keep your judgment in the room.
+
+Designers already have the skill this methodology depends on. You attune to clients, audiences, customers every day. Joinery teaches you to apply that same attunement skill to AI as a new receiving system.
+
+## The Six Domains
+
+Domains build in sequence. Each answers the founding question from a different angle.
+
+1. **Accommodation Design** — The founding reframe. Ask what the system needs, not how to constrain it. Task decomposition as accommodation.
+2. **Input Inversion** — Unstructured human input plus structured tools beats structured prompts. The burden of organization belongs to the tooling.
+3. **Prosthetic Cognition** — AI as cognitive extension, not tool and not replacement. A harness that extends reach without climbing for you.
+4. **Semantic Hierarchy** — AI memory flattens everything. Human-marked importance preserves what mattered.
+5. **Voice Governance** — Constraints applied during generation produce structurally different output than constraints applied after. Voice is structural, not stylistic.
+6. **Lens Extraction** — "Is this good?" is twelve questions. Extract what strong practitioners consistently ask, codify as testable criteria, run independently.
+
+## Tracks
+
+- **Designers** — Individual practice. Voice protocol, evaluation lenses, accommodation architecture.
+- **Creative Directors** — Team-scale coherence. Shared protocols and governance that survives beyond one person.
+- **Design Educators** — Train-the-trainer certification. Curriculum design and classroom integration.
+
+## Courses
+
+### AI Accommodation: The Foundations (Course 01 — Designer Track)
+Self-paced. 3 modules. $299.
+
+The entry point. Three weeks of applied practice on your own real project using the gradual release model: demonstration, guided practice, independent practice.
+
+- **Week 1: Task Decomposition** — Your prompts keep getting longer and your output keeps getting worse. The problem is structural. You learn to decompose, run independently, and synthesize.
+- **Week 2: Input Inversion** — Unstructured input contains richer raw material than structured prompts. You learn to dump your thinking and let the tool find the structure.
+- **Week 3: Voice Governance** — All AI copy sounds the same because voice constraints are applied after generation, not during. You learn to apply rules before the first word is produced.
+
+Grounded in six published whitepapers (DOIs). Built by a trained educator (SVA, Brooklyn College M.A., NYC DOE). Pedagogy follows the IDEA gradual release model.
+
+### Practitioner Ladder (Courses 02–07, In Development)
+02 Voice Governance / 03 Input Inversion / 04 Lens Extraction / 05 Semantic Hierarchy / 06 Prosthetic Cognition / 07 Coordinator Building
+
+### Workbench (In Development)
+Designer tooling. Voice fingerprinting, CLI, asset processing. Take alongside any course.
+
+## Certification
+
+- **Tier I: Course Completion** — Completed one course.
+- **Tier II: Program Completion** — Completed the full Designer ladder (7 courses).
+- **Tier III: Practitioner Certification** — Assessed and portfolio-reviewed.
+- **Tier IV: Educator Certification** — Train-the-trainer. Licensed to teach the methodology forward.
+
+## Research
+
+Six published whitepapers with DOIs. Open access. The papers are the foundation; the courses are the application.
+
+- Accommodation Design — https://doi.org/10.5281/zenodo.18941231
+- Input Inversion — https://doi.org/10.5281/zenodo.18962881
+- Prosthetic Cognition — https://doi.org/10.5281/zenodo.18962893
+- Semantic Flattening — https://doi.org/10.5281/zenodo.18986290
+- Lens Extraction — https://doi.org/10.5281/zenodo.18986295
+- Voice Governance — https://doi.org/10.5281/zenodo.18986297
+
+Free essay: "The Wrong Question" — Why your prompts keep getting longer and your output keeps getting worse. /essays/the-wrong-question.html
+
+## About
+
+Founded by Peter Salvato. Trained at SVA (graphic design, printmaking, screen printing under James Victore). Brooklyn College M.A. program in education. NYC Department of Education (special education, self-contained classroom, Sunset Park). Kingsborough Community College (intro to graphic design and visual studies). 25 years in design practice. 12 years as product design lead in enterprise software. Six published whitepapers. 130+ working AI skills and agents in daily production use.
+
+The methodology comes from the classroom, where designing around the processing reality of the receiving system is federal law. Accommodation Design is not a theory. It is a practice developed across 25 years of making things in rooms where the gap between intent and execution was the whole problem.
+
+---
+
+# Full Page Content
+
+## Home (index.html)
+
+AI flattens. Your work should survive it.
+
+The methodology for creatives who refuse to let the AI decide what they meant.
+
+You're a brand designer with a brief, an author with a chapter, an illustrator with a direction, a copywriter with a campaign, a creative director with a team. You try AI. The output has the right shape but it isn't quite you. Maybe it happened gradually: each session a little further from what you meant, nothing you could point to. Or it was immediate. The first draft came back and felt like someone else wrote it. Either way, the AI filled the gaps with its defaults. Its defaults aren't yours. They're what millions of similar projects look like when averaged together.
+
+More prompting doesn't fix this. The problem starts before the prompt.
+
+The AI labs are building systems for reliable output. Reliable means averaged. For code, that works. For creative work, averaged is the death of the idea. Joinery doesn't ask how to make the AI reliable. It asks how to keep your intent alive.
+
+You already have this skill. DJs call it reading the room. Teachers call it reading the classroom. Designers call it reading the client. Writers call it reading their reader. Whatever you call it: figuring out what something needs before you start. Joinery teaches you to apply it to AI.
+
+The methodology comes from a classroom, not a lab. In special education, designing around how the student actually processes isn't optional: it's federal law. The same question, applied to AI, is what extends your reach.
+
+01 Accommodation Design: Ask what AI needs from you to produce what you meant. Build to that answer.
+02 Input Inversion: Dump your raw thinking. Let the AI find the structure in it.
+03 Semantic Hierarchy: AI treats everything as equally important. You mark what actually matters.
+04 Voice Governance: Build your voice into the setup before the first word. What comes out sounds like you — the AI's defaults had nowhere to go.
+05 Lens Extraction: Bring the perspectives you trust into the process. Run your work through each one before it leaves your hands.
+06 Coordinator Building: Wire the practices into one pipeline — or build one your whole team runs from. The scaffolding handles itself; your attention stays on the work.
+Prosthetic Cognition: What the six practices build toward. A cognitive partnership where your thinking is always the source and AI extends your reach.
+
+Founding Cohort — May 2026: 50 creatives. $299. Three weeks of applied practice on your own real project. I'll personally review every student's work from this cohort. Prices increase when founding cohort closes.
+
+Research: Six whitepapers with DOIs. Peer-reviewed cognitive science across all six domains.
+Origins: Federal law requires designing around how each student actually learns. That classroom is where this methodology started.
+Practice: SVA-trained. Taught special education in Brooklyn. Twelve years as product design lead.
+
+## Courses (courses.html)
+
+Courses
+
+Every course works on your own real project. Not fictional examples. Not a playlist you watch. Three weeks of structured practice that ends with a working system you use the day after. Grounded in six published papers.
+
+Course 01. Start here.
+AI Accommodation: The Foundations
+Your prompts keep getting longer and your output keeps getting worse. This course teaches you the structural fix — three moves that keep your intent intact from start to finish, applied to your own real project.
+Self-paced. 3 modules. $299. Research anchor: Accommodation Design.
+
+The Practitioner Ladder
+
+After Foundations, each course takes one domain and goes deep. Foundations gives you the first move. These give you the full practice.
+
+02 Input Inversion — The structure pulls your thinking out instead of substituting for it. Dump raw. Let AI find what's there. (In Development)
+03 Lens Extraction — Build the stack of voices you want in the room. Declare what the work is designed to be, then run the stack to stay true to it. (In Development)
+04 Voice Governance — Capture your actual voice. Build protocols that govern AI output during generation. (In Development)
+05 Semantic Hierarchy — Structure what the AI remembers so context survives across sessions. (In Development)
+06 Coordinator Building — Build infrastructure that embodies your workflow. Capstone. (In Development)
+
+What the six practices build toward: Prosthetic Cognition — A cognitive partnership where your thinking is always the source and AI extends your reach. Not a course you complete. A state you reach when all six practices work together.
+
+Workbench — Practitioner tooling. Voice fingerprinting, CLI, asset processing. Take alongside any course. (In Development)
+
+Certification
+
+Four tiers. Each one means something different about what you can do.
+
+I. Course Completion — Completed one course. Proof you did the work, not just watched it.
+II. Program Completion — Completed the full curriculum. You have the full practice.
+III. Practitioner Certification — Assessed and portfolio-reviewed. You can do the work under your own name.
+IV. Educator Certification — Train-the-trainer. You can teach the methodology forward. Each certified educator reaches tens to thousands.
+
+Future Tracks
+
+Same methodology, different practice. If you're leading a team through AI adoption, Foundations is still where you start. The tracks below build on it.
+
+Creative Directors: Team coherence at scale. For creative team leaders managing AI adoption. Shared voice protocols, evaluation standards, governance that holds when more than one person is in the room. (Planned)
+
+Educators: Train-the-trainer. Certification. For school faculty, workshop leaders, and corporate trainers. Pedagogy scaffolding. Each certified educator teaches tens to thousands. (Planned)
+
+## AI Accommodation: The Foundations (courses/foundations.html)
+
+AI Accommodation: The Foundations
+Self-paced. 3 weeks. $299. Course 01.
+
+Your prompts keep getting longer and your output keeps getting worse. This course teaches you the structural fix — and how to keep your intent intact from start to finish.
+
+You already know how to read a room — a client, a brief, an audience. Figuring out what something needs before you start is how you do your best work. This course teaches you to do the same thing with AI.
+
+Not ten hours of video. Three weeks of structured practice on your own real project, using the gradual release model: demonstration, guided practice, independent practice. You finish with a working system for your own practice, not a playlist you watched.
+
+Week 1: Task Decomposition
+Demo, guided practice, independent practice.
+Your prompts keep getting longer and your output keeps getting worse. The problem is structural: compound instructions degrade in AI the same way they degrade in a classroom. You learn to run a room of specialists. Each one goes deeper than a compound prompt because its attention isn't split across five objectives at once. The AI gives you raw material at depth. You provide the synthesis — the calls the model cannot make because it doesn't have your judgment. You aren't prompting. You're directing.
+Deliverable: A decomposed workflow for one real project, with before/after comparison.
+
+Week 2: Input Inversion
+Demo, guided practice, independent practice.
+Structured prompts compress what makes your thinking yours. Unstructured input (talking, brainstorming, arguing with yourself) contains richer raw material. You learn to dump your thinking and let the tool find the structure. The ideas that emerge are yours because the raw material was yours.
+Deliverable: An input practice for one real project, with a recorded brain dump and its structured output.
+
+Week 3: Voice Governance
+Demo, guided practice, independent practice.
+All AI copy sounds the same because voice constraints are applied after generation, not during. You learn to extract how you actually talk (from conversation, not published writing), codify it as generation rules, and apply those rules before the first word is produced. The output sounds like you because the constraints occupied the space where the AI's defaults would have gone.
+Deliverable: A voice protocol extracted from your own speech patterns, tested against real output.
+
+What the difference looks like.
+
+Brand design — task decomposition: Same brand. Same model. One compound prompt covering five dimensions at once. Five decomposed prompts, one per dimension.
+
+Compound Output — Logo Direction: "A wordmark-forward logo using a hand-drawn or letterpress-style treatment with a supporting mark (possibly a stylized pepper or farm element). The mark should feel made by hand, not designed in software. Avoid flames, skulls, cartoons."
+
+Decomposed Output — Logo Direction: "The mark should feel earned. It should carry the weight of someone who has done physical work to produce the thing in the jar. Drawn by someone with dirt under their fingernails, not in software. Reference sign painters' corner initials and printer's marks from the 1500s: compact enough to stamp, distinct enough to identify the shop. Reproducible by hand on a napkin. Must work at bottle-cap size and at eight-foot market-stall scale."
+
+The compound version described what the logo looks like. The decomposed version described what it feels like, what it references, what it must avoid, and what constraints govern every scale. The practitioner now has something to act on, not just a spec to execute.
+
+Building a practice — task decomposition: Same practitioner. Same model. One compound prompt asking for a complete business and marketing plan. One focused question asking about positioning only.
+
+Compound Output — Practice Direction: "1. Define your target market: Conduct market research to identify your ideal clients, their industries, needs, and pain points. Create buyer personas. 2. Develop a brand identity: Create a logo, website, and social media profiles consistent with your brand. 3. Create a portfolio: Showcase your best work. 4. Determine your pricing structure: Research industry standards to ensure your prices are competitive. 5. Create a marketing strategy: Use social media, email marketing, and networking to reach your target market..."
+
+Decomposed Output — Positioning Only: "You spent eight years as a journalist before you started writing for SaaS companies. That is not a career pivot. That is why you know how to find the human story inside a technical product before you write a single sentence about it. Most copywriters learn to write clearly. You learned to find what is true first. There is a specific kind of client — the one whose product does something real but whose copy sounds like everyone else's — who needs exactly what you have. The marketing plan follows from that. The portfolio is evidence of it. Everything else is execution."
+
+The compound version gave five steps that apply equally to any practitioner who has ever read a business blog. The decomposed version, focused on positioning only, named a specific capability built over eight specific years and the exact client who needs it. The difference is not the model — the model had the same information both times. The compound prompt asked it to cover everything at once. The focused prompt left it nowhere to go except into the specifics you gave it.
+
+Fiction writing — voice governance: Same character. Same model. One version with no voice constraints. One version with a protocol extracted from the author's own speech patterns, applied before the first sentence.
+
+No Voice Protocol — Opening Scene: "Henka had lived in New City for as long as she could remember. The city was a maze of rusted machinery and broken concrete, walls of salvaged metal that blocked out most of the sky. She moved through the shadows carefully, watching for the corporate drones that swept the sector every three hours. If they spotted her, there would be questions. Questions she couldn't afford."
+
+Voice Protocol Applied — Opening Scene: "Oil and standing water, the smell of both. She pressed into the gap between the housing units and waited. Her shoulder against the corrugated metal, she felt the hum before she heard it. Distant. East. She counted beats without counting — it was just a rhythm her body kept. When the hum faded she moved. The pile was still there."
+
+The first version describes a character in a world. The second renders a world through a body. The difference is not better writing — it is a specific set of constraints applied before the first sentence: sensory priority (smell before sight), emotion as physical state, not internal monologue, short sentences during tension, no exposition. The author's voice held because it was encoded first. The AI's defaults occupied none of the space.
+
+What's included:
+- Gradual release pedagogy: demonstration, guided practice, independent practice (from IDEA-governed special education method)
+- Applied exercises on your own projects, not fictional examples
+- Three deliverables you use the day after
+- Frameworks, templates, and reference materials
+- On-camera sessions with the instructor
+- Grounded in six published whitepapers with DOIs (citations include Sweller, Cowan, Murdock, Liu et al., Wong et al., Bock, Pennebaker, Flower & Hayes)
+
+Built by a trained educator (Brooklyn College M.A. program, NYC Department of Education, Kingsborough Community College) using the same pedagogical framework the course teaches. The course structure itself demonstrates Accommodation Design.
+
+Foundations is Course 01. After it, the curriculum continues with Input Inversion, Lens Extraction, Voice Governance, Semantic Hierarchy, and Coordinator Building — each one deepening a single practice on your own real work. All six build toward Prosthetic Cognition.
+
+Completion of Foundations earns a Course Completion certificate (Tier I). Complete the full curriculum for Program Completion (Tier II).
+
+$299. Three weeks. Three deliverables. One methodology.
+
+## Research (research.html)
+
+Research
+
+Before any of this was a school, it was a practice. These six papers document three years of applied work — what the methodology is, where it comes from, and why it works.
+
+The courses translate each paper into hands-on work on your own project. The papers are the foundation. The courses are the application. Read the papers to understand the thinking. Take the courses to apply it to your practice.
+
+All six papers are open access. The tools are open source. The site you are reading was built by the system it teaches.
+
+Accommodation Design: Why "what does the system need?" is a better question than "how do I control the output?" Applied in: Course 01, Foundations. https://doi.org/10.5281/zenodo.18941231
+
+Input Inversion: Why unstructured human thinking produces better AI output than structured prompts. Applied in: Course 02, Input Inversion. https://doi.org/10.5281/zenodo.18962881
+
+Prosthetic Cognition: AI as cognitive extension: the climbing harness, not the replacement or the tool. Applied in: Course 06, Prosthetic Cognition. https://doi.org/10.5281/zenodo.18962893
+
+Semantic Flattening: Why AI memory loses what mattered, and what human-marked importance fixes. Applied in: Course 05, Semantic Hierarchy. https://doi.org/10.5281/zenodo.18986290
+
+Lens Extraction: Decomposing "is this good?" into independent evaluations drawn from real practitioners. Applied in: Course 03, Lens Extraction. https://doi.org/10.5281/zenodo.18986295
+
+Voice Governance: Why constraining AI output during generation produces structurally different work than editing after. Applied in: Course 04, Voice Governance. https://doi.org/10.5281/zenodo.18986297
+
+Free essays from the methodology.
+
+The Wrong Question: Why your prompts keep getting longer and your output keeps getting worse. https://joineryschool.com/essays/the-wrong-question.html
+
+## About (about.html)
+
+About Joinery
+
+Every generation of creatives gets a new tool that threatens to average their work. Joinery teaches you to keep your work yours — the methodology for making AI work for your practice, not the other way around.
+
+The methodology comes from a classroom, not a lab. In special education, designing around how each student actually processes isn't optional — it's federal law. Ignore the plan and you get compliance. Design around it and you get learning. Three years of applying that same question to AI, documented in six published papers.
+
+The structure should read the room. And when the room changes, the structure should change first.
+
+Peter Salvato
+
+Peter Salvato spent twenty-five years watching tools reshape creative practice — screenprinting, then desktop publishing, then the web, now AI. Each time, the practitioners who kept their work theirs were the ones with a methodology. The methodology underlying Joinery was learned in a self-contained special education classroom in Sunset Park, Brooklyn: twelve students, every subject, twelve individual plans, no other teacher running the room. Each plan was a living document — not a compliance artifact, but a description of how this particular person learns, updated as you learn more about them. Ignore that plan and the student complies but doesn't learn. Design around it and the material lands. That's the same question applied to AI.
+
+This is not a theory. It is a practice built across 25 years of making things in rooms where the gap between intent and execution was the whole problem: classrooms, print shops, construction sites, recording studios, enterprise platforms, and AI systems.
+
+Design Education: School of Visual Arts: Christoph Niemann and Nicholas Blechman taught that every mark carries meaning — precision as discipline. James Victore taught that your instinct is the material — fierceness as honesty. The synthesis: communicate with fierce specificity. Brooklyn College (M.A. program in education). Kingsborough Community College (taught intro to graphic design and visual studies). NYC Department of Education (special education, self-contained classroom, Sunset Park).
+
+Design Practice: 25 years across graphic design, print production, brand systems, and product design. 12 years as product design lead in enterprise software. Brand systems for independent businesses. The methodology comes from design practice, not from engineering.
+
+Research: Six published whitepapers with DOIs. Accommodation Design, Input Inversion, Prosthetic Cognition, Semantic Hierarchy, Lens Extraction, Voice Governance. Citations include Sweller, Cowan, Murdock, Liu et al., Bock, Pennebaker, Flower & Hayes, Bereiter & Scardamalia, Wong et al.
+
+Infrastructure: 130+ working AI skills, agents, and voice protocols in daily production use. The tooling the methodology describes is the tooling the founder uses.

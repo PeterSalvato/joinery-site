@@ -1,18 +1,12 @@
-flowchart TB
-    CONV["CONVERSATIONS\nhow you actually talk"]
-    PUB["PUBLISHED WRITING\nhow you perform"]
+flowchart LR
+    subgraph WITHOUT ["WITHOUT PROTOCOL"]
+        direction LR
+        W1["GENERATE"] --> W2["AI DEFAULTS\nFILL SPACE"] --> W3["GENERIC\nOUTPUT"] --> W4["EDIT\nVOICE IN"] --> W5["STILL\nGENERIC"]
+    end
 
-    CONV -->|"use this"| VS
-    PUB -.-x|"not this"| VS
+    subgraph WITH ["WITH PROTOCOL"]
+        direction LR
+        P1["VOICE RULES\nSET"] --> P2["GENERATE"] --> P3["DEFAULTS\nDISPLACED"] --> P4["SOUNDS\nLIKE YOU"]
+    end
 
-    VS["VOICE SAMPLING\nobserve patterns"]
-    VS --> VF["VOICE FINGERPRINT\naccumulated observations"]
-    VF --> ER["EXTRACT RULES\nbinary, testable, specific"]
-    ER --> VP["VOICE PROTOCOL\nloaded before generation"]
-    VP --> CG["CONSTRAINED GENERATION\nrules applied DURING"]
-    CG --> VER{"VERIFICATION"}
-
-    VER -->|"violation"| FIX["FIX"] --> CG
-    VER -->|"false positive"| OVERRIDE["HUMAN\nOVERRIDE"]
-    VER -->|"passes"| SHIP["SHIP"]
-    OVERRIDE --> SHIP
+    WITHOUT ~~~ WITH
