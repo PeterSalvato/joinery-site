@@ -1526,8 +1526,16 @@ p {
     border-bottom: none;
 }
 
+.course-card-grid .course-card:hover {
+    border-bottom: 1px solid var(--color-text-mid);
+}
+
 .course-card-grid .course-card:last-child {
     border-bottom: none;
+}
+
+.course-card-grid .course-card:last-child:hover {
+    border-bottom: 1px solid var(--color-text-mid);
 }
 
 .course-card {
