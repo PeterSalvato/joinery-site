@@ -104,6 +104,15 @@
             <div class="section-inner">
                 <h2>What the difference looks like.</h2>
 
+                <div class="artifact-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: var(--space-l);">
+                    <button class="artifact-tab active" data-panel="brand" style="font-family: var(--font-mono, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 0.8rem; background: var(--color-text, #2A2725); color: var(--color-bg, #F5F3EE); border: 1px solid var(--color-rule, #DDD9D1); cursor: pointer;">Brand Design</button>
+                    <button class="artifact-tab" data-panel="essay" style="font-family: var(--font-mono, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 0.8rem; background: none; color: var(--color-text-mid, #555); border: 1px solid var(--color-rule, #DDD9D1); cursor: pointer;">Essay</button>
+                    <button class="artifact-tab" data-panel="fiction" style="font-family: var(--font-mono, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 0.8rem; background: none; color: var(--color-text-mid, #555); border: 1px solid var(--color-rule, #DDD9D1); cursor: pointer;">Fiction</button>
+                    <button class="artifact-tab" data-panel="practice" style="font-family: var(--font-mono, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 0.8rem; background: none; color: var(--color-text-mid, #555); border: 1px solid var(--color-rule, #DDD9D1); cursor: pointer;">Practice</button>
+                    <button class="artifact-tab" data-panel="campaign" style="font-family: var(--font-mono, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 0.8rem; background: none; color: var(--color-text-mid, #555); border: 1px solid var(--color-rule, #DDD9D1); cursor: pointer;">Campaign Copy</button>
+                </div>
+
+                <div class="artifact-panel active" data-panel="brand">
                 <p class="artifact-context">Brand design — task decomposition</p>
                 <p>Same brand. Same model. One compound prompt covering five dimensions at once. Five decomposed prompts, one per dimension. Here is what the logo direction came back as in each version.</p>
                 <div class="artifact-comparison">
@@ -120,7 +129,10 @@
                     <div class="artifact-note">The compound version described what the logo looks like. The decomposed version described what it feels like, what it references, what it must avoid, and what constraints govern every scale. The practitioner now has something to act on, not just a spec to execute.</div>
                 </div>
 
-                <p class="artifact-context" style="margin-top: var(--space-xl);">Essay writing — input inversion</p>
+                </div>
+
+                <div class="artifact-panel" data-panel="essay" style="display: none;">
+                <p class="artifact-context">Essay writing — input inversion</p>
                 <p>Same writer. Same argument. One structured prompt asking for a complete essay on the topic. One raw input dump (voice notes on the argument, unedited) fed back as the source. Here is what the opening paragraph came back as in each version.</p>
                 <div class="artifact-comparison">
                     <div class="artifact-side">
@@ -136,7 +148,10 @@
                     <div class="artifact-note">The first version describes a social problem at category scale. The second names a specific realization from a specific person about their own situation: the actual argument. The input dump contained the real thinking. A structured prompt asked for a topic; the model gave back a taxonomy. An unstructured dump gave the model the writer's actual observations; the model gave back the argument that was already in the raw material.</div>
                 </div>
 
-                <p class="artifact-context" style="margin-top: var(--space-xl);">Fiction writing — voice governance</p>
+                </div>
+
+                <div class="artifact-panel" data-panel="fiction" style="display: none;">
+                <p class="artifact-context">Fiction writing — voice governance</p>
                 <p>Same character. Same model. One version with no voice constraints. One version with a protocol extracted from the author's own speech patterns, applied before the first sentence. Here is what the opening came back as in each version.</p>
                 <div class="artifact-comparison">
                     <div class="artifact-side">
@@ -152,7 +167,10 @@
                     <div class="artifact-note">The first version describes a character in a world. The second renders a world through a body. The difference is not better writing; it is a specific set of constraints applied before the first sentence: sensory priority (smell before sight), emotion as physical state, not internal monologue, short sentences during tension, no exposition. The author's voice held because it was encoded first. The AI's defaults occupied none of the space.</div>
                 </div>
 
-                <p class="artifact-context" style="margin-top: var(--space-xl);">Building a practice — task decomposition</p>
+                </div>
+
+                <div class="artifact-panel" data-panel="practice" style="display: none;">
+                <p class="artifact-context">Building a practice — task decomposition</p>
                 <p>Same practitioner. Same model. One compound prompt asking for a complete business and marketing plan. One focused question asking about positioning only. Here is what came back.</p>
                 <div class="artifact-comparison">
                     <div class="artifact-side">
@@ -168,7 +186,10 @@
                     <div class="artifact-note">The compound version gave five steps that apply equally to any practitioner who has ever read a business blog. The decomposed version, focused on positioning only, named a specific capability built over eight specific years and the exact client who needs it. The difference is not the model; the model had the same information both times. The compound prompt asked it to cover everything at once. The focused prompt left it nowhere to go except into the specifics you gave it.</div>
                 </div>
 
-                <p class="artifact-context" style="margin-top: var(--space-xl);">Campaign copy — voice governance</p>
+                </div>
+
+                <div class="artifact-panel" data-panel="campaign" style="display: none;">
+                <p class="artifact-context">Campaign copy — voice governance</p>
                 <p>Same brand. Same model. One prompt asking for email subject lines and opening copy for a product launch. One version with a voice protocol extracted from the brand's existing content. Here is what the copy came back as in each version.</p>
                 <div class="artifact-comparison">
                     <div class="artifact-side">
@@ -183,8 +204,29 @@
                     </div>
                     <div class="artifact-note">The first version uses phrases — "crafted," "built to last," "work as hard as you do" — that appear in thousands of brand emails. The model filled the available space with its defaults. The second carries the brand's actual voice because the protocol set constraints before generation: no aspirational language, no "you deserve" framing, product claims grounded in specific development history, short declarative sentences. The AI's defaults had nowhere to go.</div>
                 </div>
+                </div>
+
             </div>
         </section>
+
+        <script>
+        document.querySelectorAll('.artifact-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var panel = tab.dataset.panel;
+                document.querySelectorAll('.artifact-tab').forEach(function(t) {
+                    t.classList.remove('active');
+                    t.style.background = 'none';
+                    t.style.color = 'var(--color-text-mid, #555)';
+                });
+                tab.classList.add('active');
+                tab.style.background = 'var(--color-text, #2A2725)';
+                tab.style.color = 'var(--color-bg, #F5F3EE)';
+                document.querySelectorAll('.artifact-panel').forEach(function(p) {
+                    p.style.display = p.dataset.panel === panel ? 'block' : 'none';
+                });
+            });
+        });
+        </script>
 
         <!-- Origin Story -->
         <section class="section" style="border-top: 1px solid var(--color-rule);">
