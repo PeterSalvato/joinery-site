@@ -4,15 +4,15 @@
    ================================================================ */
 
 :root {
-    --color-bg: #F8F6F2;
-    --color-bg-alt: #F0EDE7;
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F5F5F5;
     --color-text: #2A2725;
     --color-text-mid: #555;
     --color-text-light: #888;
     --color-accent: #C45A2D;
     --color-accent-hover: #A84920;
     --color-rule: #DDD9D1;
-    --color-white: #F8F6F2;
+    --color-white: #FFFFFF;
     --color-dark: #1A1918;
 
     --font-heading: 'Archivo', -apple-system, sans-serif;
