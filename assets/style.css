@@ -4,8 +4,8 @@
    ================================================================ */
 
 :root {
-    --color-bg: #FFFFFF;
-    --color-bg-alt: #F5F5F5;
+    --color-bg: #E0E0E0;
+    --color-bg-alt: #D5D5D5;
     --color-text: #2A2725;
     --color-text-mid: #555;
     --color-text-light: #888;
@@ -13,6 +13,7 @@
     --color-accent-hover: #A84920;
     --color-rule: #DDD9D1;
     --color-white: #FFFFFF;
+    --color-card: #FFFFFF;
     --color-dark: #1A1918;
 
     --font-heading: 'Archivo', -apple-system, sans-serif;
@@ -1420,7 +1421,7 @@ p {
 
 .page-card {
     border: 1px solid var(--color-rule);
-    background: var(--color-bg-alt);
+    background: var(--color-white);
     padding: var(--space-m);
     max-width: var(--measure);
     margin: 0 auto;
@@ -1547,6 +1548,7 @@ p {
     padding: var(--space-m);
     text-decoration: none;
     color: inherit;
+    background: var(--color-white);
     transition: border-color 0.15s ease, background 0.15s ease;
 }
 
