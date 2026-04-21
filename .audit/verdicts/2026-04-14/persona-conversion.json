@@ -1,0 +1,151 @@
+{
+  "lens": "persona-conversion",
+  "date": "2026-04-14",
+  "screenshots_read": 5,
+  "persona_fit": {
+    "brand_designer": {
+      "verdict": "primary",
+      "strengths": [
+        "Named explicitly in the problem section of index.html: 'a brand designer with a system to encode'",
+        "Named in courses.html specialist tracks with substantive description: 'System-level decomposition. Encoding brand rules before generation. Maintaining visual coherence across AI-generated work.'",
+        "First artifact on foundations.html is brand design (task decomposition — hot sauce brand logo direction). Concrete, specific, immediately recognizable as real brand work.",
+        "The artifact before/after is the strongest in the set: the compound vs. decomposed logo direction shows a genuinely different quality of output, not just a style difference.",
+        "The 'building a practice' artifact secondarily resonates — the positioning copywriter example describes someone with a specific background earning their differentiation, which maps to how brand designers think about identity work."
+      ],
+      "gaps": [
+        "The specialist track link (brand-designer-track.html) goes to a page that presumably doesn't exist yet — dead link risk for the most interested visitor.",
+        "No artifact demonstrates voice governance or input inversion applied to brand design specifically. The brand design artifact is only task decomposition. A brand designer might wonder whether weeks 2 and 3 are relevant to their medium.",
+        "The problem statement on the homepage ('outputs are generic, untextured, don't know the brand') is present but compressed into a single clause. It doesn't get its own paragraph the way copy problems do in the artifact section.",
+        "Visual identity work is inherently visual — the site has no visual output artifacts. The logo direction comparison is text-about-visuals, not the visuals themselves. This is a structural limitation but still a gap for this persona."
+      ]
+    },
+    "copywriter": {
+      "verdict": "primary",
+      "strengths": [
+        "Named explicitly in the problem section of index.html: 'a copywriter with a voice to protect'",
+        "Named in courses.html specialist tracks with substantive description: 'Voice encoding for client and campaign work. Governing tone across multiple pieces. Applied practice on real briefs.'",
+        "Two artifacts on foundations.html directly address copywriter problems: 'building a practice' (positioning a copywriter with journalism background) and 'campaign copy — voice governance' (launch email before/after).",
+        "The campaign copy artifact is the second-strongest in the set. The 'Introducing Our New Collection' vs. 'It took us three years' contrast is immediately recognizable to any copywriter who has produced or received both types.",
+        "Voice Governance (Course 04) has the clearest persona-to-course mapping of any course on the ladder. A copywriter can see exactly where they're going.",
+        "The 'building a practice' artifact names a journalist-turned-copywriter specifically. This is a real professional archetype the persona recognizes."
+      ],
+      "gaps": [
+        "The specialist track link (copywriter-track.html) goes to a presumably nonexistent page — dead link for the most motivated visitor.",
+        "The 'building a practice' artifact context label says 'practitioner' not 'copywriter' — the connection is there but requires inference. A copywriter skim-reading might not immediately claim it.",
+        "The homepage problem paragraph mentions voice protection in one clause but doesn't show the specific failure mode: client deliverables that get rejected because they sound like every other agency's work. The artifact shows this, but the problem section doesn't set it up with that specificity.",
+        "No artifact shows multi-client voice juggling, which is the copywriter's specific version of this problem — one practitioner governing three different brand voices simultaneously."
+      ]
+    },
+    "fiction_writer": {
+      "verdict": "afterthought",
+      "strengths": [
+        "Named explicitly in the problem section of index.html: 'a fiction writer with characters and worlds to keep intact'",
+        "Named in courses.html specialist tracks with substantive description: 'Author voice and character voice. Scene-level decomposition. Maintaining character consistency across a manuscript.'",
+        "Has a dedicated artifact on foundations.html: 'fiction writing — voice governance' with Henka/New City scene comparison. The artifact is technically well-constructed.",
+        "The voice governance artifact shows a real prose quality difference — sensory/physical vs. expository — that a fiction writer would recognize immediately."
+      ],
+      "gaps": [
+        "The fiction artifact is the fourth of five on the page. Brand design and building-a-practice come first, then essay writing, then fiction. The ordering puts fiction writers in a scroll-to-find position.",
+        "The artifact demonstrates voice governance only. No fiction-specific artifact for task decomposition or input inversion — the two week-1 and week-2 practices. A novelist wondering whether decomposition applies to scene construction, chapter structure, or character development gets no answer.",
+        "The problem description on the homepage ('characters and worlds to keep intact') addresses consistency but not the deeper fiction-writer pain: the AI writes in a house style that has nothing to do with the book's register, diction, or narrative stance. The artifact shows this gap but the problem section doesn't name it that way.",
+        "The Henka example is from a sci-fi/dystopian context. Literary fiction writers whose work doesn't involve world-building may not claim it as their problem.",
+        "The specialist track link (fiction-writer-track.html) is a dead link for the most motivated visitor.",
+        "Fiction writers may need more convincing than other personas that this methodology applies to their medium at all — writing a novel with AI has more stigma in that community. The site does nothing to address this resistance."
+      ]
+    },
+    "nonfiction_writer": {
+      "verdict": "afterthought",
+      "strengths": [
+        "Named explicitly in the problem section of index.html: 'a nonfiction writer with an argument to sustain'",
+        "Named in courses.html specialist tracks with substantive description: 'Argument decomposition. Discovery-driven and claim-first essay structures. Applied practice on real manuscript material.'",
+        "Has a dedicated artifact: 'essay writing — input inversion' with the distraction/productivity essay comparison. This is the best artifact for showing that input inversion surfaces the writer's actual thinking rather than category-level prose.",
+        "The input inversion artifact is genuinely strong. The contrast between '23 minutes to regain focus' and 'whether I've become someone who can still do the work' is immediately recognizable to any essayist who has tried to write from a structured prompt."
+      ],
+      "gaps": [
+        "The 'essay writing' label undersells the persona. 'Nonfiction writer' covers reported pieces, memoir, and longform journalism — not just essays. The artifact is essay-specific. A magazine journalist or memoirist may not see their medium here.",
+        "The specialist track description mentions 'essayists, reported writers, and memoirists' — but the artifact only shows one essay type (personal/reflective). No artifact for reported/argumentative nonfiction.",
+        "The nonfiction artifact is the third of five on the page. Not buried, but not leading.",
+        "No artifact shows task decomposition or voice governance applied to nonfiction. For a nonfiction writer, decomposing an argument (thesis, evidence, transitions) is a concrete application that goes undemonstrated.",
+        "The nonfiction problem ('argument is thin, evidence generic, thinking invisible') is the most interesting of the four — it names something specific that doesn't apply to fiction or design. But the homepage problem paragraph uses the generic 'argument to sustain' which doesn't capture the specific failure mode.",
+        "The specialist track link (nonfiction-writer-track.html) is a dead link."
+      ]
+    }
+  },
+  "conversion_flow": {
+    "verdict": "strong",
+    "dead_ends": [
+      "All four specialist track pages (brand-designer-track.html, copywriter-track.html, fiction-writer-track.html, nonfiction-writer-track.html) are linked from courses.html but almost certainly do not exist. A visitor who clicks through after reading the track descriptions hits a 404. This is the highest-severity dead end — it fires at the moment of maximum interest.",
+      "The 'free essay' link on the homepage (essays/the-wrong-question.html) may not exist. If a visitor clicks it and hits a 404, credibility takes a hit at the moment the site is trying to demonstrate 'published research.'",
+      "courses/input-inversion.html through courses/coordinator-building.html are linked from courses.html. These waitlist pages may not exist yet."
+    ],
+    "friction_points": [
+      "The homepage offer card ('First 50 — May 2026') appears before the credibility section and before the free essay. A visitor who hasn't yet decided to trust the site is being asked to consider enrolling before they've seen the research or the origin story. The credibility section should precede the offer.",
+      "On the foundations page, the pricing CTA section ('$299 founding price') and the signup section are both present near the bottom. There are now two separate bottom-of-page conversion moments with different button states ('Enroll when open' on the pricing CTA, 'Get on the list' on the signup form). A visitor who clicks 'Enroll when open' may expect to land on a checkout page and instead scroll-jumps to another form. This creates a stutter.",
+      "The courses.html page has no narrative hook or problem restatement at the top. It opens with 'Curriculum' and two lines of description. A visitor who arrives here from the homepage has the context; a visitor who lands here from search or a link does not. There is no sentence that says why this curriculum exists.",
+      "Mobile: the homepage domain grid (six methodology items) requires significant scrolling before reaching the offer. On mobile this section is dense. The methodology is important but the items are abstract without the artifact demonstrations that come later on foundations.html.",
+      "The prelaunch banner is present on all three pages. On the foundations page it competes with the course header's own pricing/enrollment copy. A visitor reading the course page sees the pricing stated at least three times (banner, header meta, pricing section). Repetition is not the problem — the different CTA states ('Join the list' in the banner vs. 'Enroll when open' in the pricing section) create ambiguity about what action is available."
+    ],
+    "strengths": [
+      "Hero headline ('AI flattens. Your work should survive it.') creates immediate recognition for the target personas without over-explaining. It works as a first-read filter.",
+      "The problem paragraph on the homepage names all four personas in the first sentence. A brand designer, copywriter, fiction writer, or nonfiction writer each sees their role named in the opening paragraph — an unusually efficient piece of targeting.",
+      "The problem section earns the methodology section. 'More prompting doesn't fix this. The problem starts before the prompt.' is a clean pivot sentence that explains why a school exists and why the six practices are needed.",
+      "The methodology section earns the offer. The six-domain grid gives the curriculum a visible structure before the offer card appears. A visitor can see that what's being sold is a system, not a technique.",
+      "The founder authority section is correctly placed between the problem and the methodology. It answers 'why should I trust this?' before asking the visitor to evaluate the solution.",
+      "The origin story on the foundations page (fourth-grade classroom in Sunset Park) is the strongest credibility move on the entire site. It establishes that the methodology predates AI, was built for a harder constraint (federal law), and transfers directly. This earns the course.",
+      "The artifact section on foundations.html does real selling work. Five before/after comparisons across four use cases demonstrate the methodology in action rather than describing it. This is the correct move for a methodology course.",
+      "The gradual release structure (Demo, guided practice, independent practice) applied to the course itself is a meta-credibility move: the course is built using the same pedagogical framework it teaches. Explicitly noting this in the 'What's included' section is smart.",
+      "The courses page 'After the Ladder' section with specialist tracks correctly positions the ladder as universal infrastructure and the tracks as persona-specific applications. This architecture solves the problem of serving multiple creative disciplines without fragmenting the core offer.",
+      "The signup form is simple: one field, one button. No unnecessary friction."
+    ]
+  },
+  "priority_fixes": [
+    {
+      "priority": 1,
+      "issue": "Specialist track pages are dead links",
+      "detail": "brand-designer-track.html, copywriter-track.html, fiction-writer-track.html, nonfiction-writer-track.html are all linked from courses.html. A visitor who clicks any of these after reading the track descriptions almost certainly hits a 404. This fires at the moment of maximum persona-specific interest. Fix: either create minimal holding pages with waitlist forms, or remove the hyperlinks and render the track names as plain text until pages exist.",
+      "severity": "critical"
+    },
+    {
+      "priority": 2,
+      "issue": "Fiction writer and nonfiction writer are fourth and third in the artifact order",
+      "detail": "The artifacts on foundations.html run: brand design, building a practice, essay writing, fiction writing, campaign copy. Brand designer and copywriter get the first and last artifact slots (primacy and recency). Fiction and nonfiction writers are in the middle. If these four personas are equal targets, the artifact order signals otherwise. Fix: interleave to give each persona at least one artifact in a strong position, or lead with the essay/fiction artifacts since they're the less obvious applications.",
+      "severity": "high"
+    },
+    {
+      "priority": 3,
+      "issue": "The offer card appears before the credibility section on the homepage",
+      "detail": "The offer ('First 50 — May 2026') is the seventh section on the homepage, appearing before Research/Origins/Practice credentials and before the free essay. A visitor who hasn't yet seen the research is being asked to consider enrollment. The credibility section and free essay should come before the offer card, or the offer card should move to immediately precede the signup section at the bottom.",
+      "severity": "high"
+    },
+    {
+      "priority": 4,
+      "issue": "The essay link may be a dead link",
+      "detail": "essays/the-wrong-question.html is linked from the homepage in a 'Free essay' section. If this page doesn't exist, a visitor who clicks it after reading the methodology description hits a 404 at the moment the site is trying to demonstrate 'published research.' Fix: verify the page exists or remove the link until it does.",
+      "severity": "high"
+    },
+    {
+      "priority": 5,
+      "issue": "Competing CTA states on foundations.html",
+      "detail": "The pricing section has a button 'Enroll when open' that scroll-jumps to the signup form. The signup form says 'Join the First 50.' The banner says 'Join the list.' Three different phrasings for one action on one page. A visitor who is ready to act reads these as three different things. Fix: standardize to one CTA phrase across banner, pricing section, and signup form.",
+      "severity": "medium"
+    },
+    {
+      "priority": 6,
+      "issue": "Fiction writer artifact is genre-specific (sci-fi) and methodology resistance is unaddressed",
+      "detail": "The Henka/New City fiction artifact is from a dystopian sci-fi manuscript. Literary fiction writers whose work doesn't involve speculative world-building may not claim this as their problem. More importantly, using AI for fiction writing carries real stigma in literary fiction communities — the site does nothing to acknowledge or address this resistance. Fix: add a second fiction artifact from a realistic/literary register, and add one sentence in the fiction artifact note that names the resistance directly.",
+      "severity": "medium"
+    },
+    {
+      "priority": 7,
+      "issue": "Courses.html has no problem restatement for cold-landing visitors",
+      "detail": "The curriculum page opens with 'Curriculum' and two descriptive sentences. A visitor who arrives here without homepage context (from search, social, or a direct link) has no framing for why this curriculum exists. Fix: add two sentences at the top that restate the core problem before describing the solution.",
+      "severity": "low"
+    },
+    {
+      "priority": 8,
+      "issue": "No artifact shows task decomposition or voice governance applied to nonfiction specifically",
+      "detail": "The nonfiction artifact demonstrates input inversion only. For a writer working on reported pieces or longform arguments, decomposing the structure (thesis, evidence, counterargument, transitions) is a concrete application of week-1 work. Without an artifact, the nonfiction writer must extrapolate whether the methodology applies to their process. Fix: add a nonfiction-specific task decomposition artifact, or add a sentence in the existing artifact note that names the decomposition application for argumentative writing.",
+      "severity": "low"
+    }
+  ]
+}

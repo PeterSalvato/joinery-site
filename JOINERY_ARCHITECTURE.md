@@ -42,10 +42,10 @@ This document describes how the three Joinery repositories work together to form
 
 ---
 
-### 2. joinery-course (Private Delivery)
+### 2. joinery-platform (Private Delivery)
 
-**Repo:** https://github.com/PeterSalvato/joinery-course  
-**Directory:** `projects/active/joinery-course/`
+**Repo:** https://github.com/PeterSalvato/joinery-platform  
+**Directory:** `projects/active/joinery-platform/`
 
 **Tech (dual-layer):**
 - **Lessons:** Static HTML (compiled from markdown)
@@ -101,7 +101,7 @@ Complete modules → Submit capstone → Get certificate
 **Development:**
 
 ```bash
-cd joinery-course/platform
+cd joinery-platform/platform
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -168,14 +168,14 @@ docker-compose -f docker-compose.prod.yml up -d
 │                  Static HTML Marketing                        │
 │  index.html | about.html | courses/*.html | research.html   │
 │                                                                │
-│         ↓ Enrollment CTA links to joinery-course ↓           │
+│         ↓ Enrollment CTA links to joinery-platform ↓           │
 └────────────────────┬─────────────────────────────────────────┘
                      │
         Stripe Payment (webhook)
                      │
                      ↓
 ┌──────────────────────────────────────────────────────────────┐
-│                 joinery-course (Private)                      │
+│                 joinery-platform (Private)                      │
 │              LAYER 1: Static Lessons                         │
 │        (module-1, module-2, module-3 HTML files)             │
 │       Watermarked, noindex, read-only for students           │
@@ -207,7 +207,7 @@ docker-compose -f docker-compose.prod.yml up -d
 - Deploys instantly (GitHub Pages)
 - Can be managed independently of course platform
 
-### Why joinery-course is dual-layer (not lessons + separate platform)
+### Why joinery-platform is dual-layer (not lessons + separate platform)
 - Lessons and platform serve the same purpose: private student delivery
 - Single source of truth for enrollment and course relationships
 - Reduces deployment complexity (two components, one repo)
@@ -227,8 +227,8 @@ docker-compose -f docker-compose.prod.yml up -d
 | Layer | Purpose | Tech | Location |
 |---|---|---|---|
 | joinery-site | Public enrollment funnel | Static HTML, GitHub Pages | `joinery-site/` |
-| joinery-course/lessons | Curriculum delivery | Static HTML, Markdown source | `joinery-course/lessons/` |
-| joinery-course/platform | LMS & enrollment mgmt | Flask, SQLAlchemy, Stripe | `joinery-course/platform/` |
+| joinery-platform/lessons | Curriculum delivery | Static HTML, Markdown source | `joinery-platform/lessons/` |
+| joinery-platform/platform | LMS & enrollment mgmt | Flask, SQLAlchemy, Stripe | `joinery-platform/platform/` |
 | joinery | Infrastructure (shared) | Skills, voice, agents | `joinery/` |
 
 ---
@@ -236,8 +236,8 @@ docker-compose -f docker-compose.prod.yml up -d
 ## Database & State
 
 - **joinery-site:** No database. Static files only.
-- **joinery-course/lessons:** No database. Static HTML files.
-- **joinery-course/platform:** SQLite (dev) / PostgreSQL (prod). 8 models.
+- **joinery-platform/lessons:** No database. Static HTML files.
+- **joinery-platform/platform:** SQLite (dev) / PostgreSQL (prod). 8 models.
 - **joinery:** No database. File-based (skills, voice definitions, agent configs).
 
 ---
@@ -250,7 +250,7 @@ docker-compose -f docker-compose.prod.yml up -d
 - [ ] All links work (no 404s)
 - [ ] Responsive design verified
 
-### joinery-course
+### joinery-platform
 - [ ] Platform tests pass (`make test`)
 - [ ] Stripe webhook configured for production domain
 - [ ] Database migrations applied
@@ -270,10 +270,10 @@ docker-compose -f docker-compose.prod.yml up -d
 
 - **joinery-site/NORTHSTAR.md** — Positioning and messaging rules
 - **joinery-site/CLAUDE.md** — Marketing site session governance
-- **joinery-course/ARCHITECTURE.md** — Dual-layer rationale
-- **joinery-course/CLAUDE.md** — Platform session governance
-- **joinery-course/platform/BUILD_COMPLETE.md** — 950 lines of platform documentation
-- **joinery-course/platform/docs/DEPLOYMENT.md** — Production setup
+- **joinery-platform/ARCHITECTURE.md** — Dual-layer rationale
+- **joinery-platform/CLAUDE.md** — Platform session governance
+- **joinery-platform/platform/BUILD_COMPLETE.md** — 950 lines of platform documentation
+- **joinery-platform/platform/docs/DEPLOYMENT.md** — Production setup
 - **joinery/CLAUDE.md** — Infrastructure repo governance
 - **joinery/MANIFEST.md** — Skill dependency map
 

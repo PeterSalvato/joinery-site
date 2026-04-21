@@ -1,0 +1,504 @@
+{
+  "date": "2026-04-14",
+  "manifest": ".audit/screenshots/2026-04-14/manifest.json",
+  "checks": {
+    "links": {
+      "pass": true,
+      "failures": []
+    },
+    "images": {
+      "pass": true,
+      "failures": []
+    },
+    "voice": {
+      "pass": false,
+      "failures": [
+        {
+          "file": "index.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Joinery \u2014 A School for AI Methodology"
+        },
+        {
+          "file": "index.html",
+          "line": 122,
+          "type": "em-dash",
+          "text": "Build your voice into the setup before the first word. What comes out sounds like you \u2014 the AI's def"
+        },
+        {
+          "file": "index.html",
+          "line": 132,
+          "type": "em-dash",
+          "text": "Wire the practices into one pipeline \u2014 or build one your whole team runs from. The scaffolding handl"
+        },
+        {
+          "file": "index.html",
+          "line": 147,
+          "type": "em-dash",
+          "text": "First 50 \u2014 May 2026"
+        },
+        {
+          "file": "courses.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Curriculum \u2014 Joinery"
+        },
+        {
+          "file": "courses.html",
+          "line": 138,
+          "type": "em-dash",
+          "text": "\u2014 A cognitive partnership where your thinking is always the source and AI extends your reach."
+        },
+        {
+          "file": "courses.html",
+          "line": 160,
+          "type": "em-dash",
+          "text": "\u2014 For brand strategists and visual identity practitioners. System-level decomposition. Encoding bran"
+        },
+        {
+          "file": "courses.html",
+          "line": 168,
+          "type": "em-dash",
+          "text": "\u2014 For campaign writers and brand voice strategists. Voice encoding for client and campaign work. Gov"
+        },
+        {
+          "file": "courses.html",
+          "line": 176,
+          "type": "em-dash",
+          "text": "\u2014 For novelists and short fiction writers. Author voice and character voice. Scene-level decompositi"
+        },
+        {
+          "file": "courses.html",
+          "line": 184,
+          "type": "em-dash",
+          "text": "\u2014 For essayists, reported writers, and memoirists. Argument decomposition. Discovery-driven and clai"
+        },
+        {
+          "file": "courses.html",
+          "line": 192,
+          "type": "em-dash",
+          "text": "\u2014 For team leaders managing AI adoption across a group. Shared voice protocols and evaluation standa"
+        },
+        {
+          "file": "courses.html",
+          "line": 200,
+          "type": "em-dash",
+          "text": "\u2014 Train-the-trainer. Pedagogy scaffolding for teaching the methodology forward. Pathway to Tier IV c"
+        },
+        {
+          "file": "courses.html",
+          "line": 215,
+          "type": "em-dash",
+          "text": "\u2014 Completed Course 01."
+        },
+        {
+          "file": "courses.html",
+          "line": 222,
+          "type": "em-dash",
+          "text": "\u2014 Full ladder (Courses 01-06). The complete practice."
+        },
+        {
+          "file": "courses.html",
+          "line": 229,
+          "type": "em-dash",
+          "text": "\u2014 Full ladder plus one specialist track. Assessed and portfolio-reviewed."
+        },
+        {
+          "file": "courses.html",
+          "line": 236,
+          "type": "em-dash",
+          "text": "\u2014 Full ladder, Educator track, plus assessment. You can teach the methodology forward."
+        },
+        {
+          "file": "research.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Research \u2014 Joinery"
+        },
+        {
+          "file": "research.html",
+          "line": 98,
+          "type": "em-dash",
+          "text": "Before any of this was a school, it was a practice. These six papers document three years of applied"
+        },
+        {
+          "file": "about.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "About \u2014 Joinery"
+        },
+        {
+          "file": "essays/the-wrong-question.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "The Wrong Question \u2014 Joinery"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Foundations \u2014 Joinery"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 80,
+          "type": "em-dash",
+          "text": "Your prompts keep getting longer and your output keeps getting worse. The problem is structural: com"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 107,
+          "type": "em-dash",
+          "text": "Brand design \u2014 task decomposition"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 123,
+          "type": "em-dash",
+          "text": "Building a practice \u2014 task decomposition"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 134,
+          "type": "em-dash",
+          "text": "\"You spent eight years as a journalist before you started writing for SaaS companies. That is not a "
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 136,
+          "type": "em-dash",
+          "text": "The compound version gave five steps that apply equally to any practitioner who has ever read a busi"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 139,
+          "type": "em-dash",
+          "text": "Essay writing \u2014 input inversion"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 140,
+          "type": "em-dash",
+          "text": "Same writer. Same argument. One structured prompt asking for a complete essay on the topic. One raw "
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 150,
+          "type": "em-dash",
+          "text": "\"The thing I can't get past is that every productivity system I've tried assumes the problem is time"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 150,
+          "type": "negation-affirmation",
+          "text": "\"The thing I can't get past is that every productivity system I've tried assumes the problem is time"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 152,
+          "type": "em-dash",
+          "text": "The first version describes a social problem at category scale. The second names a specific realizat"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 155,
+          "type": "em-dash",
+          "text": "Fiction writing \u2014 voice governance"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 166,
+          "type": "em-dash",
+          "text": "\"Oil and standing water, the smell of both. She pressed into the gap between the housing units and w"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 168,
+          "type": "em-dash",
+          "text": "The first version describes a character in a world. The second renders a world through a body. The d"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 171,
+          "type": "em-dash",
+          "text": "Campaign copy \u2014 voice governance"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 177,
+          "type": "em-dash",
+          "text": "Subject: \"Introducing Our New Collection: Made for the Way You Live\"  \"We're excited to share someth"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 182,
+          "type": "em-dash",
+          "text": "Subject: \"It took us three years. Here's what changed.\"  \"We scrapped the first version in 2022. The"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 184,
+          "type": "em-dash",
+          "text": "The first version uses phrases \u2014 \"crafted,\" \"built to last,\" \"work as hard as you do\" \u2014 that appear "
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 192,
+          "type": "em-dash",
+          "text": "The methodology came from a fourth-grade classroom in Sunset Park, Brooklyn. Twelve students, twelve"
+        },
+        {
+          "file": "courses/foundations.html",
+          "line": 212,
+          "type": "em-dash",
+          "text": "Foundations is Course 01. After it, the curriculum continues with Input Inversion, Lens Extraction, "
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Brand Designer Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 78,
+          "type": "em-dash",
+          "text": "The AI output has the right category but not the right brand. You asked for a logo direction and got"
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 86,
+          "type": "em-dash",
+          "text": "Brand design has a specific AI problem: the output is generic because the brief is compound. A promp"
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 87,
+          "type": "em-dash",
+          "text": "The deeper problem is that brand rules exist in your head, not in the prompt. You know this client's"
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 99,
+          "type": "em-dash",
+          "text": "The approach scales to the full brand system. Decomposition isn't just for logos \u2014 it applies to cam"
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 107,
+          "type": "em-dash",
+          "text": "The brand rules you carry in your head are not accessible to the AI through a compound prompt. This "
+        },
+        {
+          "file": "courses/brand-designer-track.html",
+          "line": 116,
+          "type": "em-dash",
+          "text": "This module connects everything. A brand lens array runs multiple evaluation perspectives independen"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Copywriter Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 78,
+          "type": "em-dash",
+          "text": "The copy is technically correct and completely wrong. The words are there. The brand isn't. You know"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 86,
+          "type": "em-dash",
+          "text": "Copywriting has a specific AI problem: the model doesn't know this brand's voice, and a prompt can't"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 87,
+          "type": "em-dash",
+          "text": "The other half of the problem is campaign coherence. A brief that asks for a complete campaign \u2014 ema"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 98,
+          "type": "em-dash",
+          "text": "The client's voice already exists in their corpus: past campaigns, brand guidelines, social posts, i"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 107,
+          "type": "em-dash",
+          "text": "A compound campaign brief covers too much at once. Email sequence, social copy, landing page, paid a"
+        },
+        {
+          "file": "courses/copywriter-track.html",
+          "line": 116,
+          "type": "em-dash",
+          "text": "This module connects everything. A copy lens array runs multiple evaluation perspectives independent"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Fiction Writer Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 78,
+          "type": "em-dash",
+          "text": "You've been working on this novel for months. Dozens of sessions. The world is built, the characters"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 86,
+          "type": "em-dash",
+          "text": "Fiction breaks every AI assumption. Sessions expire. Context windows fill. The model doesn't remembe"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 98,
+          "type": "em-dash",
+          "text": "In fiction, input inversion works at two levels. The first level is the author: your unstructured th"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 107,
+          "type": "em-dash",
+          "text": "Your author voice lives in your conversation, not your published prose. Published writing has been e"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 108,
+          "type": "em-dash",
+          "text": "The protocol runs before the first sentence. Sensory priority, emotional logic, sentence rhythm, wha"
+        },
+        {
+          "file": "courses/fiction-writer-track.html",
+          "line": 116,
+          "type": "em-dash",
+          "text": "This module connects everything. Scene-level decomposition runs specialists independently: setting, "
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Nonfiction Writer Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 78,
+          "type": "em-dash",
+          "text": "The AI-assisted draft is competent and empty. The argument is there \u2014 sort of \u2014 but it reads like a "
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 86,
+          "type": "em-dash",
+          "text": "Nonfiction has a different AI problem than fiction. The issue isn't voice drift \u2014 it's argument thin"
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 87,
+          "type": "em-dash",
+          "text": "Decomposition solves a different problem in nonfiction than it does in other disciplines. You're not"
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 98,
+          "type": "em-dash",
+          "text": "The thinking you did before you started writing contains the essay. Your unstructured notes, voice m"
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 108,
+          "type": "em-dash",
+          "text": "The sequence depends on how your essay works. Position essays: argument specialist first, evidence s"
+        },
+        {
+          "file": "courses/nonfiction-writer-track.html",
+          "line": 116,
+          "type": "em-dash",
+          "text": "Nonfiction voice is different from fiction voice. What makes your essays yours is not just sentence "
+        },
+        {
+          "file": "courses/author-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Author Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/creative-director-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Creative Director Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/educator-track.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Educator Track \u2014 Joinery"
+        },
+        {
+          "file": "courses/input-inversion.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Input Inversion \u2014 Joinery"
+        },
+        {
+          "file": "courses/lens-extraction.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Lens Extraction \u2014 Joinery"
+        },
+        {
+          "file": "courses/lens-extraction.html",
+          "line": 116,
+          "type": "negation-affirmation",
+          "text": "Now you build your own. You identify three to five practitioners whose judgment shaped how you evalu"
+        },
+        {
+          "file": "courses/voice-governance.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Voice Governance \u2014 Joinery"
+        },
+        {
+          "file": "courses/voice-governance.html",
+          "line": 118,
+          "type": "negation-affirmation",
+          "text": "Then you codify those patterns as generation constraints. Not style descriptions (\"write with warmth"
+        },
+        {
+          "file": "courses/voice-governance.html",
+          "line": 149,
+          "type": "negation-affirmation",
+          "text": "\"The AI governance conversation is organized around a single question.\" Abstract-concept opening. 27"
+        },
+        {
+          "file": "courses/semantic-hierarchy.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Semantic Hierarchy \u2014 Joinery"
+        },
+        {
+          "file": "courses/coordinator-building.html",
+          "line": 6,
+          "type": "em-dash",
+          "text": "Coordinator Building \u2014 Joinery"
+        },
+        {
+          "file": "courses/coordinator-building.html",
+          "line": 129,
+          "type": "negation-affirmation",
+          "text": "You run your coordinator on a real project, end to end. Not a test case. Not a simulation. A project"
+        }
+      ]
+    },
+    "seo": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  "summary": "3/4 passed"
+}

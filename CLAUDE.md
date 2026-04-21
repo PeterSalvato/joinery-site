@@ -64,10 +64,10 @@ DNS CNAME points to GitHub Pages. Verify with `dig joineryschool.com`.
 - Enrollment CTAs (email capture, Stripe links)
 
 **What does NOT belong here:**
-- Student-facing curriculum content (that's in joinery-course/)
-- Internal strategy docs or planning (those go to joinery-course/docs/ or joinery/)
-- Admin code or instructor tools (those go to joinery-course/platform/)
-- Diagrams (removed; will be added when ready, see CLAUDE.md in joinery-course)
+- Student-facing curriculum content (that's in joinery-platform/)
+- Internal strategy docs or planning (those go to joinery-platform/docs/ or joinery/)
+- Admin code or instructor tools (those go to joinery-platform/platform/)
+- Diagrams (removed; will be added when ready, see CLAUDE.md in joinery-platform)
 
 ## NORTHSTAR.md Alignment
 
@@ -89,19 +89,19 @@ Pages should:
 - No marketing analytics (no Google Analytics, no pixel tracking)
 - No third-party scripts except fonts (Google Fonts)
 - Form submission goes to Kit (email capture tool)
-- Course enrollment links point to joinery-course/platform (Stripe payments)
+- Course enrollment links point to joinery-platform/platform (Stripe payments)
 
 ## Relationship to Other Repos
 
 | Repo | Purpose | Link? |
 |---|---|---|
-| `joinery-course/` | Course platform + lessons | Yes (enrollment CTA) |
+| `joinery-platform/` | Course platform + lessons | Yes (enrollment CTA) |
 | `joinery/` | Skills, voice, infrastructure | No (internal only) |
 | `petersalvato.com` | Personal site | Yes (founder footer) |
 
 ## Misplaced Content Notes
 
-- `/course/` directory removed (that's curriculum, belongs in joinery-course/)
+- `/course/` directory removed (that's curriculum, belongs in joinery-platform/)
 - `/prep/` directory removed (working notes, not deployment content)
 - `/tools/` kept (design aids like type-pairing-playground.html are useful for content decisions)
 
@@ -121,6 +121,6 @@ Pages should:
 - [ ] Course pages have correct course numbers and descriptions
 - [ ] Founder attribution at footer points to petersalvato.com
 - [ ] Signup form action points to Kit
-- [ ] Enrollment CTAs point to joinery-course
+- [ ] Enrollment CTAs point to joinery-platform
 - [ ] No diagram placeholders remain
 - [ ] Responsive design verified on mobile/tablet/desktop

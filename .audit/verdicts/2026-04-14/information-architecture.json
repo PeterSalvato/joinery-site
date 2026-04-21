@@ -1,0 +1,107 @@
+{
+  "lens": "information-architecture",
+  "date": "2026-04-14",
+  "screenshots_read": 3,
+
+  "ladder_legibility": {
+    "verdict": "clear",
+    "issues": [
+      "The numbered cards (01–06) are the primary sequence signal, but no explicit forward-direction arrow or connective text appears between cards — a first-time visitor must infer the sequence from the numbers alone. The header copy ('each one builds on the last') is present but small.",
+      "'Waitlist' on cards 02–06 reads ambiguously: a visitor unfamiliar with the school might not know whether 'Waitlist' means 'pay now and wait' or 'express interest for a future cohort.' No tooltip, link, or note clarifies this.",
+      "The 'Planned / Waitlist Open' status indicator on specialist track pages uses different language than 'Waitlist' on the course cards — two terms for the same concept erodes confidence.",
+      "Price architecture is present but fragmented: $299 founding price appears in the banner, on the card, and on the foundations page, but the $2,499 full-ladder price only appears in the top-cap and in the footer footnote of the After-the-Ladder section. A visitor scanning the cards would not encounter it without reading the container cap copy.",
+      "The meta-label 'Gradual Release', 'Experiential / Contrastive Learning' etc. on the course cards adds pedagogical credibility but introduces jargon that is unexplained at the listing level. Useful for initiates; opaque to a first-time visitor."
+    ],
+    "strengths": [
+      "The single-container design for the Practitioner Ladder (top cap + cards + bottom destination cap) is structurally sound. The caps bracket the sequence visually.",
+      "The Prosthetic Cognition bottom cap correctly names the destination and links to the paper — gives the sequence a terminal point, not just an open list.",
+      "The homepage domain-grid (01–06 + arrow to Prosthetic Cognition) mirrors the courses page sequence, reinforcing continuity across the two primary pages.",
+      "Foundations is clearly distinguished from the rest: 'Enrolling' vs 'Waitlist', different price, explicit founding-cohort framing. Entry point is unambiguous.",
+      "The intro paragraph on courses.html ('start with Foundations, which gives you three structural moves you can apply the same day') is the right orientation text. It answers 'where do I begin' before the visitor reaches the cards."
+    ]
+  },
+
+  "specialist_tracks": {
+    "verdict": "credible",
+    "issues": [
+      "The prerequisite (full ladder required) appears in the section subhead on courses.html but is not visually emphasized — it sits in small muted text and could be skimmed. A visitor who jumps directly to a track page from search sees it only in a two-line footer note after the entire module breakdown.",
+      "The Copywriter track has no dedicated page (copywriter-track.html linked from courses.html but not audited here — likely stubbed or missing). If the file is empty or missing, this is a broken link for a live listing.",
+      "Creative Director and Educator tracks have significantly thinner course-listing descriptions on courses.html compared to Brand Designer, Copywriter, Fiction Writer, and Nonfiction Writer. Creative Director gets one sentence; Educator gets one sentence with no substantive content description. At the listing level, these two read as placeholder-tier compared to the others.",
+      "The 'Planned / Waitlist Open' status badge on the Brand Designer and Fiction Writer track pages is a confidence-eroding hedge when combined with fully developed module breakdowns. The mismatch between 'this is planned' and three detailed modules with deliverables creates cognitive dissonance — either the course is real enough to have deliverables or it isn't real enough to enroll in.",
+      "No track page cross-links to the other specialist tracks. A visitor who arrives at Fiction Writer via search has no path to discover Brand Designer or Copywriter."
+    ],
+    "strengths": [
+      "Brand Designer and Fiction Writer track pages are substantively developed: specific problem framing, three modules with named pedagogies, concrete deliverables, and a credibility section (origin/practice). These read as real offerings.",
+      "The prerequisite framing on the track pages is direct and honest: 'This track is planned. $699. Requires the full Practitioner Ladder (Courses 01-06).' No ambiguity about the purchase path.",
+      "The Brand Designer track problem framing ('the output has the right category but not the right brand') and the Fiction Writer problem framing ('voice has drifted — you can't point to the chapter where it shifted') are specific, practitioner-recognizable situations. These are not generic course descriptions.",
+      "The fiction track's 'Where this comes from' section (built inside a real novel, 40+ sessions, kishotenketsu as a lens) significantly strengthens credibility and distinguishes it from a theoretical offering.",
+      "Six tracks listed with prices and links is a complete-looking portfolio at the courses.html level, even if back-end pages vary in completeness."
+    ]
+  },
+
+  "path_clarity": {
+    "verdict": "clear",
+    "dead_ends": [
+      "author-track.html exists at /courses/author-track.html but is not linked from courses.html. It is an orphan page — reachable only by direct URL or search index. If indexed by search engines, it will surface stale content (Author track that no longer exists as a named offering) and create confusion. Should be 301-redirected or removed.",
+      "courses.html links to copywriter-track.html but this file was not confirmed to exist. If missing, this is a live broken link in the Specialist Tracks section.",
+      "Courses 02–06 link to pages that may not exist (input-inversion.html, lens-extraction.html, etc. under /courses/). These are listed as Waitlist but clicking them will 404 if the files haven't been created. Not confirmed here but worth verifying.",
+      "The 'Planned / Waitlist Open' specialist track pages all use the same Kit form (9288884) as Foundations enrollment. A visitor cannot distinguish between joining a general list and joining a specific track waitlist — both actions send to the same form."
+    ],
+    "strengths": [
+      "Homepage → courses.html is clearly signposted: the nav, the offer card ('See the full course' / 'browse the curriculum'), and the domain-grid 'See the full curriculum' text link all route there.",
+      "courses.html → foundations.html is unambiguous: the 01 card is the only 'Enrolling' card, and the header copy explicitly names Foundations as the start.",
+      "foundations.html → courses.html is present in the 'What's included' section ('See the full curriculum') with a natural narrative lead-in. The certification section also links back.",
+      "Track pages → courses.html is present in the prerequisite note at the bottom of each track page.",
+      "Every page terminates in a signup section with a clear CTA. No page ends without a next action.",
+      "Prelaunch banner is consistent across all pages and always links to #signup."
+    ]
+  },
+
+  "mobile_ia": {
+    "verdict": "works",
+    "issues": [
+      "The Practitioner Ladder cards on mobile render as a stacked single-column list. The numbered sequence is legible (01, 02, 03 visible in order) but the visual container structure (top cap, cards, bottom cap) is harder to read as a unified bracket — the caps blend into the cards without the horizontal whitespace that makes them distinct on desktop.",
+      "The 'After the Ladder' specialist tracks section on mobile renders as a dense text list. The ladder-row layout collapses to stacked text with the $699 price tag appearing at the end of each block. On small screens the price is visually disconnected from the track name at the start of the row.",
+      "The prelaunch banner on mobile appears to contain the full pricing string ('Foundations (Course 01) first 50 enroll May 2026. Self-paced. $299 ($499 after). Join the list.') which on very small viewports may wrap awkwardly or compete with the nav.",
+      "No CTA is above the fold on mobile for courses.html — the banner is present but the first actionable signup is at the bottom. The 'Get on the list' in the banner is there but its link-affordance may be weak at small size."
+    ]
+  },
+
+  "priority_fixes": [
+    {
+      "priority": 1,
+      "issue": "author-track.html orphan page",
+      "action": "Add a 301 redirect from /courses/author-track.html to /courses.html, or delete the file. If search-indexed, stale content will surface for visitors and create a dead end."
+    },
+    {
+      "priority": 2,
+      "issue": "Confirm copywriter-track.html and courses 02–06 pages exist",
+      "action": "Verify all linked course pages exist as files. Any missing file is a live broken link in the main curriculum listing. Stub pages with 'Waitlist Open' content and the signup form are sufficient to prevent 404s."
+    },
+    {
+      "priority": 3,
+      "issue": "Waitlist terminology inconsistency",
+      "action": "Standardize to one term across all contexts: course cards on courses.html ('Waitlist'), specialist track listing ('Planned / Waitlist Open'), and specialist track pages ('Planned / Waitlist Open'). Either consolidate to 'Waitlist Open' everywhere, or use the two-term version and add a one-sentence note explaining what joining the list means."
+    },
+    {
+      "priority": 4,
+      "issue": "Prerequisite gatekeeping undersold at listing level",
+      "action": "On courses.html, add a brief note in the Specialist Tracks section subhead that the prerequisite is a hard gate, not a recommendation. Current phrasing 'Requires the full ladder' is present but visually light. Consider a small visual separator or stronger typographic weight to distinguish it from the track descriptions."
+    },
+    {
+      "priority": 5,
+      "issue": "Creative Director and Educator track descriptions are placeholder-tier",
+      "action": "Both tracks get one sentence of description in the courses.html listing, compared to two to three sentences for the other four tracks. Expand to match — or flag them explicitly as 'coming soon' so the disparity reads as intentional sequencing rather than incompleteness."
+    },
+    {
+      "priority": 6,
+      "issue": "Track pages do not cross-link to other tracks",
+      "action": "Add a minimal 'Other specialist tracks' navigation element to each track page. Visitors arriving from search have no path to discover the other tracks. A simple row of linked names after the prerequisite note is sufficient."
+    },
+    {
+      "priority": 7,
+      "issue": "All waitlist forms route to the same Kit form",
+      "action": "If Kit supports tagged form submissions or multiple forms, differentiate by track so waitlist data is segmentable. If not feasible now, add a hidden field or note in the form placeholder text clarifying which list the visitor is joining ('Brand Designer Track waitlist')."
+    }
+  ]
+}

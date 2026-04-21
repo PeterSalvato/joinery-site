@@ -1,0 +1,93 @@
+{
+  "lens": "copy-verify",
+  "date": "2026-04-14",
+  "screenshots_read": 3,
+  "pages_checked": 3,
+  "pages": [
+    {
+      "page": "index.html",
+      "result": "9/11",
+      "failures": [
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 122 (domain-desc, Voice Governance): \"What comes out sounds like you — the AI's defaults had nowhere to go.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 132 (domain-desc, Coordinator Building): \"Wire the practices into one pipeline — or build one your whole team runs from.\""
+        }
+      ],
+      "notes": "Strong opener. Hero 'AI flattens. Your work should survive it.' creates immediate grip — stranger feels the stakes at sentence one. Problem section is specific and earned: 'averaged is the death of the idea' is grounded in a real claim about how averaging works. Founder authority paragraph lands well — specifics (twenty-five years, special education classroom, federal law, six published DOIs) are all traceable. No banned words, no fortune-cookie closer, no tool personification beyond the borderline 'scaffolding handles itself' (item 9, soft flag, not a hard fail — refers to infrastructure the student builds, not to the AI). Shaw check passes: stripping the name leaves content that could not belong to any generic AI course. The two em dashes are body-copy prose violations in the domain-desc spans."
+    },
+    {
+      "page": "courses.html",
+      "result": "11/11",
+      "failures": [],
+      "notes": "All em dashes on this page are structural label separators (bold Title — descriptor pattern used consistently across Practitioner Ladder, specialist tracks, and certification tiers). None appear in prose sentences. No banned words, no negation-affirmation, no fortune-cookie closer. The opener ('Six courses. Your own real project. Each one builds on the last.') is direct and specific. The pedagogical method labels per course card (Gradual Release, Experiential/Contrastive, Studio/Workshop + Case Study, Apprenticeship to Independent Practice, Scaffolded Independence, Project-Based Capstone) are a strong differentiator — no generic AI course names its pedagogy per module. Shaw check passes cleanly. Practitioner authority holds: the curriculum structure itself reads like someone who has built and taught curricula, not someone who assembled a course outline."
+    },
+    {
+      "page": "courses/foundations.html",
+      "result": "7/11",
+      "failures": [
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 80 (Week 1 body): \"You provide the synthesis — the calls the model cannot make because it doesn't have your judgment.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 136 (artifact-note, Peter's framing): \"The difference is not the model — the model had the same information both times.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 140 (Peter's framing, essay section intro): \"One raw input dump — voice notes on the argument, unedited — fed back as the source.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 152 (artifact-note, Peter's framing): \"The second names a specific realization from a specific person about their own situation — which is the actual argument.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 168 (artifact-note, Peter's framing): \"The difference is not better writing — it is a specific set of constraints applied before the first sentence.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 192 (origin story): \"A compound instruction — take out your notebook, turn to page 42, answer questions three through seven — is three tasks arriving simultaneously.\""
+        },
+        {
+          "item": 4,
+          "label": "em-dash",
+          "detail": "Line 212 (what's included section): \"curriculum continues with... Coordinator Building — each one deepening a single practice on your own real work.\""
+        },
+        {
+          "item": 7,
+          "label": "negation-affirmation",
+          "detail": "Line 80 (Week 1 body): \"You aren't prompting. You're directing.\" Classic Not-X / Y two-sentence pattern."
+        },
+        {
+          "item": 7,
+          "label": "negation-affirmation",
+          "detail": "Line 193 (origin story): \"Designing around the processing reality of the receiving system is not a best practice in that classroom. It is federal law.\" — Not-X sentence followed by affirmation sentence."
+        }
+      ],
+      "notes": "The artifact section is the richest differentiator on the site — the before/after comparisons are specific, real-feeling, and demonstrate the methodology in action. The origin story (Sunset Park fourth-grade classroom, federal law, IDEA) is strong practitioner authority and traceable. Em dash violations concentrate in the artifact-note framing paragraphs (Peter's own analytical commentary between comparison pairs) and the origin story. These are not quoted AI examples — they are Peter's prose and must comply. The two negation-affirmation failures are real but partially understandable as rhetorical emphasis moves; they need rewriting as direct statements regardless. Shaw check passes — this page would be impossible to transplant to any other AI course site. Practitioner register holds in the origin story and week breakdowns; slips in the artifact notes where em dashes cluster."
+    }
+  ],
+  "site_level_findings": [
+    "Em dashes are the primary recurring violation. index.html has 2, foundations.html has 7. courses.html has none. The pattern suggests em dashes were edited out of courses.html but not revisited on the other two. Priority fix: foundations.html artifact-notes, which contain 5 of the 9 total violations.",
+    "Negation-affirmation appears only in foundations.html (2 instances). Both are in pedagogically important passages — Week 1 close and origin story — so rewrites need care to preserve the rhetorical weight while removing the Not-X / Y structure.",
+    "The 'scaffolding handles itself' phrase in index.html (Coordinator Building domain-desc) is a borderline personification flag. It describes an artifact the student builds, not the AI, so it is not a hard tool-personification violation. Worth revisiting for clarity — 'the scaffolding runs without your attention' or 'your attention stays on the work' (already present after the semicolon) could replace the phrase.",
+    "Shaw check passes at site level. The combination of named pedagogy (Gradual Release, Scaffolded Independence), named methodology (Accommodation Design, Prosthetic Cognition), specific founder biography (special education, federal law, Brooklyn College M.A., SVA), and before/after artifacts makes this site impossible to decontextualize. No generic AI course uses this framing.",
+    "Credibility claims are traceable: DOIs are cited (zenodo.18941231, zenodo.18962893 visible in source), credential specifics (Brooklyn College M.A., NYC DOE, Kingsborough Community College, SVA) are internally consistent with established founder biography. No invented research.",
+    "No banned words found on any page.",
+    "No fortune-cookie closers found on any page. The closest candidate ('Three weeks. Three deliverables. One methodology.' in foundations.html pricing section) reads as a structural summary, not an aphoristic closer — passes."
+  ],
+  "overall": "27/33 items passed across 3 pages. 6 items failed: item 4 (em-dash) failed on index.html (2 instances) and foundations.html (7 instances); item 7 (negation-affirmation) failed on foundations.html (2 instances). courses.html is clean."
+}
