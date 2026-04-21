@@ -231,10 +231,6 @@ h1 {
     line-height: 1.1;
     letter-spacing: -0.025em;
     color: var(--color-text);
-    -webkit-mask-image: url('/assets/textures/letterpress-mask.png');
-    mask-image: url('/assets/textures/letterpress-mask.png');
-    -webkit-mask-size: 300px;
-    mask-size: 300px;
 }
 
 h2 {
@@ -244,10 +240,6 @@ h2 {
     line-height: 1.2;
     letter-spacing: -0.015em;
     color: var(--color-text);
-    -webkit-mask-image: url('/assets/textures/letterpress-mask.png');
-    mask-image: url('/assets/textures/letterpress-mask.png');
-    -webkit-mask-size: 300px;
-    mask-size: 300px;
 }
 
 h3 {
