@@ -1812,3 +1812,224 @@ input:focus-visible {
         flex-direction: column;
     }
 }
+/* ================================================================
+   BAUHAUS LAYER
+   Appended to style.css. Overrides that shift the visual register
+   from clean template toward designed artifact.
+
+   Principles applied:
+   - Typography as dominant visual element (aggressive scale)
+   - Grid as visible structure (rules, borders, structural lines)
+   - Accent color as organizational signal (not decoration)
+   - Material honesty (no gradients, no shadows, flat surfaces)
+   - Density variation (tight content, open breathing room)
+   - White space as structural element
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   1. TYPE SCALE REVISION
+   Ratio: ~1.4 (augmented fourth). Bauhaus posters used dramatic
+   contrast between heading and body. The h1 should dominate the
+   page the way a Bayer poster headline dominates the sheet.
+   ---------------------------------------------------------------- */
+
+h1 {
+    font-size: clamp(2.8rem, 5vw + 1rem, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+body {
+    line-height: 1.55;
+}
+
+/* Mono elements: Bauhaus-style captions and wayfinding markers */
+.course-meta,
+.week-label,
+.week-pedagogy,
+.artifact-side-label,
+.artifact-context,
+.cred-label,
+.course-card-meta,
+.course-card-status,
+.ladder-num,
+.prelaunch-banner {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+/* ----------------------------------------------------------------
+   2. VISIBLE GRID ELEMENTS
+   Steel framing visible through glass. The grid is not hidden
+   infrastructure; it is part of the design.
+   ---------------------------------------------------------------- */
+
+/* Heavier section dividers */
+.methodology-lean,
+.cred-section,
+.artifact {
+    border-top: 2px solid var(--color-text);
+}
+
+/* Nav bottom border: structural */
+.nav {
+    border-bottom: 2px solid var(--color-text);
+}
+
+/* Remove shadow on scroll. No fake depth. */
+.nav.scrolled {
+    box-shadow: none;
+}
+
+/* Course cards: structural border */
+.course-card {
+    border: 2px solid var(--color-rule);
+}
+
+.course-card:hover {
+    border-color: var(--color-text);
+    background: var(--color-bg);
+}
+
+/* Artifact comparison: heavier frame */
+.artifact-comparison {
+    border: 2px solid var(--color-text);
+}
+
+/* Page card: structural border */
+.page-card {
+    border: 2px solid var(--color-text);
+    background: var(--color-bg);
+}
+
+
+/* ----------------------------------------------------------------
+   3. ACCENT COLOR AS ORGANIZATIONAL SIGNAL
+   Kandinsky: red anchors composition. The rust accent marks
+   structural moments.
+   ---------------------------------------------------------------- */
+
+/* Left-border accent on hero heading */
+.hero h1 {
+    padding-left: 1rem;
+    border-left: 4px solid var(--color-accent);
+}
+
+/* Section headings: accent marker */
+.methodology-lean h2,
+.artifact h2 {
+    padding-left: 1rem;
+    border-left: 4px solid var(--color-accent);
+}
+
+/* Domain grid numbers in accent */
+.domain-num {
+    color: var(--color-accent);
+}
+
+/* Week/module labels in accent */
+.week-label {
+    color: var(--color-accent);
+}
+
+/* Active nav link: organizational signal */
+.nav-links a.active {
+    color: var(--color-accent);
+}
+
+
+/* ----------------------------------------------------------------
+   4. SPACING: DENSITY VARIATION
+   Tight content blocks alternate with generous white space.
+   ---------------------------------------------------------------- */
+
+/* Hero: more breathing room */
+.hero {
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-l);
+}
+
+/* Hero heading: poster-scale */
+.hero h1 {
+    font-size: clamp(2.8rem, 6vw + 0.5rem, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    max-width: 16em;
+}
+
+/* Hero subtext: caption scale */
+.hero-sub {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: var(--space-m);
+    max-width: 28em;
+}
+
+/* Signup: full compositional block */
+.signup {
+    padding: var(--space-xxl) var(--space-m);
+    border-top: 4px solid var(--color-accent);
+}
+
+/* Credibility strip: tighter, functional */
+.cred-section {
+    padding: var(--space-m) var(--space-m);
+}
+
+
+/* ----------------------------------------------------------------
+   5. MATERIAL HONESTY
+   No gradients, no shadows, no fake depth. Square edges.
+   ---------------------------------------------------------------- */
+
+.signup-button,
+.button,
+.signup-input,
+.essay-cta button,
+.essay-cta input {
+    border-radius: 0;
+}
+
+
+/* ----------------------------------------------------------------
+   6. RESPONSIVE
+   Structure survives the breakpoints.
+   ---------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        padding-left: 0.75rem;
+        border-left-width: 3px;
+    }
+
+    .methodology-lean h2,
+    .artifact h2 {
+        padding-left: 0.75rem;
+        border-left-width: 3px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        padding-left: 0.6rem;
+        border-left-width: 3px;
+    }
+}
