@@ -220,13 +220,21 @@ hr.rule {
    Size hierarchy: 48 / 36 / 24 / 18 / 16
    ================================================================ */
 
+h1, h2 {
+    position: relative;
+}
+
 h1 {
     font-family: var(--font-heading);
     font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.025em;
-    color: var(--color-text);
+    background: var(--color-text) url('/assets/textures/paper-grain.png');
+    background-size: 400px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h2 {
@@ -235,7 +243,11 @@ h2 {
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.015em;
-    color: var(--color-text);
+    background: var(--color-text) url('/assets/textures/paper-grain.png');
+    background-size: 400px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h3 {
