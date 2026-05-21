@@ -1,0 +1,1237 @@
+/* ================================================================
+   Joinery — Style
+   Practical Typography energy. Content is the design.
+   ================================================================ */
+
+:root {
+    --color-bg: #F8F6F2;
+    --color-bg-alt: #F0EDE7;
+    --color-text: #2A2725;
+    --color-text-mid: #555;
+    --color-text-light: #888;
+    --color-accent: #C45A2D;
+    --color-accent-hover: #A84920;
+    --color-rule: #DDD9D1;
+    --color-white: #F8F6F2;
+    --color-dark: #1A1918;
+
+    --font-heading: 'Archivo', -apple-system, sans-serif;
+    --font-body: 'Figtree', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+
+    --grid-columns: 12;
+    --grid-gutter: 20px;
+    --grid-margin: 40px;
+    --grid-max: 1200px;
+
+    --measure: 36rem;
+    --measure-wide: 48rem;
+
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 4rem;
+    --space-xl: 6rem;
+    --space-xxl: 8rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================================================================
+   Grid — 12-column fluid, centered, 1200px max
+   Usage: class="grid" on container, then children use grid-column
+   e.g. grid-column: 1 / 7 (spans 6 of 12)
+   e.g. grid-column: 3 / 11 (spans 8, offset by 2)
+   ================================================================ */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 0 var(--grid-gutter);
+    max-width: var(--grid-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-margin);
+    padding-right: var(--grid-margin);
+}
+
+/* Common column spans */
+.col-full   { grid-column: 1 / -1; }
+.col-10     { grid-column: 2 / 12; }
+.col-8      { grid-column: 3 / 11; }
+.col-8-left { grid-column: 1 / 9; }
+.col-6      { grid-column: 1 / 7; }
+.col-6-right { grid-column: 7 / 13; }
+.col-4      { grid-column: 1 / 5; }
+.col-4-mid  { grid-column: 5 / 9; }
+.col-4-right { grid-column: 9 / 13; }
+
+/* Debug: make grid visible (add class="grid debug" to see columns) */
+.grid.debug {
+    background-image: repeating-linear-gradient(
+        to right,
+        rgba(200, 0, 0, 0.05) 0,
+        rgba(200, 0, 0, 0.05) calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns)),
+        transparent calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns)),
+        transparent calc((100% - (var(--grid-columns) - 1) * var(--grid-gutter)) / var(--grid-columns) + var(--grid-gutter))
+    );
+}
+
+@media (max-width: 768px) {
+    :root {
+        --grid-margin: 20px;
+        --grid-gutter: 16px;
+    }
+
+    .col-10,
+    .col-8,
+    .col-8-left,
+    .col-6,
+    .col-6-right,
+    .col-4,
+    .col-4-mid,
+    .col-4-right { grid-column: 1 / -1; }
+}
+
+
+/* ================================================================
+   Nav
+   ================================================================ */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-rule);
+    padding: 0 var(--space-m);
+    transition: box-shadow 0.2s ease;
+}
+
+.nav.scrolled {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nav-inner {
+    max-width: var(--measure-wide);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.2rem;
+}
+
+.nav-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.nav-mark img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-mark span {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color-text-light);
+    transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
+}
+
+.nav-links a.active {
+    color: var(--color-text);
+}
+
+
+/* ================================================================
+   Sections — shared rhythm
+   ================================================================ */
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-inner {
+    max-width: var(--measure);
+    margin: 0 auto;
+}
+
+.section-inner.wide {
+    max-width: var(--measure-wide);
+}
+
+hr.rule {
+    border: none;
+    border-top: 1px solid var(--color-rule);
+    margin: 0;
+}
+
+
+/* ================================================================
+   Typography
+   Size hierarchy: 48 / 36 / 24 / 18 / 16
+   ================================================================ */
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--color-text);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--color-text);
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+}
+
+p {
+    max-width: var(--measure);
+}
+
+.mono {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+}
+
+
+/* ================================================================
+   Hero
+   ================================================================ */
+
+.hero {
+    padding: var(--space-xl) var(--space-m) var(--space-xxl);
+}
+
+.hero-inner {
+    max-width: var(--measure);
+    margin: 0 auto;
+}
+
+.hero h1 {
+    max-width: 14em;
+    margin-bottom: var(--space-m);
+}
+
+.hero-sub {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+    max-width: 32em;
+}
+
+
+/* ================================================================
+   Problem
+   ================================================================ */
+
+.problem {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.problem-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    max-width: 30em;
+}
+
+.problem-text + .problem-text {
+    margin-top: var(--space-s);
+}
+
+
+/* ================================================================
+   Methodology
+   ================================================================ */
+
+.methodology {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.methodology .section-inner h2 {
+    margin-bottom: var(--space-m);
+}
+
+.methodology .section-inner p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-mid);
+}
+
+.methodology .section-inner p + p {
+    margin-top: var(--space-s);
+}
+
+
+/* ================================================================
+   Curriculum — Table of contents style
+   ================================================================ */
+
+.curriculum {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.curriculum h2 {
+    margin-bottom: 0.5rem;
+}
+
+.curriculum > .section-inner > p {
+    font-size: 1.05rem;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-l);
+}
+
+.domain-list {
+    list-style: none;
+    border-top: 1px solid var(--color-rule);
+}
+
+.domain-item {
+    display: flex;
+    gap: var(--space-m);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-rule);
+    align-items: baseline;
+}
+
+.domain-number {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    flex-shrink: 0;
+    width: 2rem;
+    padding-top: 0.15rem;
+}
+
+.domain-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.domain-content p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-text-mid);
+}
+
+.domain-note {
+    margin-top: var(--space-m);
+    font-size: 0.9rem;
+    color: var(--color-text-mid);
+    line-height: 1.6;
+}
+
+
+/* ================================================================
+   Tracks
+   ================================================================ */
+
+.tracks {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.tracks h2 {
+    margin-bottom: var(--space-l);
+}
+
+.track-list {
+    display: flex;
+    gap: var(--space-l);
+}
+
+.track {
+    flex: 1;
+    border-top: 2px solid var(--color-text);
+    padding-top: var(--space-m);
+}
+
+.track h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.track-who {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+}
+
+.track p:last-child {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--color-text-mid);
+}
+
+
+/* ================================================================
+   Enrolling CTA
+   ================================================================ */
+
+.enrolling {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.enrolling h2 {
+    margin-bottom: 0.5rem;
+}
+
+.enrolling p {
+    font-size: 1.05rem;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-m);
+}
+
+.text-link {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+.text-link:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+.text-link::after {
+    content: ' \2192';
+}
+
+.status-indicator {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+
+/* ================================================================
+   Signup (dark section)
+   ================================================================ */
+
+.signup {
+    background-color: var(--color-dark);
+    color: var(--color-bg);
+    padding: var(--space-xl) var(--space-m);
+}
+
+.signup-inner {
+    max-width: var(--measure);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.signup h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    color: var(--color-bg);
+}
+
+.signup .subtitle {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: var(--space-l);
+}
+
+.signup-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 26rem;
+    margin: 0 auto;
+}
+
+.signup-input {
+    flex: 1;
+    padding: 0.85rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border: 1px solid #444;
+    border-radius: 2px;
+    background: transparent;
+    color: var(--color-bg);
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.signup-input::placeholder {
+    color: #666;
+}
+
+.signup-input:focus {
+    border-color: var(--color-accent);
+}
+
+.signup-button {
+    padding: 0.85rem 1.8rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+}
+
+.signup-button:hover {
+    background: var(--color-accent-hover);
+}
+
+
+/* ================================================================
+   Footer
+   ================================================================ */
+
+.footer {
+    padding: 2.5rem var(--space-m);
+    text-align: center;
+    background-color: var(--color-dark);
+    border-top: 1px solid #2A2928;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin: 0 auto;
+}
+
+.footer a {
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+.footer a:hover {
+    border-bottom-color: #999;
+}
+
+
+/* ================================================================
+   Courses page
+   ================================================================ */
+
+.course-entry {
+    border-top: 1px solid var(--color-rule);
+    padding-top: var(--space-m);
+}
+
+.course-entry h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.course-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-s);
+}
+
+.course-entry p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-m);
+}
+
+
+/* ================================================================
+   Foundations course page
+   ================================================================ */
+
+.course-header {
+    padding: var(--space-xl) var(--space-m) var(--space-l);
+}
+
+.course-header .section-inner h1 {
+    font-size: clamp(2rem, 4.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.course-header .course-meta {
+    margin-bottom: var(--space-m);
+}
+
+.course-header p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+}
+
+.week-breakdown {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.week {
+    margin-bottom: var(--space-l);
+}
+
+.week:last-child {
+    margin-bottom: 0;
+}
+
+.week-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+
+.week h3 {
+    font-size: 1.12rem;
+    margin-bottom: 0.35rem;
+}
+
+.week-pedagogy {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.week p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+    margin-bottom: 0.75rem;
+}
+
+.week .deliverable {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.week .deliverable strong {
+    font-weight: 600;
+}
+
+
+/* ================================================================
+   Artifact comparison
+   ================================================================ */
+
+.artifact {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.artifact h2 {
+    margin-bottom: 0.5rem;
+}
+
+.artifact > .section-inner > p {
+    font-size: 1.05rem;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-l);
+}
+
+.artifact-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background-color: var(--color-rule);
+    border: 1px solid var(--color-rule);
+}
+
+.artifact-side {
+    background: var(--color-bg);
+    padding: 1.75rem;
+}
+
+.artifact-side.alt {
+    background: var(--color-bg-alt);
+}
+
+.artifact-side-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.artifact-side h4 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.artifact-excerpt {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--color-text-mid);
+}
+
+.artifact-excerpt em {
+    color: var(--color-accent);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.artifact-note {
+    grid-column: 1 / -1;
+    background: var(--color-dark);
+    color: var(--color-bg);
+    padding: 1.25rem 1.75rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+/* ================================================================
+   What's included (simple list)
+   ================================================================ */
+
+.includes-list {
+    list-style: none;
+    max-width: var(--measure);
+}
+
+.includes-list li {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.includes-list li::before {
+    content: '\2013';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
+}
+
+
+/* ================================================================
+   Pricing CTA
+   ================================================================ */
+
+.pricing {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.pricing p {
+    font-size: 1.05rem;
+    color: var(--color-text-mid);
+    margin: 0 auto var(--space-m);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 2px;
+    transition: background 0.15s ease;
+}
+
+.button:hover {
+    background: var(--color-accent-hover);
+}
+
+
+/* ================================================================
+   Research page
+   ================================================================ */
+
+.paper-list {
+    list-style: none;
+    border-top: 1px solid var(--color-rule);
+}
+
+.paper {
+    display: block;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-rule);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.15s ease;
+}
+
+.paper:hover {
+    color: var(--color-accent);
+}
+
+.paper-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: block;
+}
+
+.paper-subtitle {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--color-text-mid);
+    margin-top: 0.2rem;
+    line-height: 1.5;
+}
+
+.paper:hover .paper-subtitle {
+    color: var(--color-accent);
+}
+
+
+/* ================================================================
+   Reading / essays section
+   ================================================================ */
+
+.reading {
+    padding: var(--space-xl) var(--space-m);
+    border-top: 1px solid var(--color-rule);
+}
+
+.reading h2 {
+    margin-bottom: var(--space-m);
+}
+
+.essay-entry {
+    border-top: 1px solid var(--color-rule);
+    padding-top: var(--space-m);
+}
+
+.essay-entry-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+
+.essay-entry a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.15s ease;
+}
+
+.essay-entry a:hover {
+    color: var(--color-accent);
+}
+
+.essay-entry-title {
+    font-family: var(--font-heading);
+    font-size: 1.12rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.essay-entry-desc {
+    font-size: 0.92rem;
+    color: var(--color-text-mid);
+    line-height: 1.6;
+}
+
+.essay-entry a:hover .essay-entry-desc {
+    color: var(--color-accent);
+}
+
+
+/* ================================================================
+   About / Founder
+   ================================================================ */
+
+.founder {
+    padding: var(--space-xl) var(--space-m);
+}
+
+.founder h2 {
+    margin-bottom: var(--space-l);
+}
+
+.founder h2 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-rule);
+    transition: border-color 0.15s ease;
+}
+
+.founder h2 a:hover {
+    border-color: var(--color-text);
+}
+
+.founder-bio {
+    display: flex;
+    gap: var(--space-l);
+    align-items: flex-start;
+    margin-bottom: var(--space-l);
+}
+
+.founder-photo {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.founder-photo img {
+    width: 100%;
+    display: block;
+}
+
+.founder-text {
+    flex: 1;
+}
+
+.founder-text p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-mid);
+}
+
+.founder-text p + p {
+    margin-top: var(--space-s);
+}
+
+.founder-creds {
+    border-top: 1px solid var(--color-rule);
+    padding-top: var(--space-m);
+}
+
+.founder-cred {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-mid);
+}
+
+.founder-cred + .founder-cred {
+    border-top: 1px solid var(--color-rule);
+}
+
+.founder-cred strong {
+    display: inline;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-right: 0.5rem;
+}
+
+
+/* ================================================================
+   Essay article page
+   ================================================================ */
+
+.essay-article {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-m) var(--space-xxl);
+}
+
+.essay-article .essay-breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-m);
+}
+
+.essay-article .essay-breadcrumb a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.essay-article .essay-breadcrumb a:hover {
+    color: var(--color-accent);
+}
+
+.essay-article h1 {
+    font-size: clamp(2rem, 4.5vw, 2.6rem);
+    margin-bottom: 0.5rem;
+}
+
+.essay-article .essay-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-l);
+    line-height: 1.6;
+}
+
+.essay-article p {
+    margin-bottom: 1.4rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.essay-article h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-s);
+    letter-spacing: -0.01em;
+}
+
+.essay-article .separator {
+    display: block;
+    text-align: center;
+    color: var(--color-rule);
+    margin: var(--space-l) 0;
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+}
+
+.essay-cta {
+    margin-top: var(--space-l);
+    padding-top: var(--space-l);
+    border-top: 1px solid var(--color-rule);
+}
+
+.essay-cta h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.essay-cta p {
+    font-size: 0.95rem;
+    color: var(--color-text-mid);
+    margin-bottom: var(--space-m);
+}
+
+.essay-cta form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 24rem;
+}
+
+.essay-cta input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-rule);
+    border-radius: 2px;
+    background: var(--color-white);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.essay-cta input:focus {
+    border-color: var(--color-accent);
+}
+
+.essay-cta button {
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.essay-cta button:hover {
+    background: var(--color-accent-hover);
+}
+
+.essay-footer {
+    margin-top: var(--space-l);
+    padding-top: var(--space-m);
+    border-top: 1px solid var(--color-rule);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.essay-footer a {
+    color: var(--color-text-mid);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.essay-footer a:hover {
+    color: var(--color-accent);
+}
+
+
+/* ================================================================
+   Responsive
+   ================================================================ */
+
+@media (max-width: 640px) {
+    html { font-size: 16px; }
+
+    .hero {
+        padding: var(--space-l) 1.5rem var(--space-xl);
+    }
+
+    h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .section {
+        padding: var(--space-l) 0;
+    }
+
+    .problem,
+    .methodology,
+    .curriculum,
+    .tracks,
+    .enrolling,
+    .artifact,
+    .reading,
+    .founder,
+    .week-breakdown {
+        padding: var(--space-l) 1.5rem;
+    }
+
+    .signup {
+        padding: var(--space-l) 1.5rem;
+    }
+
+    .course-header {
+        padding: var(--space-l) 1.5rem var(--space-m);
+    }
+
+    .pricing {
+        padding: var(--space-l) 1.5rem;
+    }
+
+    .track-list {
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    .signup-form {
+        flex-direction: column;
+    }
+
+    .signup-button {
+        padding: 1rem var(--space-m);
+    }
+
+    .artifact-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-bio {
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    .founder-photo {
+        width: 140px;
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .essay-article {
+        padding: var(--space-l) 1.5rem var(--space-xl);
+    }
+
+    .essay-cta form {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.3: The Decomposition — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="https://joineryschool.com/">
+                    <img src="../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://joineryschool.com/">Home</a></li>
+                    <li><a href="https://joineryschool.com/courses.html" class="active">Courses</a></li>
+                    <li><a href="https://joineryschool.com/research.html">Research</a></li>
+                    <li><a href="https://joineryschool.com/about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="course-page">
+            <div class="course-header">
+                <div class="module-label">Module 1 &middot; Task Decomposition</div>
+                <h1>Lesson 1.3: The Decomposition</h1>
+                <p class="lesson-meta">Same brief, same model. Five prompts instead of one. Here's what changes.</p>
+            </div>
+
+            <div class="lesson-content">
+
+                <p>Lesson 1.2 showed what comes back from a compound prompt. This lesson runs the same brief through specialist prompts — each limited to a single dimension, each told to ignore everything else.</p>
+
+                <div class="domain-tabs" data-lesson="1-3">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" data-domain="brand-designer">Brand Designer</button>
+                        <button class="tab-btn" data-domain="copywriter">Copywriter</button>
+                        <button class="tab-btn" data-domain="fiction-writer">Fiction Writer</button>
+                        <button class="tab-btn" data-domain="nonfiction-writer">Nonfiction Writer</button>
+                    </div>
+
+                    <div class="tab-panel active" data-domain="brand-designer">
+                        <p>Roughing It Hot Sauce asked for color palette, typography, logo direction, imagery guidelines, and layout principles. The same brief runs through five specialist prompts. Here are the prompts — notice what each one says at the end.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Prompt 1: Color only</strong></p>
+                            <p><em>Roughing It Hot Sauce is a small-batch hot sauce brand from a 4-acre farm in the Hudson Valley. The founder grows her own peppers and makes four seasonal sauces. Positioning: agricultural, seasonal, serious about peppers. Closer to craft vinegar than typical hot sauce. Recommend a color palette with hex codes. Explain what each color does in the system and why it fits. Do not address typography, logo, imagery, or layout.</em></p>
+
+                            <p><strong>Prompt 2: Typography only</strong></p>
+                            <p><em>Roughing It Hot Sauce is a Hudson Valley farm brand making four seasonal hot sauces. Agricultural positioning, seasonal honesty, pepper-forward. The color palette is already defined. Recommend typography pairings for packaging labels, web, and market signage. For each pairing, specify where it is used and why it fits. Do not address color, logo, imagery, or layout.</em></p>
+
+                            <p><strong>Prompt 3: Logo only</strong></p>
+                            <p><em>Roughing It Hot Sauce is a farm brand from the Hudson Valley. The founder is a former firefighter who grows her own peppers. Four seasonal sauces, agricultural positioning. Describe the logo style direction. Not a logo design. The principles, references, and constraints that should govern the mark. What it should feel like, what it should avoid, what makes it unmistakably this brand. Do not address color, typography, imagery, or layout.</em></p>
+
+                            <p><strong>Prompt 4: Imagery only</strong></p>
+                            <p><em>Roughing It Hot Sauce is a Hudson Valley farm brand with four seasonal sauces. Agricultural, serious about peppers, seasonal honesty. Define imagery guidelines for the brand's packaging, web presence, and social media. What kinds of images, what treatment, what to avoid. Photography style, texture use, how product and process are captured. Do not address color, typography, logo, or layout.</em></p>
+
+                            <p><strong>Prompt 5: Layout only</strong></p>
+                            <p><em>Roughing It Hot Sauce is a farm brand from the Hudson Valley with four seasonal sauces. The identity needs to work on 5oz bottle labels, a Shopify e-commerce site, farmers market stall signage, and shipping boxes. Define layout principles that govern how elements are arranged across these surfaces. Do not address color, typography, logo, or imagery.</em></p>
+                        </div>
+
+                        <p>Each prompt tells the model to ignore everything except its one dimension. The model's full attention goes to one problem.</p>
+
+                        <h3>What each specialist produced</h3>
+
+                        <h4>Color</h4>
+
+                        <p>The compound output gave four colors with a sentence of rationale each. The color specialist organized the palette as a two-color print job (Harvest Soil plus Cream) with one per-sauce accent, and explained why: small-batch food labels at this price point use two-plate flexo printing on kraft or uncoated stock. The palette was built around the production reality. Each seasonal sauce gets its own accent drawn from what that specific pepper looks like at harvest: Pepper Green for the spring Anaheim, Cayenne for the summer sauce, Ember for the smoked fall chipotle, Aged Obsidian for the 90-day fermented habanero.</p>
+
+                        <p>It also specified what the palette deliberately avoids and why. High-saturation reds and yellows signal heat. That's what every other hot sauce brand does. Roughing It's differentiation is provenance. The palette stays out of the heat-signal business. The compound output understood the positioning. The color specialist carried the positioning into the palette's internal logic.</p>
+
+                        <h4>Typography</h4>
+
+                        <p>The compound output gave one pairing with brief rationale. The typography specialist gave three complete pairings with a recommendation and specific reasoning for each use case.</p>
+
+                        <p>The recommended pairing was Canela Text with Söhne Mono. The rationale for the monospaced secondary face was specific: monospaced type signals that the brand tracks and communicates its process. Harvest dates, batch numbers, fermentation duration, volume. Monospace on a label reads as field-notebook, as log entry, as something recorded in the moment and not afterward prettified. That's a positioning statement built into the type system. The compound output called the serif/sans pairing "agricultural." The typography specialist asked what the type is saying about the brand.</p>
+
+                        <h4>Logo</h4>
+
+                        <p>The compound output described a direction in one paragraph. The logo specialist spent its full attention on what the mark needs to feel like and why.</p>
+
+                        <p>The reference territory was specific: seed packet marks from regional farms before the 1980s (Fedco, Johnny's, Hudson Valley Seed Library's older material) and printer's marks from American small-press publishers of the 1960s (City Lights, Black Sparrow, New Directions). Those marks were designed to be reproducible by a jobber printer in a small shop, simple enough to hold detail at any reproduction size. That constraint produced marks with more personality than most contemporary brand identity work, because they had to carry the brand at thumbnail scale without losing anything essential.</p>
+
+                        <p>The mark must hold from a half-inch bottle cap stamp to an eight-foot market stall banner, at one color on any surface, and be reproducible by hand if Tess needs to redraw it on a chalkboard. The compound output described what the mark should look like. The logo specialist described what the mark needs to survive.</p>
+
+                        <h4>Imagery</h4>
+
+                        <p>The compound output gave general photography guidelines in a paragraph. The imagery specialist built a system.</p>
+
+                        <p>Three categories in a 40/35/25 ratio: process photography (hands, fermentation, harvest, the farm kitchen), seasonal farm photography (the same plots across all four seasons, same angles when possible), and in-context product photography (the bottle being used in a real kitchen, never on white seamless). The seasonal farm photography exists to make the brand's structural argument visible — the product is the farm's output changing with the season. That image category wasn't in the compound output. The 600 DPI grayscale scanning specification for hand-lettered source material wasn't there. Neither was the lighting discipline, the prohibition on ring lights and softboxes, or the instruction that the image library refreshes quarterly with each sauce release.</p>
+
+                        <h4>Layout</h4>
+
+                        <p>The compound output gave principles. The layout specialist built a system from a primary surface down.</p>
+
+                        <p>The label is the primary surface. Every other surface descends from its logic: wordmark anchored top, sauce name below, harvest date in the monospaced face in the accent color, ingredient list single column, batch number bottom-aligned, one accent color bar running vertically along one edge. The web layout echoes the label structure. The market stall uses the label's type system scaled up. The shipping box is one-color on kraft, minimal information, a cost choice that doubles as a design choice. The seasonal accent rotates; everything else holds still. The constancy of the system is the identity.</p>
+
+                        <p>The color specialist said no heat-signaling reds. The logo specialist didn't know that — it was told to ignore color. The typography specialist recommended a monospaced secondary face. The layout specialist assumed a grotesk. Neither is wrong. Both made their recommendations without knowledge of what the others decided.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="copywriter" hidden>
+                        <p>A homepage carries multiple persuasive responsibilities at once: claim a market position, describe the offer in terms the buyer uses, address hesitation, push toward a decision. One compound prompt handles all four simultaneously. Each section covers different work aimed at a different part of the reader's attention.</p>
+
+                        <p>Fieldwork Ceramics is a one-person studio making wheel-thrown functional ceramics — bowls, mugs, plates. Sold direct through a website and two retail accounts. Price point: $45–$180. The buyer is someone who wants objects that feel made.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Prompt 1: Headline only</strong></p>
+                            <p><em>Fieldwork Ceramics makes wheel-thrown functional ceramics — bowls, mugs, and plates — sold direct from a one-person studio. Price point: $45–$180. The buyer is someone who wants objects that feel made, not manufactured. Write the homepage headline. One sentence. State what the customer gets that they cannot get from a mass-produced alternative. Do not address positioning, product descriptions, social proof, or calls to action.</em></p>
+
+                            <p><strong>Prompt 2: Positioning only</strong></p>
+                            <p><em>Fieldwork Ceramics is a one-person ceramic studio making wheel-thrown functional objects. The price and quality put it between mass-market homeware and gallery ceramics. Write the positioning paragraph — one paragraph that names the category this belongs to and what distinguishes it within that category. Do not write a headline, product descriptions, social proof, or CTA.</em></p>
+
+                            <p><strong>Prompt 3: Product language only</strong></p>
+                            <p><em>Fieldwork Ceramics makes wheel-thrown bowls, mugs, and plates. Write descriptions for each of the three categories. Lead with what the customer experiences using the object — how it sits in the hand, how it holds heat, how it behaves at the table. Do not lead with materials or process. Do not address headline, positioning, social proof, or CTA.</em></p>
+
+                            <p><strong>Prompt 4: Social proof only</strong></p>
+                            <p><em>Fieldwork Ceramics sells at $45–$180. The buyer is already interested — they've looked at the work. Write the social proof section: two or three testimonial hooks (not actual quotes — the structure and type of claim that would move someone hesitating at the price). Do not address headline, positioning, product descriptions, or CTA.</em></p>
+
+                            <p><strong>Prompt 5: CTA only</strong></p>
+                            <p><em>Fieldwork Ceramics. The buyer is on the page, they've read the positioning, they're considering a $90 mug. Write the primary call to action: button text and the one sentence above it. Address the hesitation directly. Do not address headline, positioning, product descriptions, or social proof.</em></p>
+                        </div>
+
+                        <p>Each prompt tells the model to ignore everything except its dimension. The model's full attention goes to one persuasive problem.</p>
+
+                        <h3>What each specialist produced</h3>
+
+                        <h4>Headline</h4>
+
+                        <p>The compound output gave "Handmade ceramics for everyday use." The headline specialist came back with something framed around what mass production cannot do: the weight distribution of a thrown mug, the glazed interior that changes over years of use. It named the specific loss the buyer accepts when they choose manufactured homeware. The compound output described the product. The headline specialist made the argument for why you'd pay more.</p>
+
+                        <h4>Positioning</h4>
+
+                        <p>The compound output placed Fieldwork Ceramics in "handmade homeware." The positioning specialist asked the harder question: handmade homeware is a crowded category. What specific territory does this occupy? It located the gap between Etsy-scale production (where quality is inconsistent) and gallery ceramics (where the object is art, not a mug you use for coffee). Fieldwork is the mug you use every morning that happens to be better than anything at Williams Sonoma. The compound output named a category. The positioning specialist found the gap.</p>
+
+                        <h4>Product language</h4>
+
+                        <p>The compound output described the ceramics in process terms: "wheel-thrown," "food-safe glaze," "kiln-fired." The product specialist wrote toward the experience: the way a well-thrown bowl sits flat without wobbling, how the weight tells you it won't chip, the way a lip that's been trimmed rather than just pulled feels different against your mouth after three years of daily use. Same objects. Different argument.</p>
+
+                        <h4>Social proof</h4>
+
+                        <p>The compound output suggested collecting customer testimonials about quality and service. The social proof specialist identified the actual hesitation: a $90 mug is the kind of purchase people have to justify. It framed the testimonial hooks around the justification — the person who bought one mug two years ago and is back because it's the only one left in the cabinet, the person who bought a set as a wedding gift and received a thank-you note eighteen months later. The hesitation is the price. The proof is durability and return.</p>
+
+                        <h4>CTA</h4>
+
+                        <p>The compound output suggested "Shop the collection." The CTA specialist argued that no one hesitating at $90 is moved by "shop." It wrote toward the specific moment — the buyer who has been looking at the mug for five minutes and is about to close the tab. The button copy acknowledged the price. The sentence above it named what the buyer is actually trading: one purchase versus fifteen years of using something that holds up.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="fiction-writer" hidden>
+                        <p>A chapter opening carries multiple obligations at once: establish where we are, show who the character is from the inside, advance the situation, plant a detail that will matter later. One compound prompt produces a paragraph that touches all four. Each obligation requires the model's full attention.</p>
+
+                        <p>Marcus is a line cook at a restaurant where the head chef is coming apart. Chapter 3 opens with Marcus arriving for morning prep and finding the chef already in the kitchen — which never happens.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Prompt 1: Setting only</strong></p>
+                            <p><em>Marcus, a line cook, arrives at the restaurant at 6:45am for prep. The head chef is already there, which never happens. Describe only the physical space as Marcus enters — what he sees, hears, smells, what registers before he speaks to anyone. Make the space do work: show the chef's state through the evidence in the room, not through description of the chef. Do not write Marcus's interior state, any dialogue, or advance the plot.</em></p>
+
+                            <p><strong>Prompt 2: Character interiority only</strong></p>
+                            <p><em>Marcus walks into the kitchen and finds the chef already there. Write only what happens inside Marcus — what he notices, what he tries not to notice, what his body does before his mind has caught up. Do not describe the space, write dialogue, or move the situation forward.</em></p>
+
+                            <p><strong>Prompt 3: Plot beat only</strong></p>
+                            <p><em>Marcus finds the chef in the kitchen early. Write only what happens: the single small action or exchange that occurs, and what it puts in motion for the rest of the chapter. This is one beat, one action, one consequence. Do not describe the setting or write interior state.</em></p>
+
+                            <p><strong>Prompt 4: Voice/detail only</strong></p>
+                            <p><em>Marcus is a line cook at a restaurant where the head chef is coming apart. Write one concrete, specific detail — an object, a smell, a sound — that belongs to this story and no other. Not a summary. A specific. The kind of thing a reader marks with a pencil.</em></p>
+                        </div>
+
+                        <p>Each prompt tells the model to ignore everything except its dimension. The model's full attention goes to one craft problem.</p>
+
+                        <h3>What each specialist produced</h3>
+
+                        <h4>Setting</h4>
+
+                        <p>The compound output described a professional kitchen in the morning: stainless steel, fluorescent light, the smell of industrial cleaner. The setting specialist asked what evidence the chef's early arrival left in the room. It found the inventory: a reach-in left open to the wrong temperature, a cutting board moved to the wrong station, a prep container filled and labeled with yesterday's date — work started at 5am and abandoned before the right time. The kitchen told the story before Marcus did.</p>
+
+                        <h4>Interiority</h4>
+
+                        <p>The compound output gave Marcus general unease. The interiority specialist gave him something specific: he checked the prep list before he checked on the chef. The self-awareness about checking the list — knowing he should be asking if the chef was okay and instead documenting whether the work was done — was the character. Not described as "he told himself he was being practical." Shown as the order of his attention.</p>
+
+                        <h4>Plot beat</h4>
+
+                        <p>The compound output had Marcus and the chef exchange a terse greeting. The plot specialist asked what the beat needs to do for the chapter: Marcus needs to understand something he can't say out loud. It gave one action — the chef slides the prep list across the station without looking up, the same way Marcus's father used to hand him his report card. No dialogue. No staging. One gesture, one association, one thing Marcus now carries into the rest of the chapter.</p>
+
+                        <h4>Voice and detail</h4>
+
+                        <p>The compound output gave kitchen atmosphere. The detail specialist gave one object: a ceramic mug in the wrong place. The chef always starts with his coffee on the left side of his station. Today the mug is on the fish station, four feet away, where it has no business being. Marcus doesn't comment on it. The reader knows something moved it.</p>
+
+                        <p>Setting / interiority / plot beat / detail is one decomposition of a scene — the one that matches what the original compound prompt named. Fiction writers cut differently depending on what the scene needs: surface action versus subtext, the moment itself versus what the moment costs the character, what the scene shows versus what it withholds. The choice of cut is yours. The method is the same: full attention on one problem, then synthesis.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="nonfiction-writer" hidden>
+                        <p>An essay about a subject that matters needs five things to hold together: an argument that makes this essay yours rather than anyone's, an opening that earns the reader's time, a structure that carries the argument forward, evidence that makes the argument feel earned, and a closing that justifies having read this far. One compound prompt handles all five.</p>
+
+                        <p>Personal essay: what making sourdough bread teaches that cookbooks cannot convey.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Prompt 1: Argument only</strong></p>
+                            <p><em>I want to write a personal essay about making sourdough bread — specifically, what the process teaches that cookbooks cannot convey. Write only the central argument: the one claim that makes this essay mine rather than anyone's. Not a summary of the piece. The argument. Do not write an opening, structure the essay, provide evidence, or close it.</em></p>
+
+                            <p><strong>Prompt 2: Opening only</strong></p>
+                            <p><em>Personal essay: what sourdough teaches that cookbooks can't. The argument is that following a recipe exactly is a form of not paying attention — the bread teaches you that the recipe is a map, and maps are wrong. Write only the opening. Put the reader inside a specific moment in the kitchen. Do not state the argument, structure the essay, provide evidence, or close.</em></p>
+
+                            <p><strong>Prompt 3: Structure only</strong></p>
+                            <p><em>Personal essay about sourdough as teacher. The argument: process teaches what recipes can't encode. The opening puts us inside a specific moment of failure. Write only the essay's structure — what each section does (not what it says), how the argument moves from opening to close. Do not write prose or provide evidence.</em></p>
+
+                            <p><strong>Prompt 4: Evidence only</strong></p>
+                            <p><em>Personal essay arguing that sourdough teaches presence in a way recipes can't encode — following the recipe exactly is a form of not paying attention. What's the evidence? Provide three concrete, specific moments from the bread-making process that make the argument feel earned rather than asserted. Specific enough that a reader who bakes will recognize them. Do not write the opening, structure the essay, or close it.</em></p>
+
+                            <p><strong>Prompt 5: Closing only</strong></p>
+                            <p><em>Personal essay: sourdough teaches what cookbooks can't. The argument is that you learn by failing to follow the recipe, not by following it — the recipe is a map, and maps are wrong. Write only the closing. What does the reader leave with? Do not restate the argument. Do not summarize. End the essay.</em></p>
+                        </div>
+
+                        <p>Each prompt tells the model to ignore everything except its dimension. The model's full attention goes to one essay problem.</p>
+
+                        <h3>What each specialist produced</h3>
+
+                        <h4>Argument</h4>
+
+                        <p>The compound output gave "bread-making teaches patience and attentiveness beyond what recipes convey." The argument specialist said patience is a description of the process, not a claim. It pushed to what the process specifically teaches that the recipe actively prevents: the recipe assumes the variables are controlled, but they aren't — the flour is different from last month, the kitchen is warmer, the starter has shifted. The real argument: following a recipe exactly is a form of not paying attention. The bread teaches you that the recipe is a map, and maps are wrong.</p>
+
+                        <h4>Opening</h4>
+
+                        <p>The compound output opened with "I started making bread during the pandemic, like many people." The opening specialist rejected the first sentence and put us inside a specific moment: the fourth time a loaf collapsed during baking despite identical conditions, the writer standing at the oven door, understanding for the first time that something was happening in the dough that the recipe couldn't see. No autobiography. No pandemic. The moment the recipe ran out of answers.</p>
+
+                        <h4>Structure</h4>
+
+                        <p>The compound output gave a loose chronological arc. The structure specialist organized the essay as movement through three states: following the recipe (certainty, discipline, failure), investigating the failure (observation without a framework, the writer starting to pay attention), and working without the recipe (presence, the bread as feedback). Not a timeline. A progression in how the writer relates to the process.</p>
+
+                        <h4>Evidence</h4>
+
+                        <p>The compound output gestured at general baking lessons. The evidence specialist gave three specifics: the windowpane test and what it means to fail it for eight weeks and then, on the ninth, feel the difference before testing it; the difference between a starter that smells like nail polish remover versus one that smells like yogurt, and what each tells you about timing; the first time the writer adjusted hydration based on how the dough felt rather than what the recipe said, and the realization that this was only possible after months of following the recipe wrong.</p>
+
+                        <h4>Closing</h4>
+
+                        <p>The compound output ended with a summary of lessons learned. The closing specialist returned to the moment from the opening — the collapsed loaf — but now the writer is in a different relationship to it. The loaf failed because the kitchen was two degrees warmer than last week, the starter peaked an hour earlier than expected, the flour from the new bag absorbed differently. The recipe couldn't have told you this. You had to be there.</p>
+
+                        <p>This is the argument-first sequence — it works for position essays where the claim precedes the investigation. For essays that discover their argument through evidence (reported pieces, essays where the argument emerges from the material), the sequence reverses: evidence specialist first, argument specialist second. The evidence pass asks what's actually there; the argument pass reads the evidence and asks what it argues. Same specialists, different order. The order is a structural decision about how your piece develops.</p>
+                    </div>
+                </div>
+
+                <p class="illustrator-note">Illustrators: the decomposition pattern applies to image-making. Color as one pass, gesture and pose as another, compositional framing as a third, setting as a fourth. The specialists work independently. That's the point.</p>
+
+                <h2>The structural difference</h2>
+
+                <p>Each specialist went deeper because it wasn't splitting attention. On competitive programming benchmarks, Ridnik et al. (2024)<sup><a href="#fn1">[1]</a></sup> documented a jump from 19 to 44 percent on the pass@5 metric when generation moved from a single compound prompt to a decomposed multi-step flow. Same model, same problems, different input architecture. Andrew Ng (2024)<sup><a href="#fn2">[2]</a></sup> observed that GPT-3.5 running in an iterative agent loop scored significantly higher on coding benchmarks than GPT-4 running on a single compound prompt — a practitioner data point that the input architecture matters more than the model version. The pattern holds at smaller scales: Wei et al. (2022)<sup><a href="#fn3">[3]</a></sup> found that adding explicit reasoning steps to prompts substantially improved performance on complex tasks — a lightweight form of decomposition. Zhou et al. (2022)<sup><a href="#fn4">[4]</a></sup> showed that on tasks that exceed a model's capacity as a single step, decomposition doesn't just improve results — it makes them possible at all.</p>
+
+                <p>There's a new problem. Multiple independent outputs that don't coordinate. Each specialist worked without knowledge of what the others decided — that's exactly what you asked for. Someone needs to read all the outputs and make the calls. That's you. That's the next lesson.</p>
+
+            </div>
+
+            <div class="footnotes">
+                <h3>Research notes</h3>
+                <ol>
+                    <li id="fn1">Ridnik, T., Kredo, D., &amp; Friedman, I. (2024). Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering. <em>arXiv</em> 2401.08500. <a href="https://arxiv.org/abs/2401.08500" target="_blank" rel="noopener">arxiv.org/abs/2401.08500</a></li>
+                    <li id="fn2">Ng, A. (2024, March 20). How agents can improve LLM performance. <em>The Batch</em>, DeepLearning.AI. <a href="https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/" target="_blank" rel="noopener">deeplearning.ai/the-batch</a></li>
+                    <li id="fn3">Wei, J., Wang, X., Schuurmans, D., Bosma, M., Xia, F., Chi, E., Le, Q.V., &amp; Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. <em>Advances in Neural Information Processing Systems</em>, 35, 24824–24837. <a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener">arxiv.org/abs/2201.11903</a></li>
+                    <li id="fn4">Zhou, D., Schärli, N., Hou, L., Wei, J., Scales, N., Wang, X., Schuurmans, D., Cui, C., Bousquet, O., Le, Q.V., &amp; Chi, E. (2022). Least-to-most prompting enables complex reasoning in large language models. <em>arXiv</em> 2205.10625. <a href="https://arxiv.org/abs/2205.10625" target="_blank" rel="noopener">arxiv.org/abs/2205.10625</a></li>
+                </ol>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="lesson-2.html"><span class="nav-label">Previous</span>Lesson 1.2: The Compound Instruction Problem</a>
+                <a href="lesson-4.html"><span class="nav-label">Next</span>Lesson 1.4: The Synthesis Step</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script src="../assets/course.js"></script>
+</body>
+</html>

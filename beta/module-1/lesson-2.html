@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1.2: The Compound Instruction Problem — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="https://joineryschool.com/">
+                    <img src="../assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://joineryschool.com/">Home</a></li>
+                    <li><a href="https://joineryschool.com/courses.html" class="active">Courses</a></li>
+                    <li><a href="https://joineryschool.com/research.html">Research</a></li>
+                    <li><a href="https://joineryschool.com/about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="course-page">
+            <div class="course-header">
+                <div class="module-label">Module 1 &middot; Task Decomposition</div>
+                <h1>Lesson 1.2: The Compound Instruction Problem</h1>
+                <p class="lesson-meta">Why compound prompts produce shallow output — and why the output still looks good enough to use.</p>
+            </div>
+
+            <div class="lesson-content">
+
+                <p>Lesson 1.1 named the compound instruction problem. Here's that problem on a real brief.</p>
+
+                <p>Read the prompt before you read the output.</p>
+
+                <div class="domain-tabs" data-lesson="1-2">
+                    <div class="tab-nav" role="tablist">
+                        <button class="tab-btn active" role="tab" aria-selected="true" data-domain="brand-designer">Brand Designer</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-domain="copywriter">Copywriter</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-domain="fiction-writer">Fiction Writer</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-domain="nonfiction-writer">Nonfiction Writer</button>
+                    </div>
+
+                    <div class="tab-panel active" data-domain="brand-designer">
+                        <blockquote class="artifact-prompt">
+                            <p>I'm designing identity for Roughing It Hot Sauce, a small-batch brand from a farm in the Hudson Valley. Founder grows her own peppers. Four seasonal sauces (green spring, red summer, smoky fall, fermented winter). Positioning: agricultural, seasonal, serious about peppers. Not edgy, not gimmicky. Closer to craft vinegar than typical hot sauce. Budget is tight, works on shelves, markets, and web. Give me a color palette with hex codes, typography pairings, logo direction, imagery guidelines, and layout principles.</p>
+                        </blockquote>
+
+                        <p>Here's what came back.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Color Palette</strong></p>
+                            <ul>
+                                <li>Deep Green (#2C3E2D): primary brand color. Evokes farm, growth, seasonal change.</li>
+                                <li>Warm Cream (#F4E8D0): secondary. Agricultural warmth, papery texture.</li>
+                                <li>Brick Red (#A83C2E): accent. Hints at heat without shouting.</li>
+                                <li>Dark Charcoal (#1F1F1F): for type and structural elements.</li>
+                            </ul>
+                            <p>The palette reads natural and grounded, avoiding the saturated reds and yellows typical of hot sauce branding.</p>
+
+                            <p><strong>Typography</strong></p>
+                            <p>Pair a humanist serif with a clean sans-serif: Freight Text Pro (warm, editorial serif with agricultural feel) for headers, Söhne (neutral grotesk) for body. The serif carries the agricultural/editorial tone; the sans handles functional text.</p>
+
+                            <p><strong>Logo Style Direction</strong></p>
+                            <p>A wordmark-forward logo using a hand-drawn or letterpress-style treatment of "Roughing It" with a supporting mark (possibly a stylized pepper or farm element). Should feel made by hand, not designed in software. Avoid flames, skulls, cartoons.</p>
+
+                            <p><strong>Imagery</strong></p>
+                            <p>Photography should emphasize the farm: peppers in context, hands in soil, process shots of fermentation and cooking. Natural light, no studio backdrops. Shoot product on wood, stone, or kitchen surfaces rather than white seamless.</p>
+
+                            <p><strong>Layout Principles</strong></p>
+                            <p>Generous whitespace, simple grids, editorial hierarchy. Labels should feel printed rather than designed. Use the color palette restraintfully. The system should scale from a 5oz bottle label up to a market stall banner without losing legibility.</p>
+                        </div>
+
+                        <p>That output is good. Each section names the right direction. The color palette avoids hot sauce reds. The typography pairs an editorial serif with a clean sans. The logo calls for hand-drawn or letterpress. The imagery goes to the farm. The layout is restrained and editorial.</p>
+
+                        <p>A working designer could take this and build something defensible.</p>
+
+                        <p>That's exactly the problem. It looks done.</p>
+
+                        <h3>What the output is missing</h3>
+
+                        <p>The color section gave four colors with a sentence of rationale each. Coherent. Correct general direction. But the color specialist working at full depth on this brand would ask different questions: How are small-batch food labels actually produced at this price point? What does two-color flexo printing on kraft stock mean for the palette? Do the four seasonal sauces each need their own accent color, and if so, what do you pull from? The compound output didn't get there because it wasn't asked to. It was asked for five things at once.</p>
+
+                        <p>The typography gave one pairing. One option. The logo gave a concept description. The imagery gave general photography guidelines — the right territory, without specifying ratios, lighting discipline, how to handle hand-lettered source material, or how the image library should shift across the four seasons.</p>
+
+                        <p>Each section named the correct surface direction. None of them went deep.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="copywriter" hidden>
+                        <p>A copywriter working on a studio website faces the same split.</p>
+
+                        <blockquote class="artifact-prompt">
+                            <p>Write a homepage headline, tagline, about section, product page introduction, and email signup callout for Fieldwork Ceramics — a Brooklyn studio making hand-thrown functional ware. Two founders. Everything made to order, 4–6 week lead time. Positioned as heirloom quality, built for daily use.</p>
+                        </blockquote>
+
+                        <p>Here's what came back.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Headline:</strong> Made to Last. Made to Use.</p>
+
+                            <p><strong>Tagline:</strong> Hand-thrown ceramics for the everyday table.</p>
+
+                            <p><strong>About:</strong> Fieldwork Ceramics is a Brooklyn studio founded by two makers who believe functional objects should outlast trends. Every piece is made to order by hand, fired in our studio, built to be used — not displayed. Our work is designed for the table: plates that stack, bowls that pour, mugs that hold heat. 4–6 week lead time.</p>
+
+                            <p><strong>Product intro:</strong> Each piece begins with a lump of clay and ends on your table. Hand-thrown, functional, made to last.</p>
+
+                            <p><strong>Signup callout:</strong> Join the list. New work, restocks, and studio news.</p>
+                        </div>
+
+                        <p>That output covers all five sections. The headline is clean. The about positions the work correctly. The signup callout is lean. A working copywriter could take this and build a page.</p>
+
+                        <p>That's exactly the problem. It looks done.</p>
+
+                        <h3>What the output is missing</h3>
+
+                        <p>The copywriter working the headline alone would have chased a different question: what is the customer's relationship with an object they use every morning for twenty years? "Made to Last. Made to Use." names the claim. It doesn't earn it. Working under a single brief — headline only — there's room to ask what daily-use heirloom actually means to someone. Does it mean the mug outlives the marriage? That the chip in it is the history? The compound prompt asked for five sections at once. The headline got a fraction of the attention a single-section brief would have given it.</p>
+
+                        <p>The about section introduced the founders as "two makers" without asking what makes them specific. The product copy restated the positioning. Each section named the right territory. None of them found the thing underneath the territory — the detail that earns the claim instead of just repeating it.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="fiction-writer" hidden>
+                        <p>A fiction writer opening a short story faces the same problem with a different set of dimensions.</p>
+
+                        <blockquote class="artifact-prompt">
+                            <p>I'm writing a short story about a line cook named Marcus reuniting with his estranged father at a family funeral. The opening scene needs to establish Marcus's character, introduce the tension with his father, use the kitchen as his emotional refuge, and plant a detail that pays off at the end.</p>
+                        </blockquote>
+
+                        <p>Here's what came back.</p>
+
+                        <div class="artifact-output">
+                            <p>Marcus worked the prep line with the kind of focus other people brought to prayer. Six AM, an hour before service, just him and the mise en place. He broke down a case of Roma tomatoes without looking at the knife.</p>
+
+                            <p>His father was flying in from Phoenix for the funeral. Three days. Marcus had calculated the overlap: arrive Thursday evening, service Friday, reception Friday afternoon, flight home Saturday morning. He could control the kitchen. He could not control Thursday evening.</p>
+
+                            <p>He set the knife down next to the cutting board. Next to his left hand, exactly where it always went.</p>
+                        </div>
+
+                        <p>That opening handles all four objectives. Marcus's character appears in his prep-line focus. The father tension appears in the flight-itinerary calculation. The kitchen appears as refuge. The knife is placed as the payoff detail.</p>
+
+                        <p>That's exactly the problem. It looks done.</p>
+
+                        <h3>What the output is missing</h3>
+
+                        <p>A writer working character alone would have asked: what does Marcus do with his hands when he's nervous that he doesn't do on the line? The knife appeared because the prompt asked for a payoff detail. It wasn't discovered — it was placed to satisfy a requirement. The character specialist, working without the other three objectives competing for attention, follows a different question: what is the specific, involuntary thing Marcus does that tells you everything about him? That question has room to land when it's the only question being asked.</p>
+
+                        <p>The father tension appears as a flight itinerary — logistically correct, emotionally efficient. The writer working tension alone would have asked where in the body Marcus carries that relationship. The kitchen appears as refuge through presence alone — Marcus is there early. The writer working the refuge beat would have asked what the kitchen sounds like at six AM that it doesn't sound like at noon, and why that difference matters to Marcus specifically.</p>
+
+                        <p>The elements feel more integrated in fiction than in design or copy — setting and interiority don't have clean edges in prose. They don't have to. The specialists don't care that the final paragraph will weave them together. Each one worked its problem without the others competing for attention. The setting specialist found what was in the room. The interiority specialist found what was in Marcus. Weaving them is the synthesis step.</p>
+                    </div>
+
+                    <div class="tab-panel" data-domain="nonfiction-writer" hidden>
+                        <p>A nonfiction writer working on a personal essay faces the same split — the dimensions are less visual, but the attention problem is identical.</p>
+
+                        <blockquote class="artifact-prompt">
+                            <p>I'm writing a personal essay about learning to bake sourdough in 2020. I want to open with an early failure — the first dense, gummy loaf — build toward the argument that the process taught me something about attention that no productivity system ever did, structure it as three scenes with a connecting thread, anchor it to a central image, and close with a line that opens outward rather than wraps up.</p>
+                        </blockquote>
+
+                        <p>Here's what came back.</p>
+
+                        <div class="artifact-output">
+                            <p><strong>Opening:</strong> Begin with the failure loaf — the dense, gummy interior you couldn't slice. The smell when you cut it open. What you expected versus what you found.</p>
+
+                            <p><strong>Argument:</strong> Sourdough resists the efficiency mindset. Unlike a productivity framework, it doesn't reward optimization. It rewards attention over time: watching the starter, learning what "doubled" actually looks like, understanding that following the recipe is a misunderstanding of what the recipe is asking.</p>
+
+                            <p><strong>Three scenes:</strong> (1) The failure loaf and what went wrong. (2) The morning you understood the starter. (3) The first loaf that worked and what you noticed about how you made it differently.</p>
+
+                            <p><strong>Central image:</strong> The starter as a living system — something that has to be fed, that dies if ignored, that remembers neglect.</p>
+
+                            <p><strong>Closing:</strong> Something like: "The loaf doesn't know you've been trying. It only knows what you gave it."</p>
+                        </div>
+
+                        <p>That structure names the right sections. The argument is in the right territory. The starter-as-living-system image is correct. A working essayist could draft from this.</p>
+
+                        <p>That's exactly the problem. It looks done.</p>
+
+                        <h3>What the output is missing</h3>
+
+                        <p>The essayist working the argument alone would have pushed on a harder question: what specifically did sourdough teach that productivity systems couldn't, and why is that gap the interesting thing? "Attention over time" is the territory. But the compound prompt asked for five sections simultaneously, and the argument got a paragraph. The argument specialist, working without hook, structure, image, and closing all competing, has room to ask: is this really about attention? Or is it about the difference between a system you optimize and a system you have to meet on its own terms? That distinction doesn't get examined in a five-section brief.</p>
+
+                        <p>The central image appeared as "starter as living system" — the obvious choice. The image specialist, working alone, follows the question: what is the specific moment when a living system stops being a metaphor and starts being the point? That question doesn't get asked when the image is one of five items in a list.</p>
+
+                        <p>One note specific to essays: argument and evidence aren't always parallel tasks. A position essay starts from a claim and finds evidence that earns it. A discovery essay accumulates evidence and finds out what it's arguing. The compound problem is the same in both. The decomposition looks different: if the argument isn't known yet, the evidence specialist runs first. The argument specialist comes after — it reads the evidence and asks what that material actually argues.</p>
+                    </div>
+                </div>
+
+                <h2>Why this happens</h2>
+
+                <p>Two things are working against a compound prompt.</p>
+
+                <p>The first is serial position. Liu et al. (2024)<sup><a href="#fn1">[1]</a></sup> found that language model performance degrades significantly when relevant information is positioned in the middle of a long input, compared to the beginning or end. Performance follows a U-shaped curve. The model processes the first item (color palette) with full attention and the last item (layout principles) with reasonable attention. The three items in the middle get less. Murdock (1962)<sup><a href="#fn2">[2]</a></sup> documented the same pattern in human recall: items at the beginning and end of a list are remembered significantly better than items in the middle. Different systems. Same structural problem.</p>
+
+                <p>The second is attention budget. Sweller (1988)<sup><a href="#fn3">[3]</a></sup> established cognitive load theory: performance degrades when a task demands more than working memory can hold. Miller (1956)<sup><a href="#fn4">[4]</a></sup> estimated that capacity at seven items; Cowan (2001)<sup><a href="#fn5">[5]</a></sup> revised it downward to approximately four chunks. A prompt asking for five dimensions of a brand identity asks the model to hold color logic, typography logic, logo logic, imagery logic, and layout logic simultaneously. The attention distributes across all five. Each gets a fraction.</p>
+
+                <p>I learned this before I knew what to call it. In a fourth-grade special education classroom in Brooklyn, a compound instruction to a student with processing delays — "take out your notebook, turn to page 42, answer questions three through seven" — is three tasks arriving simultaneously. The student hears the first one and starts working. The second and third are gone. Give one instruction at a time. That's the fix.<sup><a href="#fn6">[6]</a></sup> The structural problem is identical in both systems. The inputs arrive faster than the receiving system can process them whole.</p>
+
+                <p>The instinct when the output isn't deep enough is to add more detail to the prompt. More context, more constraints, more specification. The prompt grows to three paragraphs. The output gets different but not deeper. More instructions in a compound prompt don't solve the attention split. They add more items to the middle of a list the model was already struggling to hold.</p>
+
+                <h2>What the compound prompt decided</h2>
+
+                <p>The compound prompt made the AI the creative director. One pass, one perspective, five dimensions decided simultaneously. The output is coherent because one mind shaped all of it. The color palette doesn't fight the typography. The logo direction doesn't contradict the imagery. Everything fits.</p>
+
+                <p>That coherence is also the ceiling. The model's full attention pointed at one goal: fit five sections into one response that hangs together. Depth on any single dimension was a secondary concern. Coherence across five dimensions was the primary one. It achieved what it was asked to achieve.</p>
+
+                <p>The next two lessons show what changes when you stop asking for five things at once. Notice, too, how the output sounds — the cadence, the transitions, the epigrammatic close. That register is the model's default. You didn't ask for it. It was there because it's always there. Week 3 is about governing it.</p>
+
+            </div>
+
+            <div class="footnotes">
+                <h3>Research notes</h3>
+                <ol>
+                    <li id="fn1">Liu, N.F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., &amp; Liang, P. (2024). Lost in the Middle: How Language Models Use Long Contexts. <em>Transactions of the Association for Computational Linguistics</em>, 12, 157–173. <a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">arxiv.org/abs/2307.03172</a></li>
+                    <li id="fn2">Murdock, B.B., Jr. (1962). The serial position effect of free recall. <em>Journal of Experimental Psychology</em>, 64(5), 482–488. <a href="https://doi.org/10.1037/h0045106" target="_blank" rel="noopener">doi.org/10.1037/h0045106</a></li>
+                    <li id="fn3">Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. <em>Cognitive Science</em>, 12(2), 257–285. <a href="https://doi.org/10.1207/s15516709cog1202_4" target="_blank" rel="noopener">doi.org/10.1207/s15516709cog1202_4</a></li>
+                    <li id="fn4">Miller, G.A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. <em>Psychological Review</em>, 63(2), 81–97. <a href="https://doi.org/10.1037/h0043158" target="_blank" rel="noopener">doi.org/10.1037/h0043158</a></li>
+                    <li id="fn5">Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. <em>Behavioral and Brain Sciences</em>, 24(1), 87–114. <a href="https://doi.org/10.1017/S0140525X01003922" target="_blank" rel="noopener">doi.org/10.1017/S0140525X01003922</a></li>
+                    <li id="fn6">Wong, C., Odom, S.L., Hume, K., Cox, A.W., Fettig, A., Kucharczyk, S., &amp; Schultz, T.R. (2014). Evidence-based practices for children, youth, and young adults with autism spectrum disorder. <em>Journal of Autism and Developmental Disorders</em>, 45(7), 1951–1966. Task analysis is classified as an evidence-based practice in special education with decades of applied research support. <a href="https://doi.org/10.1007/s10803-014-2351-z" target="_blank" rel="noopener">doi.org/10.1007/s10803-014-2351-z</a></li>
+                </ol>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="lesson-1.html"><span class="nav-label">Previous</span>Lesson 1.1</a>
+                <a href="lesson-3.html"><span class="nav-label">Next</span>Lesson 1.3: The Decomposition</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+    <script src="../assets/course.js"></script>
+</body>
+</html>

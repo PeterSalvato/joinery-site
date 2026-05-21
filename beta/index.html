@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Access — Joinery Foundations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/course.css">
+    <style>
+        .beta-gate {
+            max-width: var(--measure);
+            margin: var(--space-xl) auto;
+            padding: 0 var(--grid-margin);
+            text-align: center;
+        }
+        .beta-gate h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: var(--space-s);
+        }
+        .beta-gate p {
+            color: var(--color-text-mid);
+            margin-bottom: var(--space-m);
+        }
+        .beta-form {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: var(--space-s);
+        }
+        .beta-form input[type="password"] {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            padding: 0.6rem 1rem;
+            border: 2px solid var(--color-rule);
+            background: var(--color-white);
+            color: var(--color-text);
+            border-radius: 4px;
+            width: 220px;
+            transition: border-color 0.2s;
+        }
+        .beta-form input[type="password"]:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+        .beta-form button {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.6rem 1.4rem;
+            background: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .beta-form button:hover {
+            background: var(--color-accent-hover);
+        }
+        .beta-error {
+            color: var(--color-accent);
+            font-size: 0.85rem;
+            min-height: 1.2em;
+        }
+        .beta-content {
+            display: none;
+        }
+        .beta-content.unlocked {
+            display: block;
+        }
+        .beta-gate.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <nav class="nav" id="nav">
+            <div class="nav-inner">
+                <a class="nav-mark" href="https://joineryschool.com/">
+                    <img src="assets/logo.svg" alt="Joinery">
+                    <span>Joinery</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://joineryschool.com/">Home</a></li>
+                    <li><a href="https://joineryschool.com/courses.html" class="active">Courses</a></li>
+                    <li><a href="https://joineryschool.com/research.html">Research</a></li>
+                    <li><a href="https://joineryschool.com/about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Password gate -->
+        <div class="beta-gate" id="beta-gate">
+            <h1>Foundations: Beta Access</h1>
+            <p>This course is in private beta. Enter your access code to continue.</p>
+            <form class="beta-form" id="beta-form">
+                <input type="password" id="beta-pw" placeholder="Access code" autocomplete="off" autofocus>
+                <button type="submit">Enter</button>
+            </form>
+            <p class="beta-error" id="beta-error"></p>
+        </div>
+
+        <!-- Course content (hidden until authenticated) -->
+        <div class="beta-content" id="beta-content">
+            <div class="course-page">
+                <div class="course-header">
+                    <div class="module-label">Beta Review &middot; Foundations</div>
+                    <h1>Module 1: Task Decomposition</h1>
+                    <p class="lesson-meta">6 lessons &middot; About 90 minutes of reading</p>
+                </div>
+
+                <div class="lesson-content">
+                    <p>Practitioners who use AI lose authorship. This module teaches you to use the attunement skill you already have to stay in the author's seat.</p>
+
+                    <p>You already attune to the receiving systems for your work: the audience, the reader, the client, the subject. This module applies that same attunement skill to AI as a new receiving system. You'll see why compound prompts degrade, watch what changes when you decompose the same brief, and do it yourself on your own work.</p>
+
+                    <div class="persona-selector" id="persona-selector">
+                        <p class="persona-prompt">What best describes your primary practice?</p>
+                        <div class="persona-options">
+                            <button class="persona-btn" data-domain="brand-designer">Brand Designer</button>
+                            <button class="persona-btn" data-domain="copywriter">Copywriter</button>
+                            <button class="persona-btn" data-domain="fiction-writer">Fiction Writer</button>
+                            <button class="persona-btn" data-domain="nonfiction-writer">Nonfiction Writer</button>
+                        </div>
+                        <p class="persona-note">You can switch at any time inside the lessons.</p>
+                    </div>
+
+                    <a class="module-card-link" href="module-1/lesson-1.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.1</div>
+                            <h3>The Frame Break</h3>
+                            <p>Why the instinct to add more detail to a prompt is the wrong move. The pattern you already use when reading a room, applied to a different system.</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="module-1/lesson-2.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.2</div>
+                            <h3>The Compound Instruction Problem</h3>
+                            <p>A real brief, run through the compound approach. Watch what the AI actually does when you give it five jobs at once.</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="module-1/lesson-3.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.3</div>
+                            <h3>The Decomposition</h3>
+                            <p>Same brief, decomposed into specialist tasks. One job per prompt. The output changes in ways that matter.</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="module-1/lesson-4.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.4</div>
+                            <h3>The Synthesis Step</h3>
+                            <p>The part AI cannot do. You step through the specialist outputs, make tracked decisions, and compile the creative direction brief.</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="module-1/lesson-5.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.5</div>
+                            <h3>Decompose Your Own Work</h3>
+                            <p>Apply the full cycle to your own project. Decompose, run specialists, synthesize, articulate what your judgment added.</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="module-1/lesson-6.html">
+                        <div class="module-card">
+                            <div class="module-meta">Lesson 1.6</div>
+                            <h3>Week 1 Deliverable</h3>
+                            <p>Your decomposition brief, synthesis decisions, and reflection on what changed when you decomposed the work.</p>
+                        </div>
+                    </a>
+
+                    <div style="margin-top: var(--space-l); padding-top: var(--space-m); border-top: 1px solid var(--color-rule);">
+                        <h2>Beta Feedback</h2>
+                        <p>After you finish the six lessons, I'd appreciate your honest feedback. A few questions I'm interested in:</p>
+                        <ol style="margin-top: var(--space-s); margin-left: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;">Was there a lesson that changed how you think about working with AI?</li>
+                            <li style="margin-bottom: 0.5rem;">Was there a lesson that felt redundant or unclear?</li>
+                            <li style="margin-bottom: 0.5rem;">Did you try any of the exercises on your own work? What happened?</li>
+                            <li style="margin-bottom: 0.5rem;">In your own words: what is this module actually teaching?</li>
+                            <li style="margin-bottom: 0.5rem;">Is $299 a price you would pay for the full course (3 modules, 18 lessons)?</li>
+                        </ol>
+                        <p style="margin-top: var(--space-s);">Reply by email or we can set up a 15-minute call. Either works.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Founded by <a href="https://petersalvato.com">Peter Salvato</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+    (function() {
+        var HASH = '6be565dcccdd32287f48cc2af9c613523df136e25644900b545bfbf5e944441f';
+        var AUTH_KEY = 'joinery-beta-access';
+
+        function checkAuth() {
+            try {
+                return sessionStorage.getItem(AUTH_KEY) === 'true';
+            } catch(e) {
+                return false;
+            }
+        }
+
+        function unlock() {
+            document.getElementById('beta-gate').classList.add('hidden');
+            document.getElementById('beta-content').classList.add('unlocked');
+        }
+
+        if (checkAuth()) {
+            unlock();
+        }
+
+        document.getElementById('beta-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            var pw = document.getElementById('beta-pw').value;
+            var encoder = new TextEncoder();
+            var data = encoder.encode(pw);
+            var hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            var hashArray = Array.from(new Uint8Array(hashBuffer));
+            var hashHex = hashArray.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+
+            if (hashHex === HASH) {
+                try { sessionStorage.setItem(AUTH_KEY, 'true'); } catch(e) {}
+                unlock();
+            } else {
+                document.getElementById('beta-error').textContent = 'Incorrect access code.';
+                document.getElementById('beta-pw').value = '';
+                document.getElementById('beta-pw').focus();
+            }
+        });
+
+        // Propagate student param to lesson links
+        var params = new URLSearchParams(window.location.search);
+        var student = params.get('s');
+        if (student) {
+            document.querySelectorAll('a[href]').forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (href && !href.startsWith('http') && !href.startsWith('#')) {
+                    var url = new URL(href, window.location.href);
+                    url.searchParams.set('s', student);
+                    link.setAttribute('href', url.pathname + url.search);
+                }
+            });
+        }
+
+        // Persona selector
+        var personaSelector = document.getElementById('persona-selector');
+        if (personaSelector) {
+            var savedPersona;
+            try { savedPersona = localStorage.getItem('joinery-persona'); } catch(e) {}
+            personaSelector.querySelectorAll('.persona-btn').forEach(function(btn) {
+                if (savedPersona && btn.dataset.domain === savedPersona) btn.classList.add('selected');
+                btn.addEventListener('click', function() {
+                    personaSelector.querySelectorAll('.persona-btn').forEach(function(b) {
+                        b.classList.remove('selected');
+                    });
+                    btn.classList.add('selected');
+                    try { localStorage.setItem('joinery-persona', btn.dataset.domain); } catch(e) {}
+                });
+            });
+        }
+
+        // Nav scroll
+        var nav = document.getElementById('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                nav.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
