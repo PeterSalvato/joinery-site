@@ -1,3 +1,25 @@
 course/foundations/
 copyright-submission/
 node_modules/
+
+# Internal planning docs (not for public repo)
+BUSINESS-PLAN.md
+EXECUTION-PLAN.md
+PRODUCT.md
+STATUS.md
+DESIGN.md
+prep/
+
+# Course source content (compiled markdown)
+course/adv-*.md
+course/spec-*.md
+course/shopify-*.md
+course/design-*.md
+course/writing-*.md
+
+# Internal tools
+dashboard/
+content/
+
+# Local assets not for deploy
+assets/fonts/
